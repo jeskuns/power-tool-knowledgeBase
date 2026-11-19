@@ -21,7 +21,7 @@
       bar.id = "site-nav";
       document.body.insertBefore(bar, document.body.firstChild);
     }
-    var html = '<a class="brandmark" href="index.html"><span class="mark">ED</span><span>工程部数字化</span></a>';
+    var html = '<a class="brandmark" href="index.html"><span class="mark">ED</span><span>电动工具知识库</span></a>';
     NAV.forEach(function (n) {
       var cls = "nav" + (n.href === cur ? " active" : "");
       html += '<a class="' + cls + '" href="' + n.href + '">' + n.label + "</a>";

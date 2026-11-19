@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>工程部知识库 · 型号 / 标准 / 方法 / 设备 / 记录 / 案例</title>
+<title>电动工具知识库 · 型号 / 标准 / 方法 / 设备 / 记录 / 案例</title>
 <meta name="theme-color" content="#1f4e5f">
 
 <style>
@@ -219,7 +219,7 @@ body .kb-card:hover::after{color:var(--primary-100)}
 body .kb-links{padding-top:12px;border-top:1px solid var(--border-light)}
 body .section:last-of-type{background:var(--primary-50);border-top:1px solid var(--border-light);padding-top:38px!important;padding-bottom:46px!important}
 footer{background:var(--surface);border-top:1px solid var(--border-light);padding:24px 0 32px!important}
-footer::before{content:"工程部 · 知识库";display:block;font-size:14px;font-weight:800;color:var(--primary);letter-spacing:.5px;margin-bottom:4px}
+footer::before{content:"电动工具知识库";display:block;font-size:14px;font-weight:800;color:var(--primary);letter-spacing:.5px;margin-bottom:4px}
 
 /* 宽屏：撤掉 widescreen.css 给 section 追加的左右 padding，
    让 .container 真正吃满 --w-page（1400/1640/1800/2040/2320px） */
@@ -247,7 +247,7 @@ footer::before{content:"工程部 · 知识库";display:block;font-size:14px;fon
         <nav class="topbar-breadcrumb">
             <a href="index.html">首页</a>
             <span class="sep">/</span>
-            <span class="current">工程部知识库</span>
+            <span class="current">电动工具知识库</span>
         </nav>
         <div class="topbar-actions">
             <span class="topbar-badge">型号 · 标准 · 方法 · 设备 · 记录 · 案例</span>
@@ -260,7 +260,7 @@ footer::before{content:"工程部 · 知识库";display:block;font-size:14px;fon
 <section class="hero">
     <div class="container">
         <span class="hero-eyebrow">— 六个知识库，一个入口 —</span>
-        <h1>工程部知识库</h1>
+        <h1>电动工具知识库</h1>
         <p>六个库集中一个入口，输入即出结果；型号 / 标准 / 方法方案 / 设备工装 / 记录 / 案例都能查，原文与卡片全部离线内置，拷到手机没网也能用。</p>
         <div class="hero-meta">
             <span>25 张标准卡片</span>
@@ -473,8 +473,8 @@ footer::before{content:"工程部 · 知识库";display:block;font-size:14px;fon
             <div class="panel warn">
                 <h4>内容从哪来，怎么更新</h4>
                 <ul>
-                    <li>这里是<b>源文件目录</b>（<code>Documents\lifeOS\数字化\实验室管理\知识库\</code>），六个库与主页在此维护；<code>company\gongchengbu\knowledge\</code> 是同步到工程部项目的备份。</li>
-                    <li>更新源数据后：跑 <code>python _脚本/build_query_kb_all.py</code> 刷新六库单文件 md；工程部备份用 robocopy 从本目录增量同步。</li>
+                    <li>这里是<b>源文件目录</b>（<code>Documents\lifeOS\数字化\实验室管理\知识库\</code>），六个库与主页在此维护；<code>company\gongchengbu\knowledge\</code> 是同步到实验室管理的备份。</li>
+                    <li>更新源数据后：跑 <code>python _脚本/build_query_kb_all.py</code> 刷新六库单文件 md；实验室管理备份用 robocopy 从本目录增量同步。</li>
                     <li>查询数据由 <code>python knowledge/tools/build_kb_data.py</code> 生成到 <code>knowledge/query/data/</code>；标准卡片由 <code>电动工具测试标准与认证知识库/_脚本/kb_html.py</code> 从 <code>卡片/*.md</code> 生成。</li>
                 </ul>
             </div>
@@ -483,7 +483,7 @@ footer::before{content:"工程部 · 知识库";display:block;font-size:14px;fon
 </section>
 
 <footer>
-    工程部质量中心 · 知识库源文件 · 六个库（型号 / 标准 / 方法 / 设备 / 记录 / 案例）· 同步备份在 company\gongchengbu\knowledge\ · 本页为静态文件，无后台依赖
+    电动工具知识库 · 源文件 · 六个库（型号 / 标准 / 方法 / 设备 / 记录 / 案例）· 同步备份在 company\gongchengbu\knowledge\ · 本页为静态文件，无后台依赖
 </footer>
 
 <script src="query/data/models.js"></script>

@@ -66,7 +66,7 @@ python build.py
 电动工具测试失效案例库有两处入口，都指向同一份数据：
 
 1. **独立案例站** `company/gongchengbu/knowledge/失效案例库/`：本库的同步副本（`查询.html` + `查询数据/records.js`），按测试项目 Tab 切换。
-2. **统一查询页** `company/gongchengbu/knowledge/query/index.html?scope=cases`：并进工程部统一数据查询页，作为第四个 Tab「失效案例」，与型号库/测试记录库/标准库并列，支持跨库关联（案例详情里可跳原始委托记录）。
+2. **统一查询页** `company/gongchengbu/knowledge/query/index.html?scope=cases`：并进统一数据查询页，作为第四个 Tab「失效案例」，与型号库/测试记录库/标准库并列，支持跨库关联（案例详情里可跳原始委托记录）。
 
 `build.py` 一次性产出三份数据：本目录 `查询数据/records.js`、独立站副本 `records.js`、以及统一查询页的 `query/data/cases.js`。所以**更新源数据后只需重跑 `python build.py`**（若要连型号/标准一起刷新，再跑一次 `python company/gongchengbu/knowledge/tools/build_kb_data.py`，它也会重新生成 `cases.js`）。
 
