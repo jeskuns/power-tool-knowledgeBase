@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工程部知识库 · 型号 / 标准 / 方法 / 设备 / 记录 / 案例</title>
+<meta name="theme-color" content="#1f4e5f">
+
+<style>
+:root {
+    --primary: #1f4e5f;
+    --primary-dark: #133340;
+    --primary-light: #2f7a8f;
+    --primary-50: #f0f7f9;
+    --primary-100: #dceaf0;
+    --gold: #c48a3a;
+    --gold-light: #e5c48c;
+    --bg: #f4f6f8;
+    --surface: #ffffff;
+    --text: #1a2332;
+    --text-2: #4a5568;
+    --text-3: #8896a6;
+    --border: #c8d1dc;
+    --border-light: #e4e9ef;
+    --shadow-md: 0 4px 20px rgba(31,78,95,.08);
+    --shadow-lg: 0 8px 32px rgba(31,78,95,.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+.container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+/* 顶部条 */
+.topbar { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--border-light); }
+.topbar-inner { height:58px; display:flex; align-items:center; justify-content:space-between; }
+.topbar-breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-3); }
+.topbar-breadcrumb a { color:var(--primary); font-weight:700; text-decoration:none; }
+.topbar-breadcrumb a:hover { color:var(--gold); }
+.topbar-breadcrumb .sep { opacity:.5; }
+.topbar-breadcrumb .current { color:var(--text-2); font-weight:700; }
+.topbar-actions { display:flex; align-items:center; gap:12px; }
+.topbar-badge { font-size:12px; color:var(--text-3); border:1px solid var(--border-light); border-radius:20px; padding:4px 12px; background:#fbfcfd; }
+.topbar-home { font-size:13px; font-weight:700; color:#fff; background:var(--primary); border-radius:20px; padding:7px 16px; text-decoration:none; }
+.topbar-home:hover { background:var(--primary-dark); }
+
+/* 页头 */
+.hero { background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 55%,var(--primary-light) 100%); color:#fff; padding:44px 0 40px; }
+.hero-eyebrow { display:inline-block; font-size:12.5px; letter-spacing:2px; color:var(--gold-light); border:1px solid rgba(229,196,140,.35); border-radius:20px; padding:5px 14px; margin-bottom:16px; }
+.hero h1 { font-size:32px; font-weight:800; letter-spacing:.3px; margin-bottom:12px; }
+.hero p { font-size:15px; color:rgba(255,255,255,.82); max-width:820px; }
+.hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+.hero-meta span { font-size:12.5px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:20px; padding:5px 13px; color:rgba(255,255,255,.85); }
+
+/* 卡片 */
+.section { padding:36px 0 8px; }
+.section-head { margin-bottom:22px; }
+.section-head h2 { font-size:23px; font-weight:800; color:var(--text); display:flex; align-items:center; gap:10px; }
+.section-head h2::after { content:""; flex:1; height:2px; background:linear-gradient(90deg,var(--gold),transparent); border-radius:2px; }
+.section-head p { font-size:14px; color:var(--text-3); margin-top:6px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
+.kb-card { background:var(--surface); border:1px solid var(--border-light); border-radius:16px; padding:26px 22px 22px; display:flex; flex-direction:column; box-shadow:var(--shadow-md); transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease; position:relative; overflow:hidden; cursor:pointer; }
+.kb-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; transform:scaleX(0); transition:transform .45s ease; }
+.kb-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+.kb-card:hover::before { transform:scaleX(1); }
+.kb-card.std::before { background:linear-gradient(90deg,var(--gold),var(--gold-light)); }
+.kb-card.rec::before { background:linear-gradient(90deg,#059669,#34d399); }
+.kb-card.prod::before { background:linear-gradient(90deg,#7c3aed,#c4b5fd); }
+.kb-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.kb-card.std .kb-icon { background:#fbf5ea; color:var(--gold); }
+.kb-card.rec .kb-icon { background:#ecfdf5; color:#059669; }
+.kb-card.prod .kb-icon { background:#f5f3ff; color:#7c3aed; }
+.kb-icon svg { width:26px; height:26px; }
+.kb-card h3 { font-size:19px; font-weight:800; margin-bottom:8px; }
+.kb-card .std-name { font-size:12.5px; color:var(--text-3); margin-bottom:10px; }
+.kb-card p.desc { font-size:13.5px; color:var(--text-2); margin-bottom:16px; }
+.kb-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:18px; }
+.kb-stat { background:#f7f9fb; border-radius:10px; padding:9px 6px; text-align:center; }
+.kb-stat b { display:block; font-size:19px; font-weight:800; color:var(--primary); letter-spacing:-.3px; }
+.kb-card.rec .kb-stat b { color:#047857; }
+.kb-card.prod .kb-stat b { color:#6d28d9; }
+.kb-stat span { font-size:11px; color:var(--text-3); }
+.kb-links { list-style:none; margin-bottom:18px; }
+.kb-links li { font-size:13px; padding:4px 0; }
+.kb-links a { color:var(--primary-light); text-decoration:none; }
+.kb-links a:hover { text-decoration:underline; }
+.enter { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; margin-top:auto; padding:11px 24px; border-radius:30px; font-size:13.5px; font-weight:700; color:#fff; text-decoration:none; }
+.kb-card.std .enter { background:linear-gradient(135deg,var(--gold),#d9a967); }
+.kb-card.rec .enter { background:linear-gradient(135deg,#059669,#10b981); }
+.kb-card.prod .enter { background:linear-gradient(135deg,#7c3aed,#a78bfa); }
+.kb-card.fail::before { background:linear-gradient(90deg,#a32020,#d9534f); }
+.kb-card.fail .kb-icon { background:#fbeaea; color:#a32020; }
+.kb-card.fail .kb-stat b { color:#a32020; }
+.kb-card.fail .enter { background:linear-gradient(135deg,#a32020,#d9534f); }
+.enter svg { width:15px; height:15px; }
+
+/* 说明块 */
+.note-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:22px; margin:8px 0 30px; }
+.panel { background:var(--surface); border:1px solid var(--border-light); border-radius:14px; padding:20px 22px; }
+.panel h4 { font-size:15.5px; color:var(--primary); margin-bottom:10px; }
+.panel ul { list-style:none; }
+.panel li { font-size:13.5px; color:var(--text-2); padding:6px 0 6px 18px; position:relative; border-bottom:1px dashed var(--border-light); }
+.panel li:last-child { border-bottom:none; }
+.panel li::before { content:""; position:absolute; left:0; top:14px; width:6px; height:6px; border-radius:50%; background:var(--gold); }
+.panel code, .panel kbd { background:#eef1f4; border-radius:4px; padding:2px 6px; font-family:Consolas,"Courier New",monospace; font-size:12.5px; color:var(--text); }
+.warn { border-left:4px solid var(--gold); background:#fdf8ed; }
+
+footer { text-align:center; color:var(--text-3); font-size:12.5px; padding:22px 0 30px; }
+@media (max-width:900px) { .grid { grid-template-columns:1fr; } .note-grid { grid-template-columns:1fr; } .hero h1 { font-size:25px; } .container { padding:0 16px; } }
+</style>
+<link rel="stylesheet" href="assets/css/widescreen.css">
+<link rel="stylesheet" href="assets/css/mobile.css">
+<style>
+/* ===== 视觉平衡：只留一个深色 hero，查询区改浅色并压缩 ===== */
+body .hero{padding:30px 0 26px!important}
+body .hero-eyebrow{margin-bottom:10px!important}
+body .hero h1{font-size:26px!important;margin-bottom:8px!important}
+body .hero p{line-height:1.7}
+body .hero .container{text-align:center}
+body .hero .container > .hero-eyebrow,body .hero .container > h1,body .hero .container > p{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+body .hero .container > p{max-width:700px;font-size:14px;line-height:1.75}
+body .hero-meta{justify-content:center;margin-top:14px!important}
+
+/* ===== 统一查询工作台（原 knowledge/query/index.html 已合并进本页） =====
+   统一要点：浅色卡片、跟随全站 .container 宽屏变量、不再自设 1180px 上限 */
+.kbq{background:var(--bg)!important;border-bottom:0!important;padding:26px 0 10px!important;scroll-margin-top:66px}
+.kbq > .container{display:block;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important}
+.qband-card{background:var(--surface);border:1px solid var(--border-light);border-top:4px solid var(--gold);border-radius:16px;padding:22px 26px 20px;box-shadow:0 10px 30px rgba(31,78,95,.08)}
+.qband-card h2{color:var(--text)!important;font-size:19px;margin:0 0 4px;font-weight:800}
+.qband-card p.sub{color:var(--text-3)!important;font-size:13.5px;margin:0 0 14px}
+.sbox{display:flex;gap:10px}
+.sbox input{flex:1;min-width:0;font-size:16px;padding:12px 16px;border:2px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none}
+.sbox input:focus{border-color:var(--primary-light)}
+.sbox input::placeholder{color:var(--text-3)}
+.sbox button{border:0;border-radius:10px;background:var(--gold);color:#fff;font-size:15px;font-weight:700;padding:0 26px;cursor:pointer}
+.sbox button:hover{background:#8d5d1f}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tab{border:1px solid var(--border-light);background:#f7f9fb;color:var(--text-2);border-radius:999px;padding:6px 15px;font-size:13px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--primary);color:#fff;border-color:var(--primary);font-weight:700}
+.tab small{opacity:.75;font-size:11px;margin-left:3px}
+.hint{font-size:12.5px;color:var(--text-3);margin-top:10px}
+.hint b{color:var(--gold)}
+.qquick{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.qquick a{background:var(--primary-50);border:1px solid var(--primary-100);color:var(--primary-dark);border-radius:999px;padding:6px 14px;font-size:13px;text-decoration:none}
+.qquick a:hover{background:var(--primary-100);color:var(--primary-dark)}
+.qnums{margin-top:12px;font-size:12.5px;color:var(--text-3)}
+.qnums b{color:var(--gold);font-size:14px}
+
+/* 分面筛选 */
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0 0}
+.chip{background:#fff;border:1px solid var(--border-light);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--text-2);cursor:pointer}
+.chip.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.chip small{color:var(--gold);font-weight:700;margin-left:3px}
+.chip.on small{color:#ffd9a0}
+
+/* 结果区：宽度完全继承 .container，不再限 1180px */
+.kbq main{display:block;width:100%;max-width:none;margin:0;padding:18px 0 40px}
+.group{background:var(--surface);border:1px solid var(--border-light);border-radius:14px;box-shadow:0 2px 12px rgba(19,32,41,.05);margin-bottom:18px;overflow:hidden}
+.ghead{display:flex;align-items:baseline;gap:12px;padding:14px 18px;background:#f7fafb;border-bottom:1px solid var(--border-light);cursor:pointer}
+.ghead h2{margin:0;font-size:16px;font-weight:800;color:var(--primary-dark)}
+.ghead .cnt{font-size:12.5px;color:var(--gold);font-weight:700}
+.ghead .more{margin-left:auto;font-size:12.5px;color:var(--primary)}
+.row{padding:13px 18px;border-bottom:1px solid #eaf0f3;cursor:pointer}
+.row:last-child{border-bottom:0}
+.row:hover{background:#f6fafb}
+.row .l1{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.row .key{font-weight:700;font-size:15px;color:var(--primary-dark);word-break:break-all}
+.row .title{flex:1;min-width:180px;font-size:14px;color:var(--text-2);word-break:break-word}
+.row .l2{margin-top:6px;font-size:12.5px;color:var(--text-2);display:flex;gap:5px 12px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:999px;background:#e7eef2;color:var(--primary-dark);border:1px solid #cfdde4;white-space:nowrap}
+.badge.cn{background:#f3e4cf;border-color:#e0c9a4;color:#6f4a12}
+.badge.fg{background:#e5eef7;border-color:#c3d7ea;color:#1c4a76}
+.badge.ok{background:#e3f2e8;border-color:#bcdcc8;color:#1c6b3f}
+.badge.bad{background:#fbe9e9;border-color:#eec7c7;color:#a32020}
+.badge.warn{background:#fbf2e0;border-color:#ecdcb8;color:#8a5a12}
+.case-no{font-size:11.5px;color:var(--text-3)}
+.detail{background:#f7fafb;border-top:1px dashed var(--border-light);padding:10px 14px;font-size:14px}
+.detail dl{display:grid;grid-template-columns:96px 1fr;gap:4px 10px;margin:0 0 8px}
+.detail dt{color:var(--text-2);font-size:13px}
+.detail dd{margin:0;word-break:break-word}
+.detail pre{white-space:pre-wrap;margin:0;font:13px/1.55 ui-monospace,Consolas,monospace;background:#fff;border:1px solid var(--border-light);border-radius:8px;padding:8px 10px;max-height:280px;overflow:auto}
+.detail img{max-width:180px;max-height:180px;background:#fff;border:1px solid var(--border-light);border-radius:8px;padding:4px;float:right;margin:0 0 8px 12px}
+.detail a{color:var(--primary-light)}
+.spec{color:var(--gold);font-weight:700}
+.xbox{clear:both;margin:9px 0 0;padding:9px 11px;border-radius:8px;font-size:13.5px;line-height:1.6;background:#eaf4f7;border:1px solid #a9cdd8;color:#143643}
+.xbox b{font-size:15px}
+.xbox.mute{background:#f4f6f8;border-color:var(--border-light);color:var(--text-2)}
+.xgo{margin-left:7px;background:var(--primary);color:#fff;border:0;border-radius:6px;padding:5px 12px;font-size:13px;cursor:pointer}
+.xgo:hover{background:var(--primary-dark)}
+.xbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 12px;padding:9px 14px;background:#eaf4f7;border:1px solid #a9cdd8;color:#143643;font-size:13px;border-radius:8px}
+.xbar button{background:#fff;color:var(--primary-dark);border:1px solid var(--primary);border-radius:6px;padding:4px 10px;font-size:13px;cursor:pointer}
+.qtoolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:0 0 14px;font-size:13px;color:var(--text-3)}
+.qtoolbar button{background:#fff;color:var(--primary-dark);border:1px solid var(--primary);border-radius:8px;padding:6px 14px;font-size:13px;cursor:pointer}
+.qtoolbar b{color:var(--gold)}
+mark{background:#ffe9a8;color:#5a3f00;padding:0 1px;border-radius:2px}
+.pager{padding:16px;text-align:center}
+.pager button{background:var(--primary);color:#fff;border:0;border-radius:8px;padding:9px 20px;font-size:15px;cursor:pointer}
+.empty{padding:40px 20px;text-align:center;color:var(--text-2)}
+.empty b{display:block;color:var(--text);font-size:17px;margin-bottom:6px}
+.blist{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.todo{font-size:12.5px;color:#8a5a12;background:#fbf2e0;border:1px dashed #e6cfa0;border-radius:8px;padding:5px 10px}
+
+/* 默认引导态：轻量提示 + 常用词 + 品牌折叠，避免与下方四张库卡片重复 */
+.home{text-align:center;padding:6px 0 10px}
+.home .sub{font-size:13.5px;color:var(--text-2);margin:0 auto;max-width:720px}
+.home-try{font-size:13px;color:var(--text-2);margin:16px 0 10px}
+.try{display:inline-block;background:#fff;border:1px solid var(--border-light);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--primary-dark);cursor:pointer;margin:0 6px 8px 0}
+.try:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.brand-fold{width:100%;margin:16px auto 0;text-align:left;background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:12px 16px}
+.brand-fold>summary{cursor:pointer;font-size:13.5px;font-weight:700;color:var(--primary-dark)}
+.brand-fold>section{border:0;box-shadow:none;margin:12px 0 0}
+.brand-fold .ghead{background:#f7fafb;padding:10px 14px}
+.brand-fold .blist button{cursor:pointer}
+
+/* ===== 成品化：知识库卡片编号、分区与页脚收尾 ===== */
+body .grid{counter-reset:kbc}
+body .kb-card{counter-increment:kbc}
+body .kb-card::before{transform:scaleX(1);height:4px}
+body .kb-card::after{content:counter(kbc,decimal-leading-zero);position:absolute;top:16px;right:20px;font-size:30px;font-weight:800;letter-spacing:-1px;color:#edf2f5;line-height:1;pointer-events:none}
+body .kb-card:hover::after{color:var(--primary-100)}
+body .kb-links{padding-top:12px;border-top:1px solid var(--border-light)}
+body .section:last-of-type{background:var(--primary-50);border-top:1px solid var(--border-light);padding-top:38px!important;padding-bottom:46px!important}
+footer{background:var(--surface);border-top:1px solid var(--border-light);padding:24px 0 32px!important}
+footer::before{content:"工程部 · 知识库";display:block;font-size:14px;font-weight:800;color:var(--primary);letter-spacing:.5px;margin-bottom:4px}
+
+/* 宽屏：撤掉 widescreen.css 给 section 追加的左右 padding，
+   让 .container 真正吃满 --w-page（1400/1640/1800/2040/2320px） */
+@media (min-width:1600px){
+    body section.qband.kbq,
+    body section.section{padding-left:0!important;padding-right:0!important}
+}
+@media (max-width:900px){
+    body .hero{padding:24px 0 20px!important}
+    body .hero h1{font-size:23px!important}
+    .kbq{padding:18px 0 8px!important}
+    .qband-card{padding:18px 16px}
+    .chips{padding:12px 0 0}
+    .kbq main{padding:14px 0 30px}
+    .sbox input{font-size:17px}
+    .row .title{min-width:0;flex-basis:100%;order:5}
+    .detail dl{grid-template-columns:84px 1fr}
+    .detail img{float:none;margin:0 0 10px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+    <div class="container topbar-inner">
+        <nav class="topbar-breadcrumb">
+            <a href="index.html">首页</a>
+            <span class="sep">/</span>
+            <span class="current">工程部知识库</span>
+        </nav>
+        <div class="topbar-actions">
+            <span class="topbar-badge">型号 · 标准 · 方法 · 设备 · 记录 · 案例</span>
+            <a href="#kbq" class="topbar-home">数据查询</a>
+            <a href="index.html" class="topbar-home">← 返回首页</a>
+        </div>
+    </div>
+</div>
+
+<section class="hero">
+    <div class="container">
+        <span class="hero-eyebrow">— 六个知识库，一个入口 —</span>
+        <h1>工程部知识库</h1>
+        <p>六个库集中一个入口，输入即出结果；型号 / 标准 / 方法方案 / 设备工装 / 记录 / 案例都能查，原文与卡片全部离线内置，拷到手机没网也能用。</p>
+        <div class="hero-meta">
+            <span>25 张标准卡片</span>
+            <span>2144 条标准目录</span>
+            <span>3601 条委托记录</span>
+            <span>8790 条产品型号</span>
+            <span>93 条失效案例</span>
+            <span>无网络依赖</span>
+        </div>
+    </div>
+</section>
+
+<!-- 唯一的查询页：搜索 / 标签 / 分面 / 结果与总览合并在同一页 -->
+<section class="qband kbq" id="kbq">
+    <div class="container">
+        <div class="qband-card">
+            <h2>直接查数据</h2>
+            <p class="sub">型号、报告编号、标准号或任意关键词，输入即出结果；点标签可浏览某个库的全部数据。</p>
+            <div class="sbox">
+                <input id="q" type="search" autocomplete="off" spellcheck="false"
+                       placeholder="输入型号 / 报告编号 / 标准号 / 关键词，直接出结果">
+                <button id="go" type="button">查询</button>
+            </div>
+            <div class="tabs" role="tablist" id="tabs"></div>
+            <div class="hint" id="hint"></div>
+            <div class="qquick" id="qquick">
+                <a href="index.html?scope=models" data-goto="models" data-q="">电动工具型号</a>
+                <a href="index.html?scope=records" data-goto="records" data-q="">测试委托记录</a>
+                <a href="index.html?scope=stds" data-goto="stds" data-q="">标准库目录</a>
+                <a href="index.html?scope=records&amp;q=%E4%B8%8D%E5%90%88%E6%A0%BC" data-goto="records" data-q="不合格">查不合格</a>
+                <a href="index.html?scope=records&amp;q=%E8%B6%85%E6%9C%9F" data-goto="records" data-q="超期">查超期</a>
+                <a href="index.html?scope=cases" data-goto="cases" data-q="">失效案例库</a>
+            </div>
+            <div class="qnums">
+                <b>8790</b> 条产品型号（30 个品牌，含产品图） ·
+                <b>3601</b> 条委托记录（2024–2026） ·
+                <b>2144</b> 条标准目录 ·
+                <b>93</b> 条失效案例 · 全部离线内置
+            </div>
+        </div>
+        <div class="chips" id="chips"></div>
+        <main id="out"></main>
+    </div>
+</section>
+
+<section class="section" id="kb-cards">
+    <div class="container">
+        <div class="section-head">
+            <h2>六个知识库 · 原文与卡片</h2>
+            <p>点卡片主按钮进入各自的阅读器 / 查询页，下面的小链接直达单篇文档；上方查询区检索型号 / 标准 / 记录 / 案例，方法 / 设备两库用卡片里的独立查询页</p>
+        </div>
+        <div class="grid">
+
+            <div class="kb-card std" onclick="window.location.href='电动工具测试标准与认证知识库/安规标准知识库.html'">
+                <div class="kb-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.6 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg>
+                </div>
+                <h3>电动工具测试标准与认证知识库</h3>
+                <div class="std-name">IEC / EN / UL / GB 安规标准</div>
+                <p class="desc">60745-1、62841-1、60335-1 系列的试验条款速查卡片：限值、试验条件、Part 2 专用要求、常见坑点，每条都带回原文条款号。产品专用卡片覆盖电钻、角磨机、圆锯、锤类、螺丝批、搅拌机、往复锯、电刨。</p>
+                <div class="kb-stats">
+                    <div class="kb-stat"><b>25</b><span>速查卡片</span></div>
+                    <div class="kb-stat"><b>974</b><span>标准全文路径</span></div>
+                    <div class="kb-stat"><b>8</b><span>产品 Part 2</span></div>
+                </div>
+                <ul class="kb-links">
+                    <li><a href="index.html?scope=stds">在本页检索标准目录</a></li>
+                    <li><a href="电动工具测试标准与认证知识库/01_卡片/00-交叉引用索引.md">交叉引用索引（标准号对照）</a></li>
+                    <li><a href="电动工具测试标准与认证知识库/00_索引/总目录.md">标准库总目录</a></li>
+                    <li><a href="电动工具测试标准与认证知识库/查询知识库/标准全文/">标准全文目录</a></li>
+                </ul>
+                <a href="电动工具测试标准与认证知识库/安规标准知识库.html" class="enter" onclick="event.stopPropagation()">
+                    进入安规标准速查
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+            <div class="kb-card rec" onclick="window.location.href='电动工具测试记录知识库/查询.html'">
+                <div class="kb-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M4 10h16M9 5v14"/></svg>
+                </div>
+                <h3>电动工具测试记录知识库</h3>
+                <div class="std-name">试验二科测试进度 2024—2026</div>
+                <p class="desc">三年委托的单条明细（合同编号、型号、测试项目、进度、报告编号、结果、绩效天数）加上口径字典、不合格清单、型号汇总、待跟进清单。按型号或单号搜索，直接定位到那一单。</p>
+                <div class="kb-stats">
+                    <div class="kb-stat"><b>3601</b><span>条委托</span></div>
+                    <div class="kb-stat"><b>14</b><span>文档</span></div>
+                    <div class="kb-stat"><b>3</b><span>年度</span></div>
+                </div>
+                <ul class="kb-links">
+                    <li><a href="index.html?scope=records">在本页按型号 / 单号直接查记录</a></li>
+                    <li><a href="电动工具测试记录知识库/README.md">口径与字段字典</a></li>
+                    <li><a href="电动工具测试记录知识库/不合格记录_2024-2026.csv">不合格清单</a></li>
+                    <li><a href="电动工具测试记录知识库/测试进度明细_2024-2026.csv">明细 CSV（下载）</a></li>
+                </ul>
+                <a href="电动工具测试记录知识库/查询.html" class="enter" onclick="event.stopPropagation()">
+                    进入测试进度查询
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+            <div class="kb-card prod" onclick="window.location.href='index.html?scope=models'">
+                <div class="kb-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-4 4-3-3-7 7H3v-4l7-7-3-3z"/></svg>
+                </div>
+                <h3>电动工具竞品型号库</h3>
+                <div class="std-name">30 个品牌 · 8790 条型号 · 产品图</div>
+                <p class="desc">按 21 家公司（东成集团 + 国内 10 + 国外 10）组织的 30 个品牌、8790 条型号参数与产品图，8569 条带图；用于选型对比与安规判定前确认。缩略图 5700 张 / 约 30 MB，原图与爬虫原始数据在型号数据 / 图片数据目录。</p>
+                <div class="kb-stats">
+                    <div class="kb-stat"><b>8790</b><span>条型号</span></div>
+                    <div class="kb-stat"><b>30</b><span>个品牌</span></div>
+                    <div class="kb-stat"><b>5700</b><span>张缩略图</span></div>
+                </div>
+                <ul class="kb-links">
+                    <li><a href="index.html?scope=models">在本页查型号（输入即出结果）</a></li>
+                    <li><a href="电动工具竞品型号库/型号数据/电动工具产品型号参数总表.xlsx">型号总表.xlsx</a></li>
+                    <li><a href="电动工具竞品型号库/查询.html">原位大目录说明</a></li>
+                </ul>
+                <a href="index.html?scope=models" class="enter" onclick="event.stopPropagation()">
+                    查电动工具型号
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+            <div class="kb-card fail" onclick="window.location.href='电动工具测试失效案例库/查询.html'">
+                <div class="kb-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <h3>电动工具测试失效案例库</h3>
+                <div class="std-name">试验二科 2026 失效案例</div>
+                <p class="desc">每一条委托记录即一个案例，按测试项目归类（温升 / EMC / 电缆弯曲 / 特性曲线）：不合格、余量小、待定一目了然，点开看完整字段，便于归口分析与复盘。</p>
+                <div class="kb-stats">
+                    <div class="kb-stat"><b>93</b><span>条案例</span></div>
+                    <div class="kb-stat"><b>4</b><span>测试项目</span></div>
+                    <div class="kb-stat"><b>57</b><span>不合格</span></div>
+                </div>
+                <ul class="kb-links">
+                    <li><a href="index.html?scope=cases">在本页看案例</a></li>
+                    <li><a href="电动工具测试失效案例库/查询.html">独立案例站（按测试项目）</a></li>
+                    <li><a href="电动工具测试失效案例库/README.md">库说明与数据口径</a></li>
+                </ul>
+                <a href="index.html?scope=cases" class="enter" onclick="event.stopPropagation()">
+                    进入失效案例查询
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+
+            <div class="kb-card std" onclick="window.location.href='电动工具测试方法与用例库/解决方案.html'">
+                <div class="kb-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
+                </div>
+                <h3>电动工具测试方法与用例库</h3>
+                <div class="std-name">156 条 SQL 用例 · GB 3883 测试方案</div>
+                <p class="desc">按 test_method_case 21 字段组织的完整用例（步骤 / 判定 / 设备）；GB 3883.1 / .201 / .203 / .206 测试方案含 8 步流程、测什么、用什么设备工装与不适用边界。</p>
+                <div class="kb-stats">
+                    <div class="kb-stat"><b>156</b><span>SQL 用例</span></div>
+                    <div class="kb-stat"><b>13</b><span>方案项目</span></div>
+                    <div class="kb-stat"><b>8</b><span>流程步骤</span></div>
+                </div>
+                <ul class="kb-links">
+                    <li><a href="电动工具测试方法与用例库/解决方案.html">GB 3883 测试方案（流程图）</a></li>
+                    <li><a href="电动工具测试方法与用例库/查询.html">用例查询（SQL 字段）</a></li>
+                    <li><a href="电动工具测试方法与用例库/README.md">建库说明与字段落地</a></li>
+                </ul>
+                <a href="电动工具测试方法与用例库/解决方案.html" class="enter" onclick="event.stopPropagation()">
+                    进入测试方案
+                </a>
+            </div>
+
+            <div class="kb-card rec" onclick="window.location.href='电动工具测试设备与工装能力库/查询.html'">
+                <div class="kb-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <h3>电动工具测试设备与工装能力库</h3>
+                <div class="std-name">125 台设备 · 10 条工装主体</div>
+                <p class="desc">按 test_equipment / test_fixture 字段组织：设备台账、19 台外部校准清单、编号照片佐证；工装是独立主体，REQ- 为需求占位，后续用 Excel / UI 回填正式 FG- 编号。</p>
+                <div class="kb-stats">
+                    <div class="kb-stat"><b>125</b><span>台设备</span></div>
+                    <div class="kb-stat"><b>19</b><span>台外校</span></div>
+                    <div class="kb-stat"><b>10</b><span>条工装</span></div>
+                </div>
+                <ul class="kb-links">
+                    <li><a href="电动工具测试设备与工装能力库/查询.html">设备 / 工装查询（工装置顶）</a></li>
+                    <li><a href="电动工具测试设备与工装能力库/查询知识库/电动工具测试设备与工装能力查询知识库.md">工装单文件 md</a></li>
+                    <li><a href="电动工具测试设备与工装能力库/README.md">回填说明（fixture_rows.xlsx）</a></li>
+                </ul>
+                <a href="电动工具测试设备与工装能力库/查询.html" class="enter" onclick="event.stopPropagation()">
+                    进入设备与工装
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section" id="kb-howto">
+    <div class="container">
+        <div class="section-head">
+            <h2>怎么用</h2>
+        </div>
+        <div class="note-grid">
+            <div class="panel">
+                <h4>三种打开方式</h4>
+                <ul>
+                    <li><b>公司内网 / 本机</b>：直接双击本页，或跑 <code>python -m http.server 8080</code> 后打开 <code>knowledge/index.html</code>。</li>
+                    <li><b>手机</b>：把整个 <code>知识库</code> 文件夹拷进手机，用浏览器打开本页；只想要一个库时，单个 HTML 文件（如 <code>安规标准知识库.html</code>）就能独立打开。</li>
+                    <li><b>APK</b>：打包 App 时把六个库一起同步进 webDir；不想要体积就先把 <code>knowledge/电动工具测试标准与认证知识库/全文</code> 排除。</li>
+                </ul>
+            </div>
+            <div class="panel warn">
+                <h4>内容从哪来，怎么更新</h4>
+                <ul>
+                    <li>这里是<b>源文件目录</b>（<code>Documents\lifeOS\数字化\实验室管理\知识库\</code>），六个库与主页在此维护；<code>company\gongchengbu\knowledge\</code> 是同步到工程部项目的备份。</li>
+                    <li>更新源数据后：跑 <code>python _脚本/build_query_kb_all.py</code> 刷新六库单文件 md；工程部备份用 robocopy 从本目录增量同步。</li>
+                    <li>查询数据由 <code>python knowledge/tools/build_kb_data.py</code> 生成到 <code>knowledge/query/data/</code>；标准卡片由 <code>电动工具测试标准与认证知识库/_脚本/kb_html.py</code> 从 <code>卡片/*.md</code> 生成。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    工程部质量中心 · 知识库源文件 · 六个库（型号 / 标准 / 方法 / 设备 / 记录 / 案例）· 同步备份在 company\gongchengbu\knowledge\ · 本页为静态文件，无后台依赖
+</footer>
+
+<script src="query/data/models.js"></script>
+<script src="query/data/records.js"></script>
+<script src="query/data/standards.js"></script>
+<script src="query/data/cases.js"></script>
+<script>
+(function(){
+"use strict";
+var KB = window.KB || {};
+var IMG_BASE = "电动工具竞品型号库/缩略图库/";
+var STD_BASE = "电动工具测试标准与认证知识库/";
+var PAGE = 40;
+
+var SETS = {
+  all: {label:"全部"},
+  models: {label:"电动工具型号", data:KB.models},
+  records: {label:"测试记录", data:KB.records},
+  stds: {label:"安规标准", data:KB.stds},
+  cases: {label:"失效案例", data:KB.cases}
+};
+
+var state = {scope:"all", q:"", tokens:[], facets:{}, shown:{}, open:{}};
+
+/* ---------- 索引 ---------- */
+function hayModel(r){
+  return [r.b,r.be,r.m,r.n,r.c,r.c1,r.p,r.u,r.id].join(" ").toLowerCase();
+}
+function hayRecord(r){
+  return [r.no,r.rpt,r.model,r.who,r.dept,r.tester,r.item,r.purpose,r.res,r.prog,r.note,r.y].join(" ").toLowerCase();
+}
+function hayStd(r){
+  return [r.n,r.t,r.c,r.y,r.r].join(" ").toLowerCase();
+}
+function hayCase(r){
+  return [r.src,r.no,r.dept,r.who,r.model,r.qty,r.item,r.purpose,r.date,r.tester,
+          r.prog,r.due,r.done,r.rpt,r.res,r.submit,r.day,r.note,r.phenom,r.cause,r.avoid]
+          .join(" ").toLowerCase();
+}
+function compact(s){ return s.replace(/[^0-9a-z\u4e00-\u9fff]+/g,""); }
+function prep(key, rows, hay){
+  for(var i=0;i<rows.length;i++){
+    rows[i]._h = hay(rows[i]).toLowerCase();
+    rows[i]._hc = compact(rows[i]._h);
+    rows[i]._i = i;
+  }
+  SETS[key].rows = rows;
+}
+if(KB.models) prep("models", KB.models.rows, hayModel);
+if(KB.records) prep("records", KB.records.rows, hayRecord);
+if(KB.stds) prep("stds", KB.stds.rows, hayStd);
+if(KB.cases) prep("cases", KB.cases.rows, hayCase);
+
+/* ---------- 跨库关联：产品型号 ↔ 本实验室委托 ---------- */
+var RECS_BY_MODEL = {}, MODELS_BY_KEY = {}, HAS_MODELS = false, HAS_RECS = false;
+var exactKey = "";
+function mkey(s){ return compact(String(s||"").toLowerCase()); }
+if(KB.records) { HAS_RECS = true; KB.records.rows.forEach(function(r){
+  var k = mkey(r.model); if(k) (RECS_BY_MODEL[k] || (RECS_BY_MODEL[k] = [])).push(r);
+}); }
+if(KB.models) { HAS_MODELS = true; KB.models.rows.forEach(function(r){
+  var k = mkey(r.m); if(k) (MODELS_BY_KEY[k] || (MODELS_BY_KEY[k] = [])).push(r);
+}); }
+function goBtn(label, scope, q){
+  return '<button type="button" class="xgo" data-goto="'+scope+'" data-q="'+esc(q)+
+         '" data-exact="'+esc(mkey(q))+'">'+label+'</button>';
+}
+function xBoxModel(r){
+  var rs = HAS_RECS ? RECS_BY_MODEL[mkey(r.m)] : null;
+  if(!rs) return "";
+  var ok=0, bad=0, other=0;
+  rs.forEach(function(o){ if(o.res==="合格") ok++; else if(o.res==="不合格") bad++; else other++; });
+  return '<div class="xbox">本实验室委托 <b>'+rs.length+'</b> 单：合格 '+ok+' / 不合格 '+bad+
+         (other?' / 未出结果或其他 '+other:'')+' '+goBtn("看这些委托","records", r.m)+'</div>';
+}
+function xBoxRecord(r){
+  if(!r.model || !HAS_MODELS) return "";
+  var ms = MODELS_BY_KEY[mkey(r.model)];
+  if(ms && ms.length){
+    return '<div class="xbox">产品库里有这个型号：'+esc(ms[0].b)+' '+esc(ms[0].m)+
+           (ms.length>1 ? ' 等 '+ms.length+' 条' : '')+' '+goBtn("看产品库","models", r.model)+'</div>';
+  }
+  return '<div class="xbox mute">这个型号不在产品库里（多为内部试制号、电源线等物料号）</div>';
+}
+
+/* ---------- 工具 ---------- */
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function hl(s){
+  var t = esc(s);
+  if(!state.tokens.length) return t;
+  for(var i=0;i<state.tokens.length;i++){
+    var tk = state.tokens[i].replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    if(tk.length<2) continue;
+    t = t.replace(new RegExp("("+tk+")","ig"),"<mark>$1</mark>");
+  }
+  return t;
+}
+function num(v,suffix){ return v ? esc(v)+(suffix||"") : ""; }
+
+/* ---------- 过滤 ---------- */
+function matchRow(row, tokens){
+  for(var i=0;i<tokens.length;i++){
+    var tk = tokens[i];
+    if(row._h.indexOf(tk)>=0) continue;
+    var ck = compact(tk);
+    if(ck.length>=2 && row._hc.indexOf(ck)>=0) continue;
+    return false;
+  }
+  return true;
+}
+function facetOk(key, row){
+  var f = state.facets[key]||{};
+  for(var k in f){ if(f[k].length && f[k].indexOf(row[k])<0) return false; }
+  return true;
+}
+function query(key){
+  var set = SETS[key]; if(!set || !set.rows) return [];
+  var toks = state.tokens, out = [];
+  var mk = exactKey ? (key==="records" ? "model" : key==="models" ? "m" : "") : "";
+  for(var i=0;i<set.rows.length;i++){
+    var r = set.rows[i];
+    if(toks.length && !matchRow(r, toks)) continue;
+    if(mk && mkey(r[mk])!==exactKey) continue;
+    if(!facetOk(key, r)) continue;
+    out.push(r);
+  }
+  return out;
+}
+
+/* ---------- 分面定义 ---------- */
+var FACETS = {
+  models: [{k:"t",label:"品牌类型",vals:["国内","国外"]},
+           {k:"b",label:"品牌",from:"brands"},
+           {k:"c",label:"品类",from:"field"},
+           {k:"p",label:"电源",from:"field"}],
+  records:[{k:"y",label:"年度",vals:["2024","2025","2026"]},
+           {k:"item",label:"测试项目",from:"field"},
+           {k:"res",label:"结果",vals:["合格","不合格","—"]},
+           {k:"dept",label:"部门",from:"field"}],
+  stds:   [{k:"c",label:"目录",from:"field"},
+           {k:"r",label:"可读性",from:"field"}],
+  cases:  [{k:"item",label:"测试项目",from:"field"},
+           {k:"res",label:"结果",vals:["不合格","余量小","待定","—"]},
+           {k:"dept",label:"部门",from:"field"},
+           {k:"src",label:"来源",vals:["TC","OA","QMS","LIMS"]}]
+};
+function facetValues(key, f){
+  var set = SETS[key], vals = [];
+  if(f.vals) return f.vals.map(function(v){return [v, count(key,f.k,[v])];});
+  var c = {};
+  for(var i=0;i<set.rows.length;i++){
+    var v = set.rows[i][f.k]; if(!v) continue; c[v]=(c[v]||0)+1;
+  }
+  vals = Object.keys(c).sort(function(a,b){return c[b]-c[a];}).slice(0,20);
+  return vals.map(function(v){return [v, c[v]];});
+}
+function count(key, fk, sel){
+  var set = SETS[key], n=0, toks=state.tokens;
+  for(var i=0;i<set.rows.length;i++){
+    var r=set.rows[i];
+    if(sel.indexOf(r[fk])<0) continue;
+    if(toks.length && !matchRow(r,toks)) continue;
+    n++;
+  }
+  return n;
+}
+
+/* ---------- 行渲染 ---------- */
+function rowModels(r){
+  var b = [];
+  b.push('<span class="badge '+(r.t==="国外"?"fg":"cn")+'">'+esc(r.b)+"</span>");
+  if(r.c) b.push('<span class="badge">'+esc(r.c)+'</span>');
+  if(r.p) b.push('<span class="badge">'+esc(r.p)+'</span>');
+  var spec = [];
+  if(r.v) spec.push("电压 "+num(r.v,"V"));
+  if(r.w) spec.push("功率 "+num(r.w,"W"));
+  if(r.tq) spec.push("扭矩 "+num(r.tq,"N·m"));
+  if(r.rpm) spec.push("转速 "+num(r.rpm));
+  if(r.j) spec.push("冲击 "+num(r.j,"J"));
+  if(r.kg) spec.push("重量 "+num(r.kg,"kg"));
+  var l2 = spec.length? spec : [r.c1||"", r.n];
+  var key = /^\D*-?\d{9,}$/.test(r.m||"") ? (r.n||r.m) : (r.m||"(无型号)");
+  var title = r.n||"";
+  if(r.m && title.indexOf(r.m)===0) title = title.slice(r.m.length).replace(/^[\s\-_()（）]+/, "");
+  return '<div class="row" data-k="models" data-i="'+r._i+'">'+
+    '<div class="l1"><span class="key">'+hl(key)+'</span>'+
+    '<span class="title">'+hl(title)+'</span></div>'+
+    '<div class="l2">'+b.join("")+
+      '<span>'+(l2||[]).slice(0,4).map(function(s){return esc(s);}).filter(Boolean).join(" · ")+'</span>'+
+      (r.img?'<span class="badge ok">有图</span>':'')+
+    '</div></div>';
+}
+function rowRecords(r){
+  var b = ['<span class="badge">'+esc(r.y||"—")+'</span>'];
+  if(r.item) b.push('<span class="badge">'+esc(r.item)+'</span>');
+  if(r.res==="合格") b.push('<span class="badge ok">合格</span>');
+  else if(r.res && r.res!=="—") b.push('<span class="badge bad">'+hl(r.res)+'</span>');
+  if(r.over) b.push('<span class="badge warn">超期</span>');
+  return '<div class="row" data-k="records" data-i="'+r._i+'">'+
+    '<div class="l1"><span class="key">'+hl(r.rpt||r.no||"(无编号)")+'</span>'+
+    '<span class="title">'+hl(r.model)+'</span></div>'+
+    '<div class="l2">'+b.join("")+
+      '<span>'+esc([r.dept,r.who,r.tester,r.prog].filter(Boolean).join(" · "))+'</span>'+
+    '</div></div>';
+}
+function rowStds(r){
+  var b = ['<span class="badge">'+esc(r.c)+'</span>'];
+  if(r.y) b.push('<span class="badge">'+esc(r.y)+'</span>');
+  if(r.r==="可全文检索") b.push('<span class="badge ok">'+esc(r.r)+'</span>');
+  else if(r.r) b.push('<span class="badge warn">'+esc(r.r)+'</span>');
+  return '<div class="row" data-k="stds" data-i="'+r._i+'">'+
+    '<div class="l1"><span class="key">'+hl(r.n||"(无编号)")+'</span>'+
+    '<span class="title">'+hl(r.t)+'</span></div>'+
+    '<div class="l2">'+b.join("")+
+      '<span>'+esc([r.pg?r.pg+"页":"", r.mdl?"有全文":"", r.ol?"有原件":""].filter(Boolean).join(" · "))+'</span>'+
+    '</div></div>';
+}
+function rowCases(r){
+  var b = [];
+  if(r.res==="不合格") b.push('<span class="badge bad">不合格</span>');
+  else if(r.res==="余量小") b.push('<span class="badge warn">余量小</span>');
+  else if(r.res==="待定") b.push('<span class="badge warn">待定</span>');
+  else b.push('<span class="badge">'+esc(r.res||"—")+'</span>');
+  if(r.item) b.push('<span class="badge fg">'+esc(r.item)+'</span>');
+  if(r.src) b.push('<span class="badge cn">'+esc(r.src)+'</span>');
+  return '<div class="row" data-k="cases" data-i="'+r._i+'">'+
+    '<div class="l1"><span class="key">'+hl(r.rpt||r.no||"(无编号)")+'</span>'+
+      '<span class="title">'+hl(r.model)+'</span>'+
+      '<span class="case-no">#'+(r._i+1)+'</span></div>'+
+    '<div class="l2">'+b.join("")+
+      '<span>'+esc([r.dept,r.who,r.tester].filter(Boolean).join(" · "))+'</span></div>'+
+    '<div class="l2" style="color:#8a5a12">'+hl((r.phenom||"").slice(0,46))+'</div></div>';
+}
+var RENDER = {models:rowModels, records:rowRecords, stds:rowStds, cases:rowCases};
+
+function detailModels(r){
+  var img = r.img ? '<img loading="lazy" src="'+IMG_BASE+encodeURI(r.img)+'" alt="'+esc(r.b)+' 产品图">' : "";
+  var dl = [];
+  function kv(k,v){ if(v) dl.push("<dt>"+k+"</dt><dd>"+esc(v)+"</dd>"); }
+  kv("品牌", r.b+(r.be?" / "+r.be:"")+"（"+r.t+"）");
+  kv("型号", r.m);
+  kv("商品ID", r.id);
+  kv("分类", [r.c, r.c1].filter(Boolean).join(" / "));
+  kv("电源", r.p);
+  kv("额定电压", r.v && r.v+" V");
+  kv("额定功率", r.w && r.w+" W");
+  kv("额定转矩", r.tq && r.tq+" N·m");
+  kv("空载转速", r.rpm && r.rpm+" r/min");
+  kv("冲击频率", r.bpm && r.bpm+" 次/min");
+  kv("冲击能量", r.j && r.j+" J");
+  kv("重量", r.kg && r.kg+" kg");
+  kv("电池", [r.ah&&r.ah+"Ah", r.bv&&r.bv+"V"].filter(Boolean).join(" / "));
+  var html = img + "<dl>"+dl.join("");
+  if(r.u) html += "<dt>官网</dt><dd><a href=\""+esc(r.u)+"\" target=\"_blank\" rel=\"noopener\">"+esc(r.u)+"</a></dd>";
+  html += "</dl>";
+  return html + xBoxModel(r) + (r.s ? "<pre>"+esc(r.s)+"</pre>" : "<div class='hint' style='color:#4a5c68'>该型号未抓到规格参数。</div>");
+}
+function detailRecords(r){
+  var dl=[];
+  function kv(k,v){ if(v) dl.push("<dt>"+k+"</dt><dd>"+esc(v)+"</dd>"); }
+  kv("合同编号", r.no); kv("报告编号", r.rpt); kv("样机型号", r.model);
+  kv("数量", r.qty); kv("测试项目", r.item); kv("测试目的", r.purpose);
+  kv("委托部门", r.dept); kv("委托人", r.who); kv("测试人员", r.tester);
+  kv("流程日期", r.date); kv("测试进度", r.prog);
+  kv("预计完成", r.due); kv("实际完成", r.done);
+  kv("测试结果", r.res); kv("绩效", r.day && r.day+" 天");
+  kv("备注", r.note);
+  return "<dl>"+dl.join("")+"</dl>" + xBoxRecord(r);
+}
+function detailStds(r){
+  var links=[];
+  if(r.md) links.push('<a href="'+STD_BASE+encodeURI(r.md)+'" target="_blank" rel="noopener">查看全文 Markdown</a>');
+  if(r.o) links.push('<a href="'+esc(r.o)+'" target="_blank" rel="noopener">原件 '+esc(r.ol||"PDF")+'</a>');
+  links.push('<a href="'+STD_BASE+'安规标准知识库.html" target="_blank" rel="noopener">25 张卡片（离线阅读）</a>');
+  var dl=[];
+  function kv(k,v){ if(v) dl.push("<dt>"+k+"</dt><dd>"+esc(v)+"</dd>"); }
+  kv("标准号", r.n); kv("名称", r.t); kv("年份", r.y); kv("状态", r.s);
+  kv("页数", r.pg); kv("可读性", r.r); kv("所在目录", r.c);
+  return "<dl>"+dl.join("")+"</dl><p>"+links.join(" ｜ ")+"</p>";
+}
+function detailCases(r){
+  var dl=[];
+  function kv(k,v){ if(v) dl.push("<dt>"+k+"</dt><dd>"+esc(v)+"</dd>"); }
+  kv("合同编号", r.no); kv("报告编号", r.rpt); kv("样机型号", r.model);
+  kv("测试项目", r.item); kv("测试结果", r.res); kv("测试目的", r.purpose);
+  kv("委托部门", r.dept); kv("委托人", r.who); kv("测试人员", r.tester);
+  kv("流程日期", r.date); kv("预计完成", r.due); kv("实际完成", r.done);
+  kv("绩效", r.day && r.day+" 天"); kv("备注", r.note);
+  var x = "<dl>"+dl.join("")+"</dl>";
+  x += '<div class="xbox"><b>失效现象</b><br>'+esc(r.phenom||"")+'</div>';
+  x += '<div class="xbox"><b>原因分析</b><br>'+esc(r.cause||"")+'</div>';
+  x += '<div class="xbox" style="background:#eaf4ea;border-color:#bcdcc8;color:#1c5230">'+
+       '<b>规避措施</b><br>'+esc(r.avoid||"")+'</div>';
+  if(r.rpt) x += '<div style="margin-top:8px">'+goBtn("看原始委托记录（测试记录库）","records", r.rpt)+'</div>';
+  return x;
+}
+var DETAIL = {models:detailModels, records:detailRecords, stds:detailStds, cases:detailCases};
+
+/* ---------- 渲染 ---------- */
+function anyFacet(){
+  for(var k in state.facets){ for(var f in state.facets[k]){ if(state.facets[k][f].length) return true; } }
+  return false;
+}
+function scopeKeys(){
+  return state.scope==="all" ? ["models","records","stds","cases"] : [state.scope];
+}
+function brandPanel(){
+  var d = SETS.models.data; if(!d || !d.brands) return "";
+  var cov = d.coverage || {};
+  var groups = {国内:[], 国外:[]};
+  d.brands.forEach(function(b){ (groups[b.type]||(groups[b.type]=[])).push(b); });
+  var html = '<section class="group"><div class="ghead"><h2>品牌覆盖</h2>'+
+    '<span class="cnt">国内 '+(cov["国内"]||0)+' 个 · 国外 '+(cov["国外"]||0)+' 个 · 型号 '+d.rows.length+' 条</span></div>'+
+    '<div style="padding:12px 14px">';
+  ["国内","国外"].forEach(function(t){
+    html += '<div style="margin-bottom:10px"><div style="font-weight:700;color:#143643;font-size:14px;margin-bottom:6px">'+t+'品牌</div><div class="blist">';
+    groups[t].forEach(function(b){
+      html += '<button class="chip" data-fk="b" data-fset="models" data-fv="'+esc(b.name)+'">'+
+        esc(b.name)+'<small>'+b.count+'</small></button>';
+    });
+    if(t==="国外" && cov["待补国外"] && cov["待补国外"].length){
+      html += '<span class="todo">待补：'+esc(cov["待补国外"].join("、"))+'</span>';
+    }
+    html += '</div></div>';
+  });
+  html += '<p style="font-size:13px;color:#4a5c68;margin:6px 0 0">点品牌名直接筛出该品牌全部型号。国外还差 3 个品牌才算满 10 个，源数据里没抓过，需要时再补爬。</p>';
+  return html + '</div></section>';
+}
+/* 默认引导态：轻量提示，四个库的入口在下方卡片区，不再重复铺四张卡 */
+function homePanel(){
+  var h = '<div class="home">'+
+    '<p class="sub">输入关键词即时出结果；或点上方标签浏览某个库的全部数据。下方是四个库的原文、卡片与单篇文档入口。</p>'+
+    '<div class="home-try">试试这些：</div><div>';
+  ["FF-100A","DCJZ16","62841","GC250","不合格","超期","温升","电缆弯曲"].forEach(function(w){
+    h += '<span class="try" data-goto="all" data-q="'+esc(w)+'">'+esc(w)+'</span>';
+  });
+  h += '</div>';
+  var bp = ""; try { bp = brandPanel(); } catch(e){}
+  if(bp) h += '<details class="brand-fold"><summary>按品牌浏览全部型号（展开）</summary>'+bp+'</details>';
+  return h + '</div>';
+}
+/* 查询态隐藏总览区，默认态恢复，保证「一个页面」不重复铺内容 */
+function syncHome(idle){
+  ["kb-cards","kb-howto"].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.style.display = idle ? "" : "none";
+  });
+}
+function render(){
+  var out = document.getElementById("out");
+  var idle = state.scope==="all" && !state.tokens.length && !anyFacet() && !exactKey;
+  syncHome(idle);
+  if(idle){
+    out.innerHTML = homePanel();
+    document.getElementById("hint").innerHTML = '内置 '+
+      (SETS.models.rows?SETS.models.rows.length:0)+' 条型号 · '+
+      (SETS.records.rows?SETS.records.rows.length:0)+' 条委托 · '+
+      (SETS.stds.rows?SETS.stds.rows.length:0)+' 条标准 · '+
+      (SETS.cases.rows?SETS.cases.rows.length:0)+' 条案例，<b>输入即查</b>';
+    renderTabs(); renderChips();
+    return;
+  }
+  var html = "", total = 0;
+  var keys = scopeKeys();
+  for(var i=0;i<keys.length;i++){
+    var k = keys[i], set = SETS[k];
+    if(!set || !set.rows) continue;
+    var rows = query(k);
+    total += rows.length;
+    if(state.scope==="all" && !rows.length) continue;
+    var limit = state.scope==="all" ? 25 : (state.shown[k]||PAGE);
+    var body = rows.slice(0,limit).map(function(r){return RENDER[k](r);}).join("");
+    var more = "";
+    if(state.scope!=="all" && rows.length>limit){
+      more = '<div class="pager"><button type="button" data-more="'+k+'">加载更多（还有 '+
+             (rows.length-limit)+' 条）</button></div>';
+    }
+    html += '<section class="group"><div class="ghead" data-scope="'+k+'"><h2>'+
+      set.label+'</h2><span class="cnt">'+rows.length+' 条</span>'+
+      (state.scope==="all" && rows.length>limit ?
+        '<span class="more">点击看全部 '+rows.length+' 条 →</span>':
+        (state.scope==="all"?'<span class="more">点击进入</span>':''))+
+      '</div>'+(body||'<div class="empty">没有匹配结果</div>')+more+'</section>';
+  }
+  if(!html){
+    html = '<div class="empty"><b>没有匹配结果</b>换个写法试试（型号里的 - 和空格可以省，比如 FF100A 直接输 FF100A）。'+
+      '<br>已收录：30 个电动工具品牌（8790 条型号）、3601 条测试委托记录、2144 条标准目录 + 25 张速查卡片、156 条 SQL 测试用例 + GB 3883 测试方案、125 台设备 / 10 条工装、93 条失效案例（含原因分析与规避措施）。'+
+      '<br>可以试：DCJZ16、62841、GC250、不合格、超期、温升、电缆弯曲…</div>';
+  }
+  if(exactKey){
+    html = '<div class="xbar">已按这个型号精确匹配，相近写法（如加 -B、-XC 的变型）没混进来'+
+           '<button type="button" data-loose="1">包含相近型号</button></div>' + html;
+  }
+  html = '<div class="qtoolbar"><button type="button" data-reset="1">← 返回知识库总览</button>'+
+         '<span>命中 <b>'+total+'</b> 条'+(state.scope!=="all"?'（'+esc(SETS[state.scope].label)+'）':'')+'</span></div>' + html;
+  out.innerHTML = html;
+  document.getElementById("hint").innerHTML =
+    state.tokens.length ? '“'+esc(state.q)+'” 命中 <b>'+total+'</b> 条' :
+    anyFacet() ? '已筛选 <b>'+total+'</b> 条（清空筛选看全部）' :
+    '内置 '+
+    (SETS.models.rows?SETS.models.rows.length:0)+' 条型号、'+
+    (SETS.records.rows?SETS.records.rows.length:0)+' 条测试记录、'+
+    (SETS.stds.rows?SETS.stds.rows.length:0)+' 条标准、'+
+    (SETS.cases.rows?SETS.cases.rows.length:0)+' 条失效案例。输入即查。';
+  renderTabs(); renderChips();
+  restoreOpen();
+}
+function renderTabs(){
+  var el = document.getElementById("tabs"), html="";
+  ["all","models","records","stds","cases"].forEach(function(k){
+    var n = k==="all" ? "" : " " + (SETS[k].rows?SETS[k].rows.length:0);
+    html += '<button class="tab" role="tab" data-scope="'+k+'" aria-selected="'+
+      (state.scope===k)+'">'+SETS[k].label+'<small>'+n+'</small></button>';
+  });
+  el.innerHTML = html;
+}
+function renderChips(){
+  var el = document.getElementById("chips"), html="";
+  var keys = state.scope==="all" ? [] : [state.scope];
+  var slim = state.tokens.length && !anyFacet() && !state.allChips;
+  keys.forEach(function(k){
+    FACETS[k].forEach(function(f){
+      var sel = (state.facets[k]||{})[f.k]||[];
+      var vals = facetValues(k,f);
+      if(slim) vals = vals.slice(0,6);
+      vals.forEach(function(pair){
+        if(!sel.length && pair[1]<3 && f.k!=="t") return;
+        var on = sel.indexOf(pair[0])>=0;
+        html += '<button class="chip'+(on?" on":"")+'" data-fk="'+f.k+'" data-fv="'+
+          esc(pair[0])+'" data-fset="'+k+'">'+esc(pair[0])+'<small>'+pair[1]+'</small></button>';
+      });
+    });
+  });
+  if(anyFacet()) html += '<button class="chip" data-clear="1">清空筛选 ×</button>';
+  if(slim) html += '<button class="chip" data-allchips="1">更多筛选 ▾</button>';
+  else if(state.tokens.length) html += '<button class="chip" data-allchips="1">收起筛选 ▴</button>';
+  el.innerHTML = html;
+}
+function restoreOpen(){
+  var out = document.getElementById("out");
+  Object.keys(state.open).forEach(function(id){
+    if(!state.open[id]) return;
+    var p = id.split(":");
+    var row = out.querySelector('.row[data-k="'+p[0]+'"][data-i="'+p[1]+'"]');
+    if(!row) return;
+    var div = document.createElement("div");
+    div.className = "detail"; div.id = "d-"+id;
+    div.innerHTML = DETAIL[p[0]](SETS[p[0]].rows[+p[1]]);
+    row.parentNode.insertBefore(div, row.nextSibling);
+  });
+}
+function restoreOpenOne(id, row){
+  var p = id.split(":");
+  var div = document.createElement("div");
+  div.className="detail"; div.id="d-"+id;
+  div.innerHTML = DETAIL[p[0]](SETS[p[0]].rows[+p[1]]);
+  row.parentNode.insertBefore(div, row.nextSibling);
+}
+
+/* ---------- 交互 ---------- */
+function scrollToQuery(){
+  var el = document.getElementById("kbq");
+  if(!el) return;
+  var y = el.getBoundingClientRect().top + window.pageYOffset - 66;
+  window.scrollTo(0, Math.max(0, y));
+}
+function applyGoto(scope, q, exact){
+  state.scope = scope;
+  state.q = q || "";
+  state.tokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  exactKey = exact || "";
+  document.getElementById("q").value = state.q;
+  state.facets = {}; state.shown = {}; state.open = {};
+  render();
+}
+function resetAll(){
+  state.allChips = false;
+  applyGoto("all", "", "");
+  try { history.replaceState(null, "", location.pathname); } catch(err){}
+  scrollToQuery();
+}
+var t=null;
+function onInput(){
+  var v = document.getElementById("q").value;
+  clearTimeout(t);
+  t = setTimeout(function(){
+    state.q = v.trim();
+    state.tokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    exactKey = "";
+    state.shown = {};
+    state.open = {};
+    render();
+  }, 140);
+}
+document.getElementById("q").addEventListener("input", onInput);
+document.getElementById("q").addEventListener("search", onInput);
+document.getElementById("go").addEventListener("click", function(){
+  state.q = document.getElementById("q").value.trim();
+  state.tokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  exactKey = "";
+  render();
+});
+document.getElementById("q").addEventListener("keydown", function(e){
+  if(e.key==="Enter"){ e.preventDefault(); }
+});
+document.getElementById("tabs").addEventListener("click", function(e){
+  var b = e.target.closest("[data-scope]"); if(!b) return;
+  state.scope = b.getAttribute("data-scope"); state.shown={}; state.open={};
+  exactKey = "";
+  render();
+  scrollToQuery();
+});
+document.getElementById("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip"); if(!b) return;
+  if(b.getAttribute("data-clear")){ state.facets={}; render(); return; }
+  if(b.getAttribute("data-allchips")){ state.allChips = !state.allChips; renderChips(); return; }
+  var k=b.getAttribute("data-fset"), f=b.getAttribute("data-fk"), v=b.getAttribute("data-fv");
+  var arr = state.facets[k]||(state.facets[k]={});
+  var cur = arr[f]||(arr[f]=[]);
+  var i = cur.indexOf(v);
+  if(i>=0) cur.splice(i,1); else cur.push(v);
+  state.shown={}; state.open={}; render();
+});
+/* 跨库按钮、快捷入口、常用词统一走页面级委托，qquick 与 #out 共用一套逻辑 */
+document.addEventListener("click", function(e){
+  var go = e.target.closest("[data-goto]");
+  if(go){
+    if(go.tagName === "A") e.preventDefault();
+    applyGoto(go.getAttribute("data-goto"), go.getAttribute("data-q")||"", go.getAttribute("data-exact")||"");
+    scrollToQuery();
+    return;
+  }
+  if(e.target.closest("[data-reset]")){ resetAll(); return; }
+  if(e.target.closest("[data-loose]")){ exactKey = ""; render(); return; }
+});
+document.getElementById("out").addEventListener("click", function(e){
+  var chip = e.target.closest("#out .chip");
+  if(chip){
+    var fk = chip.getAttribute("data-fk"), fv = chip.getAttribute("data-fv");
+    var fs = chip.getAttribute("data-fset");
+    var arr = state.facets[fs]||(state.facets[fs]={});
+    var cur = arr[fk]||(arr[fk]=[]);
+    var idx = cur.indexOf(fv);
+    if(idx>=0) cur.splice(idx,1); else cur.push(fv);
+    state.scope = "models"; state.shown={}; state.open={};
+    render(); return;
+  }
+  var more = e.target.closest("[data-more]");
+  if(more){
+    var k = more.getAttribute("data-more");
+    state.shown[k] = (state.shown[k]||PAGE) + PAGE*2;
+    render(); return;
+  }
+  var head = e.target.closest(".ghead");
+  if(head && state.scope==="all" && head.getAttribute("data-scope")){
+    state.scope = head.getAttribute("data-scope"); state.shown={}; state.open={};
+    render(); return;
+  }
+  var row = e.target.closest(".row"); if(!row) return;
+  if(e.target.closest("a")) return;
+  var rk=row.getAttribute("data-k"), i=row.getAttribute("data-i"), id=rk+":"+i;
+  var ex = document.getElementById("d-"+id);
+  if(ex){ ex.parentNode.removeChild(ex); state.open[id]=false; }
+  else { state.open[id]=true; restoreOpenOne(id, row); }
+});
+document.addEventListener("keydown", function(e){
+  if(e.key==="/" && document.activeElement!==document.getElementById("q") && !/input|textarea/i.test(document.activeElement.tagName)){
+    e.preventDefault(); document.getElementById("q").focus();
+  }
+});
+
+/* ---------- URL 参数：兼容全站旧链接 ?scope=xxx&q=xxx ---------- */
+var params = new URLSearchParams(location.search);
+var hasParams = false;
+if(params.get("scope") && SETS[params.get("scope")]){ state.scope = params.get("scope"); hasParams = true; }
+if(params.get("q")){
+  state.q = params.get("q");
+  state.tokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  document.getElementById("q").value = params.get("q");
+  hasParams = true;
+}
+if(!SETS.models.rows && !SETS.records.rows && !SETS.stds.rows && !SETS.cases.rows){
+  document.getElementById("out").innerHTML =
+    '<div class="empty"><b>还没有数据文件</b>先运行 <code>python knowledge/tools/build_kb_data.py</code> 生成 knowledge/query/data/ 下的四个 .js</div>';
+  renderTabs();
+} else {
+  render();
+}
+if(hasParams){
+  scrollToQuery();
+  if(window.innerWidth > 900) document.getElementById("q").focus();
+}
+})();
+</script>
+<script>
+(function () {
+    document.querySelectorAll('.kb-links a').forEach(function (a) {
+        a.addEventListener('click', function (e) { e.stopPropagation(); });
+    });
+})();
+</script>
+</body>
+</html>

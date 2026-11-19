@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>电动工具企业 · 知识库门户</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="hero masthead">
+    <div class="eyebrow">COMPETITOR BRANDS · 21 COMPANIES</div>
+    <h1 class="big">电动工具企业</h1>
+    <p class="lead">按归属公司组织（东成集团单列 + 国内 10 家 + 国外 10 家）。点击标签筛选，卡片显示品牌 logo、中英文名称、官网与简介。</p>
+    <div class="hero-chips">
+      <span class="chip" id="chip-total">30 个品牌</span>
+      <span class="chip">21 家公司</span>
+      <span class="chip">官网 / 官方商城直链</span>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div class="grid" id="grid"></div>
+  <footer>工程部数字化 · 知识库门户 ｜ 数据来源：品牌分类.json + 各品牌官网探测</footer>
+</div>
+<script src="assets/data/brands.js"></script>
+<script>
+  var TYPE_LABEL = { "东成系": "东成系", "国内": "国内", "国外": "国外" };
+  var TYPE_CLASS = { "东成系": "tag-dongcheng", "国内": "tag-domestic", "国外": "tag-overseas" };
+  var order = ["全部", "东成系", "国内", "国外"];
+  function esc(s) { return String(s || "").replace(/"/g, "&quot;"); }
+  function render(tab) {
+    var grid = document.getElementById("grid");
+    var list = window.BRANDS.filter(function (b) { return tab === "全部" || b.type === tab; });
+    grid.innerHTML = list.map(function (b) {
+      var logo = b.logo
+        ? '<img class="brand-logo" src="' + b.logo + '" alt="' + esc(b.brand) + '" onerror="this.style.display=\'none\';this.parentNode.classList.add(\'no-img\')">'
+        : '';
+      var fallback = '<span class="logo-fallback">' + esc(b.brand_en || b.brand).charAt(0) + '</span>';
+      var w = b.website ? '<a class="btn" href="' + b.website + '" target="_blank" rel="noopener">官网</a>' : '';
+      var m = b.mall ? ' <a class="btn ghost" href="' + b.mall + '" target="_blank" rel="noopener">商城</a>' : '';
+      return '<div class="card brand-card">' +
+        '<div class="card-top"><div class="logo-box">' + logo + fallback + '</div>' +
+        '<div class="brand-id"><h3>' + esc(b.brand) + '</h3>' +
+        '<div class="brand-en">' + esc(b.brand_en) + '</div></div></div>' +
+        '<div class="sub">' + esc(b.company) + ' · ' + esc(b.group) + '</div>' +
+        '<span class="tag ' + TYPE_CLASS[b.type] + '">' + TYPE_LABEL[b.type] + '</span>' +
+        '<p>' + esc(b.intro) + '</p>' +
+        '<div class="card-foot"><span class="count">' + b.count + ' 型号</span><span>' + w + m + '</span></div>' +
+        '</div>';
+    }).join("");
+  }
+  document.getElementById('chip-total').textContent = window.BRANDS.length + ' 个品牌';
+  var tabs = document.getElementById("tabs");
+  tabs.innerHTML = order.map(function (t) { return '<button data-t="' + t + '">' + t + '</button>'; }).join("");
+  tabs.querySelectorAll("button").forEach(function (btn) {
+    btn.onclick = function () {
+      tabs.querySelectorAll("button").forEach(function (x) { x.classList.remove("active"); });
+      btn.classList.add("active"); render(btn.dataset.t);
+    };
+  });
+  tabs.querySelector("button").classList.add("active");
+  render("全部");
+</script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>

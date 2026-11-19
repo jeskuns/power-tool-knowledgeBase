@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>电动工具测试方法与用例库 · 查询</title>
+<style>
+:root{--ink:#132029;--ink2:#4a5c68;--line:#d7dfe4;--bg:#f4f6f8;--card:#fff;--p:#1f4e5f;--pd:#143643;--g:#a8712a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+a{color:var(--p);text-decoration:none}.top{background:var(--p);color:#fff;padding:10px 14px;display:flex;gap:14px;flex-wrap:wrap}
+.top b{font-size:17px}.top a{color:#cfe3ea}
+.searchwrap{position:sticky;top:0;z-index:20;background:var(--pd);padding:10px 14px 12px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.sbox{display:flex;gap:8px}.sbox input{flex:1;min-width:0;font-size:18px;padding:12px 14px;border:2px solid #fff;border-radius:10px;outline:none}
+.sbox button{border:0;border-radius:10px;background:var(--g);color:#fff;font-size:16px;padding:0 18px;cursor:pointer}
+.tabs{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.tab{border:1px solid rgba(255,255,255,.5);color:#e7f0f4;background:transparent;border-radius:999px;padding:6px 13px;font-size:14px;cursor:pointer}
+.tab[aria-selected="true"]{background:#fff;color:var(--pd);border-color:#fff;font-weight:600}.tab small{opacity:.7;margin-left:4px}
+.hint{color:#cfe3ea;font-size:13px;margin-top:8px}.chips{display:flex;gap:6px;flex-wrap:wrap;padding:10px 14px 0}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink2);cursor:pointer}
+.chip.on{background:var(--p);color:#fff;border-color:var(--p)}
+main{padding:12px 14px 40px;max-width:1180px;margin:0 auto}
+.group{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.ghead{padding:10px 14px;cursor:pointer;background:#eef3f6;border-bottom:1px solid var(--line)}
+.ghead .l1{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.ghead .key{font-weight:700;color:var(--pd);word-break:break-all}
+.ghead .more{margin-left:auto;color:var(--g);font-size:13px}.detail{display:none;padding:10px 14px;font-size:14px;background:#f7fafb;border-top:1px dashed var(--line)}
+.group.open .detail{display:block}.detail p{margin:5px 0}.detail b{color:var(--pd)}
+.badge{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;background:#e7eef2;color:var(--pd);border:1px solid #cfdde4;white-space:nowrap}
+.empty{padding:40px 14px;text-align:center;color:var(--ink2)}footer{padding:0 14px 30px;color:var(--ink2);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="top"><b>电动工具测试方法与用例库</b><a href="解决方案.html">3883 测试方案 →</a><a href="../index.html">返回知识库门户</a><a href="查询知识库/电动工具测试方法与用例查询知识库.md">单文件 md</a></div>
+<div class="searchwrap">
+  <div class="sbox"><input id="q" placeholder="搜索用例编号 / 名称 / 标准 / 产品 / 步骤…"><button id="btn">搜索</button></div>
+  <div class="tabs" id="tabs"></div><div class="hint" id="hint"></div>
+</div>
+<div class="chips" id="chips"></div><main id="list"></main>
+<footer>字段严格对齐 test_method_case（21 项）；编制人/审核人/生效日期/env_condition 等待回填，见 README。</footer>
+<script src="查询数据/methods.js"></script>
+<script>
+(function(){
+  var D=window.KB.methods;
+  var sets=[{k:'cases',label:'SQL用例',rows:D.cases},{k:'outlines',label:'大纲项',rows:D.outlines},
+            {k:'docs',label:'大纲文档',rows:D.docs},{k:'specs',label:'企标方法',rows:D.specs}];
+  var st={tab:'cases',q:'',chip:''};
+  function esc(v){return String(v==null?'':v).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function chipval(r){if(st.tab==='cases')return r.test_type||'—';if(st.tab==='outlines')return r.testType||'—';return r.category||r.prefix||'—'}
+  function rowtext(r){
+    if(st.tab==='cases')return [r.case_code,r.case_name,r.product_category,r.tool_type,r.test_type,r.applicable_std,r.test_purpose,r.test_equipment,r.test_steps,r.judge_rule].join(' ');
+    if(st.tab==='outlines')return [r.id,r.methodCode,r.product,r.testType,r.itemType,r.desc].join(' ');
+    return [r.code,r.name,r.category,r.summary,r.source].join(' ');
+  }
+  function detail(r){
+    if(st.tab==='cases')return '<p><b>产品/类型：</b>'+esc(r.product_category)+' · '+esc(r.tool_type)+' · '+esc(r.test_type)+'</p>'+
+      '<p><b>适用标准：</b>'+esc(r.applicable_std)+'（版本 '+esc(r.std_version)+'）</p>'+
+      '<p><b>测试目的：</b>'+esc(r.test_purpose)+'</p><p><b>测试设备：</b>'+esc(r.test_equipment)+'</p>'+
+      '<p><b>测试步骤：</b><br>'+esc(r.test_steps).replace(/\n/g,'<br>')+'</p>'+
+      '<p><b>判定规则：</b>'+esc(r.judge_rule)+'</p><p><b>环境条件：</b>'+esc(r.env_condition||'待回填')+'　<b>样品要求：</b>'+esc(r.sample_require||'待回填')+'</p>'+
+      '<p><b>SQL 字段状态：</b>'+esc(r.case_code)+' · 编制人/审核人/生效日期待回填</p>';
+    if(st.tab==='outlines')return '<p><b>方法编号：</b>'+esc(r.methodCode)+'　<b>测试类型：</b>'+esc(r.testType)+'</p><p>'+esc(r.desc)+'</p><p>步骤与判定未结构化，回看大纲 PDF/TIF。</p>';
+    return '<p><b>编号：</b>'+esc(r.code)+'　<b>分类：</b>'+esc(r.category)+'　<b>页数：</b>'+esc(r.pages)+'</p><p>'+esc(r.summary||r.source||'')+'</p>';
+  }
+  function render(){
+    var s=sets.filter(function(x){return x.k===st.tab})[0];
+    document.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-selected',t.dataset.k===st.tab?'true':'false')});
+    var m={};s.rows.forEach(function(r){var v=chipval(r);m[v]=(m[v]||0)+1});
+    var box=document.getElementById('chips');box.innerHTML='';
+    [''].concat(Object.keys(m).sort(function(a,b){return m[b]-m[a]})).forEach(function(v){
+      var el=document.createElement('span');el.className='chip'+(st.chip===v?' on':'');el.textContent=v?v+' ('+m[v]+')':'全部';
+      el.onclick=function(){st.chip=v;render()};box.appendChild(el);
+    });
+    var rows=s.rows.filter(function(r){return (!st.chip||chipval(r)===st.chip)&&(!st.q||rowtext(r).toLowerCase().indexOf(st.q.toLowerCase())>=0)});
+    document.getElementById('hint').textContent='当前：'+s.label+'　命中 '+rows.length+' / '+s.rows.length+' 条（点击展开详情）';
+    var list=document.getElementById('list');list.innerHTML='';
+    if(!rows.length){list.innerHTML='<div class="empty">没有匹配的记录</div>';return}
+    rows.slice(0,500).forEach(function(r){
+      var g=document.createElement('div');g.className='group';var h=document.createElement('div');h.className='ghead';
+      var key=st.tab==='cases'?(r.case_code+' · '+r.case_name):st.tab==='outlines'?((r.methodCode||r.id)+' · '+(r.product||'')):((r.code||'')+' · '+(r.name||''));
+      h.innerHTML='<div class="l1"><span class="key">'+esc(key)+'</span><span class="badge">'+esc(chipval(r))+'</span><span class="more">展开 ▾</span></div>';
+      var d=document.createElement('div');d.className='detail';d.innerHTML=detail(r);
+      h.onclick=function(){g.classList.toggle('open');h.querySelector('.more').textContent=g.classList.contains('open')?'收起 ▴':'展开 ▾'};
+      g.appendChild(h);g.appendChild(d);list.appendChild(g);
+    });
+  }
+  var tabs=document.getElementById('tabs');
+  sets.forEach(function(s){var b=document.createElement('button');b.className='tab';b.dataset.k=s.k;b.innerHTML=s.label+'<small>'+s.rows.length+'</small>';b.onclick=function(){st.tab=s.k;st.chip='';render()};tabs.appendChild(b)});
+  document.getElementById('btn').onclick=function(){st.q=document.getElementById('q').value.trim();render()};
+  document.getElementById('q').onkeydown=function(e){if(e.key==='Enter')document.getElementById('btn').click()};
+  render();
+})();
+</script></body></html>

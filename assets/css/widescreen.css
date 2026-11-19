@@ -1,0 +1,491 @@
+/* ===== 质量中心工程部知识库 - 宽屏适配全局样式 v3.0 ===== */
+/* 本文件为所有页面提供宽屏（1920px+）和超宽屏（2560px+）适配 */
+/* 同时包含窄屏（768px-）覆盖 */
+
+/* ===== 子页面内容宽度增强 ===== */
+/* 覆盖各子页面 body 内联的 max-width（1000px/1200px），使宽屏下更舒适 */
+/* 通过 .back-link / .content-box 区分子页面，避免影响首页全宽布局 */
+body:has(.content-box),
+body:has(.back-link) {
+    max-width: 1400px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+}
+
+@media (min-width: 1920px) {
+    body:has(.content-box),
+    body:has(.back-link) {
+        max-width: 1500px !important;
+    }
+}
+
+/* ===== 全局边框增强样式 ===== */
+/* 为子页面的内容卡片增加明显的边框 */
+.content-box {
+    border: 2px solid #c8d1dc !important;
+    box-shadow: 0 4px 16px rgba(31,78,95,.08) !important;
+}
+
+/* 为分类卡片增加边框 */
+.category-box,
+.category-card {
+    border: 2px solid #c8d1dc !important;
+}
+
+/* 为章节卡片/区块卡片增加边框 */
+.section-card,
+.section-box {
+    border: 2px solid #c8d1dc !important;
+}
+
+/* 为测试卡片增加边框 */
+.test-card,
+.test-item {
+    border: 2px solid #c8d1dc !important;
+}
+
+/* 为统计卡片增加边框 */
+.stat-card,
+.year-card,
+.month-card {
+    border: 2px solid #c8d1dc !important;
+}
+
+/* 为政策卡片/策略卡片增加边框 */
+.policy-card,
+.strategy-card {
+    border: 2px solid #c8d1dc !important;
+}
+
+/* 为选项卡/筛选卡片增加边框 */
+.month-card,
+.filter-btn {
+    border: 1.5px solid #c8d1dc !important;
+}
+
+/* 为下载按钮增加边框 */
+.download-btn {
+    border: 1.5px solid #c8d1dc !important;
+}
+
+/* 为表格区域增加边框 */
+.table-box {
+    border: 2px solid #c8d1dc !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 为搜索框增加边框 */
+.search-box {
+    border: 1.5px solid #c8d1dc !important;
+}
+
+/* 为标签/tag增加边框 */
+.tag,
+.standard-tag {
+    border: 1px solid #c8d1dc !important;
+}
+
+/* ===== 窄屏覆盖：取消宽屏的大 padding ===== */
+@media (max-width: 768px) {
+    .container,
+    .header-inner,
+    .main-container,
+    .content-wrapper,
+    .page-container,
+    .section-inner {
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .site-header .container,
+    .site-header > div,
+    header .container,
+    header > div[style*="max-width"] {
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .content-area,
+    .main-content,
+    .page-content,
+    .body-content {
+        max-width: 100% !important;
+    }
+
+    /* 内容型页面正文区域在窄屏下全宽 */
+    .content-section:not(.academy-overview) .container,
+    .content-section:not(.academy-overview) .content-wrapper,
+    .content-section:not(.academy-overview) .page-content,
+    .content-section:not(.academy-overview) .main-content {
+        max-width: 100% !important;
+    }
+
+    /* 小屏下导航链接允许折行 */
+    .nav-link,
+    .nav-list a,
+    .header-nav a,
+    .main-nav a,
+    .site-nav a,
+    .nav-links a {
+        white-space: normal !important;
+        word-break: break-all;
+    }
+}
+
+/* 核心容器宽度：保持内容可读性，避免过宽 */
+.container,
+.header-inner,
+.main-container,
+.content-wrapper,
+.page-container,
+.section-inner,
+.topbar-inner {
+    max-width: 1400px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+/* 各学院 header 内宽 */
+.site-header .container,
+.site-header > div,
+header .container,
+header > div[style*="max-width"] {
+    max-width: 1400px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+/* 内容区宽度 */
+.content-area,
+.main-content,
+.page-content,
+.body-content {
+    max-width: 1400px !important;
+}
+
+/* ===== 超宽屏 1920px+ 优化 ===== */
+@media (min-width: 1920px) {
+    .container,
+    .header-inner,
+    .main-container,
+    .content-wrapper,
+    .page-container,
+    .section-inner,
+    .content-area,
+    .main-content,
+    .page-content {
+        max-width: 1500px !important;
+    }
+
+    /* 卡片网格在超宽屏下保持合理列数 */
+    .card-grid,
+    .modules-grid,
+    .tools-grid,
+    .course-grid,
+    .knowledge-grid,
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    }
+
+    /* Hero区域边距 */
+    .hero,
+    .hero-section,
+    .banner {
+        padding-left: calc((100vw - 1500px) / 2) !important;
+        padding-right: calc((100vw - 1500px) / 2) !important;
+    }
+
+    /* 统计数字在宽屏下保持合理宽度 */
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    }
+}
+
+/* ===== 4K 超宽屏 2560px+ 优化 ===== */
+@media (min-width: 2560px) {
+    .container,
+    .header-inner,
+    .main-container,
+    .content-wrapper,
+    .page-container,
+    .section-inner,
+    .content-area,
+    .main-content,
+    .page-content {
+        max-width: 1600px !important;
+    }
+
+    .card-grid,
+    .modules-grid,
+    .tools-grid,
+    .course-grid,
+    .knowledge-grid,
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.5rem !important; }
+
+    .hero,
+    .hero-section,
+    .banner {
+        padding-left: calc((100vw - 1600px) / 2) !important;
+        padding-right: calc((100vw - 1600px) / 2) !important;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    }
+}
+
+/* ===== 通用宽屏优化 ===== */
+
+/* 表格在宽屏下自动扩展 */
+table {
+    width: 100%;
+}
+
+/* 两栏布局在宽屏下合理分配 */
+.two-column,
+.sidebar-layout,
+.split-layout {
+    gap: 40px;
+}
+
+@media (min-width: 1920px) {
+    .two-column,
+    .sidebar-layout,
+    .split-layout {
+        gap: 60px;
+    }
+}
+
+/* 导航栏链接间距优化 */
+@media (min-width: 1600px) {
+    .main-nav a,
+    .nav-links a,
+    .site-nav a {
+        padding: 0 18px;
+    }
+}
+
+/* 底部页脚宽屏优化 */
+.site-footer,
+footer {
+    max-width: 100%;
+}
+
+.footer-inner,
+.footer-content,
+.footer-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1920px) {
+    .footer-inner,
+    .footer-content,
+    .footer-grid {
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .footer-inner,
+    .footer-content,
+    .footer-grid {
+        max-width: 1600px;
+    }
+}
+
+/* 确保所有页面在宽屏下居中且有适当边距 */
+@media (min-width: 1600px) {
+    body {
+        padding: 0;
+    }
+
+    /* 留白与内容区上限（--w-page）保持一致，避免与容器 max-width 叠加后更窄 */
+    section:not(.hero):not(.banner):not(.full-width) {
+        padding-left: max(40px, calc((100% - var(--w-page)) / 2));
+        padding-right: max(40px, calc((100% - var(--w-page)) / 2));
+    }
+}
+
+/* ==========================================================================
+   全局修复：导航菜单文字不折行 + 子页面标题居中
+   ========================================================================== */
+
+/* 路径页面 Hero 居中：结构为 .hero > .container > .hero-eyebrow/h2/p */
+.hero:has(> .container > .hero-eyebrow) .hero-eyebrow,
+.hero:has(> .container > .hero-eyebrow) h2,
+.hero:has(> .container > .hero-eyebrow) p {
+    text-align: center !important;
+}
+.hero:has(> .container > .hero-eyebrow) > .container > p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 所有导航链接禁止折行（四字菜单保持一行或两行各二字，不再出现三一拆分） */
+.nav-link,
+.nav-list a,
+.header-nav a,
+.main-nav a,
+.site-nav a,
+.nav-links a {
+    white-space: nowrap !important;
+}
+
+/* 子学院页面 .section-head 标题居中 */
+.section-head,
+.section-header,
+.page-head {
+    text-align: center !important;
+}
+
+/* 子学院页面 Hero 标题居中（通过 hero-eyebrow 直接子元素区分子学院） */
+.hero-inner:has(> .hero-eyebrow) h2 {
+    text-align: center !important;
+    letter-spacing: 3px !important;
+    max-width: 100% !important;
+}
+
+/* 子学院页面 section-head 内 h2/h3 标题居中分散 */
+.section-head h2,
+.section-head h3,
+.section-header h2,
+.section-header h3,
+.page-head h2,
+.page-head h3 {
+    letter-spacing: 2px !important;
+}
+
+/* 子学院页面 Hero 段落下也居中 */
+.hero-inner:has(> .hero-eyebrow) > p {
+    text-align: center !important;
+}
+
+/* 子学院页面 Hero 整体居中（通过 .hero-eyebrow 判断是子学院页面 Hero） */
+.hero-inner:has(> .hero-eyebrow) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* 子学院页面 Hero 描述段落也水平居中 */
+.hero-inner:has(> .hero-eyebrow) > p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 子学院页面 Hero 统计数字居中 */
+.hero-inner:has(> .hero-eyebrow) > .hero-stats,
+.hero-stats:has(> .hero-stat) {
+    justify-content: center !important;
+}
+
+/* 子学院页面 Hero 中 eyebrow 标签也居中 */
+.hero-inner:has(> .hero-eyebrow) .hero-eyebrow {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* 子学院页面 section-sub 副标题居中 */
+.section-sub,
+.section-desc,
+.page-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 导航容器在窄屏时允许折行，但单项不折行 */
+.nav-list,
+.header-nav,
+.site-nav,
+.nav-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+
+/* 下拉菜单内的链接也保持不折行 */
+.dropdown-content a,
+.nav-list .dropdown-content a {
+    white-space: nowrap !important;
+}
+
+/* 内容型页面正文区域限制宽度，保证长文本可读性 */
+/* 仅在子页面（非学院首页）的 content-section 中生效 */
+.content-section:not(.academy-overview) .container,
+.content-section:not(.academy-overview) .content-wrapper,
+.content-section:not(.academy-overview) .page-content,
+.content-section:not(.academy-overview) .main-content {
+    max-width: min(1100px, 100% - 80px) !important;
+}
+
+/* ==========================================================================
+   自适应页面宽度（宽屏 / 超宽屏）
+   --------------------------------------------------------------------------
+   问题：各页面的 body 与主容器都是固定 px 上限（实验室 1100、题库 1200、
+        首页 1280、培训/LIMS 1400），视口变宽时上限不变，于是 1920 / 2560
+        的台式机上内容只占中间一条，两侧大量空白，看起来"很窄"。
+   方案：把上限改为随视口分档提升的变量 --w-page，并用
+        min(上限, 100% - 2×留白) 计算，使内容在任何宽度下都能铺开，
+        同时保留可读性上限。仅 ≥1200px 生效，手机/平板与 App 内不受影响。
+   ========================================================================== */
+:root {
+    --w-page: 1400px;    /* 内容区宽度上限 */
+    --w-gutter: 40px;    /* 内容区左右留白 */
+}
+@media (min-width: 1600px) { :root { --w-page: 1640px; } }
+@media (min-width: 1920px) { :root { --w-page: 1800px; } }
+@media (min-width: 2200px) { :root { --w-page: 2040px; } }
+@media (min-width: 2560px) { :root { --w-page: 2320px; } }
+
+@media (min-width: 1200px) {
+    /* 页面本体：铺满可用宽度（背景/通栏随之铺开），但不超过上限 */
+    html:not(.app-native) body,
+    html:not(.app-native) body:has(.content-box),
+    html:not(.app-native) body:has(.back-link) {
+        width: 100% !important;
+        max-width: min(var(--w-page), 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* 主容器：在页面本体内居中，左右保留留白 */
+    html:not(.app-native) .container,
+    html:not(.app-native) .header-inner,
+    html:not(.app-native) .topbar-inner,
+    html:not(.app-native) .footer-inner,
+    html:not(.app-native) .footer-content,
+    html:not(.app-native) .footer-grid,
+    html:not(.app-native) .main-container,
+    html:not(.app-native) .content-wrapper,
+    html:not(.app-native) .page-container,
+    html:not(.app-native) .section-inner,
+    html:not(.app-native) .content-area,
+    html:not(.app-native) .main-content,
+    html:not(.app-native) .page-content,
+    html:not(.app-native) .body-content,
+    html:not(.app-native) .kpi-container,
+    html:not(.app-native) .wrap,
+    html:not(.app-native) .wrapper {
+        width: 100% !important;
+        max-width: min(var(--w-page), 100% - 2 * var(--w-gutter)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
