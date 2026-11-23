@@ -11,7 +11,7 @@
 UDC 621.882.6
 十字槽凹穴六角头螺栓
 GB 29.2-88
-Cross recessed hexagou bolts with
+Cross recessed hexagon bolts with
 代替GB29—76
 indentation
 1. 主题内容
@@ -169,7 +169,7 @@ GB 29.2-88
 技术条件
 技术条件如表2所示。
 表2
-GB196.GB197
+GB 196、GB 197
 5.8
 机械性能
 GB
@@ -187,7 +187,7 @@ GB
 包装
 GB 90
 5标记
-5.1·标记方法按GB1237规定。
+5.1 标记方法按GB 1237规定。
 5.2标记示例：
 螺纹规格d=M5、公称长度！=20mm、性能等级为5.8级、不经表面处理的十字槽凹穴六角头螺
 栓的标记：

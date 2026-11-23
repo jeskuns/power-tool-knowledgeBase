@@ -197,6 +197,16 @@ mark{background:#ffe9a8;color:#5a3f00;padding:0 1px;border-radius:2px}
 .empty b{display:block;color:var(--text);font-size:17px;margin-bottom:6px}
 .blist{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
 .todo{font-size:12.5px;color:#8a5a12;background:#fbf2e0;border:1px dashed #e6cfa0;border-radius:8px;padding:5px 10px}
+/* 品牌卡片（带 logo）：复用 .chip 的点击委托，只换外观 */
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:8px;margin-top:4px}
+.chip.bcard{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:9px 8px 7px;border-radius:12px;line-height:1.2}
+.chip.bcard:hover{border-color:var(--primary);background:#f4fafb}
+.chip.bcard .blogo{height:30px;display:flex;align-items:center;justify-content:center;width:100%}
+.chip.bcard .blogo img{max-height:30px;max-width:84px;object-fit:contain}
+.chip.bcard .bname{font-size:12px;font-weight:600;color:var(--text);max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chip.bcard small{margin:0;font-size:11px}
+.chip.bcard.on .bname{color:#fff}
+.chip.bcard.on .blogo img{filter:brightness(0) invert(1)}
 
 /* 默认引导态：轻量提示 + 常用词 + 品牌折叠，避免与下方四张库卡片重复 */
 .home{text-align:center;padding:6px 0 10px}
@@ -368,7 +378,7 @@ footer::before{content:"电动工具知识库";display:block;font-size:14px;font
                 </div>
                 <h3>电动工具竞品型号库</h3>
                 <div class="std-name">30 个品牌 · 8790 条型号 · 产品图</div>
-                <p class="desc">按 21 家公司（东成集团 + 国内 10 + 国外 10）组织的 30 个品牌、8790 条型号参数与产品图，8569 条带图；用于选型对比与安规判定前确认。缩略图 5700 张 / 约 30 MB，原图与爬虫原始数据在型号数据 / 图片数据目录。</p>
+                <p class="desc">按 21 家公司（东成集团 + 国内 10 + 国外 10）组织的 30 个品牌、8790 条型号参数与产品图，8606 条带图；用于选型对比与安规判定前确认。缩略图 5700 张 / 约 30 MB，原图与爬虫原始数据在型号数据 / 图片数据目录。</p>
                 <div class="kb-stats">
                     <div class="kb-stat"><b>8790</b><span>条型号</span></div>
                     <div class="kb-stat"><b>30</b><span>个品牌</span></div>
@@ -465,17 +475,17 @@ footer::before{content:"电动工具知识库";display:block;font-size:14px;font
             <div class="panel">
                 <h4>三种打开方式</h4>
                 <ul>
-                    <li><b>公司内网 / 本机</b>：直接双击本页，或跑 <code>python -m http.server 8080</code> 后打开 <code>knowledge/index.html</code>。</li>
+                    <li><b>公司内网 / 本机</b>：直接双击本页，或跑 <code>python -m http.server 8080</code> 后打开 <code>知识库/index.html</code>。</li>
                     <li><b>手机</b>：把整个 <code>知识库</code> 文件夹拷进手机，用浏览器打开本页；只想要一个库时，单个 HTML 文件（如 <code>安规标准知识库.html</code>）就能独立打开。</li>
-                    <li><b>APK</b>：打包 App 时把六个库一起同步进 webDir；不想要体积就先把 <code>knowledge/电动工具测试标准与认证知识库/全文</code> 排除。</li>
+                    <li><b>APK</b>：打包 App 时把六个库一起同步进 webDir；不想要体积就先把 <code>知识库/电动工具测试标准与认证知识库/查询知识库/标准全文</code> 排除。</li>
                 </ul>
             </div>
             <div class="panel warn">
                 <h4>内容从哪来，怎么更新</h4>
                 <ul>
-                    <li>这里是<b>源文件目录</b>（<code>Documents\lifeOS\数字化\实验室管理\知识库\</code>），六个库与主页在此维护；<code>company\gongchengbu\knowledge\</code> 是同步到实验室管理的备份。</li>
+                    <li>这里是<b>源文件目录</b>（<code>Documents\lifeOS\数字化\实验室管理\知识库\</code>），六个库与主页在此维护；<code>company\gongchengbu\knowledge\</code> 是同步到实验室管理项目的备份。</li>
                     <li>更新源数据后：跑 <code>python _脚本/build_query_kb_all.py</code> 刷新六库单文件 md；实验室管理备份用 robocopy 从本目录增量同步。</li>
-                    <li>查询数据由 <code>python knowledge/tools/build_kb_data.py</code> 生成到 <code>knowledge/query/data/</code>；标准卡片由 <code>电动工具测试标准与认证知识库/_脚本/kb_html.py</code> 从 <code>卡片/*.md</code> 生成。</li>
+                    <li>本页查询数据 <code>query/data/*.js</code>（型号 / 记录 / 标准 / 案例）来自工程部知识库导出；方法 / 设备两库用各自 <code>查询.html</code>；标准卡片由 <code>电动工具测试标准与认证知识库/_脚本/kb_html.py</code> 从 <code>01_卡片/*.md</code> 生成。</li>
                 </ul>
             </div>
         </div>
@@ -490,6 +500,7 @@ footer::before{content:"电动工具知识库";display:block;font-size:14px;font
 <script src="query/data/records.js"></script>
 <script src="query/data/standards.js"></script>
 <script src="query/data/cases.js"></script>
+<script src="assets/data/brands.js"></script>
 <script>
 (function(){
 "use strict";
@@ -791,26 +802,37 @@ function anyFacet(){
 function scopeKeys(){
   return state.scope==="all" ? ["models","records","stds","cases"] : [state.scope];
 }
+function brandLogoMap(){
+  var m = {};
+  (window.BRANDS||[]).forEach(function(x){ if(x && x.brand && x.logo) m[x.brand] = x.logo; });
+  return m;
+}
 function brandPanel(){
   var d = SETS.models.data; if(!d || !d.brands) return "";
   var cov = d.coverage || {};
+  var logos = brandLogoMap();
   var groups = {国内:[], 国外:[]};
   d.brands.forEach(function(b){ (groups[b.type]||(groups[b.type]=[])).push(b); });
   var html = '<section class="group"><div class="ghead"><h2>品牌覆盖</h2>'+
     '<span class="cnt">国内 '+(cov["国内"]||0)+' 个 · 国外 '+(cov["国外"]||0)+' 个 · 型号 '+d.rows.length+' 条</span></div>'+
     '<div style="padding:12px 14px">';
   ["国内","国外"].forEach(function(t){
-    html += '<div style="margin-bottom:10px"><div style="font-weight:700;color:#143643;font-size:14px;margin-bottom:6px">'+t+'品牌</div><div class="blist">';
+    html += '<div style="margin-bottom:12px"><div style="font-weight:700;color:#143643;font-size:14px;margin-bottom:8px">'+t+'品牌</div><div class="bgrid">';
     groups[t].forEach(function(b){
-      html += '<button class="chip" data-fk="b" data-fset="models" data-fv="'+esc(b.name)+'">'+
-        esc(b.name)+'<small>'+b.count+'</small></button>';
+      var lg = logos[b.name] || "";
+      var pic = lg
+        ? '<img src="'+esc(lg)+'" alt="'+esc(b.name)+'" loading="lazy" onerror="this.remove()">'
+        : '<b style="font-size:14px;color:var(--primary-dark)">'+esc(String(b.name||"").slice(0,1))+'</b>';
+      html += '<button class="chip bcard" data-fk="b" data-fset="models" data-fv="'+esc(b.name)+'" title="'+esc(b.name)+' · '+b.count+' 条型号">'+
+        '<span class="blogo">'+pic+'</span>'+
+        '<span class="bname">'+esc(b.name)+'</span><small>'+b.count+'</small></button>';
     });
     if(t==="国外" && cov["待补国外"] && cov["待补国外"].length){
       html += '<span class="todo">待补：'+esc(cov["待补国外"].join("、"))+'</span>';
     }
     html += '</div></div>';
   });
-  html += '<p style="font-size:13px;color:#4a5c68;margin:6px 0 0">点品牌名直接筛出该品牌全部型号。国外还差 3 个品牌才算满 10 个，源数据里没抓过，需要时再补爬。</p>';
+  html += '<p style="font-size:13px;color:#4a5c68;margin:6px 0 0">点品牌卡片直接筛出该品牌全部型号。Logo 取自各品牌官网，30 个品牌全部收录。</p>';
   return html + '</div></section>';
 }
 /* 默认引导态：轻量提示，四个库的入口在下方卡片区，不再重复铺四张卡 */
@@ -1068,7 +1090,7 @@ if(params.get("q")){
 }
 if(!SETS.models.rows && !SETS.records.rows && !SETS.stds.rows && !SETS.cases.rows){
   document.getElementById("out").innerHTML =
-    '<div class="empty"><b>还没有数据文件</b>先运行 <code>python knowledge/tools/build_kb_data.py</code> 生成 knowledge/query/data/ 下的四个 .js</div>';
+    '<div class="empty"><b>还没有数据文件</b>请确认 <code>query/data/</code> 下的 models.js / records.js / standards.js / cases.js 四个文件与本站同目录</div>';
   renderTabs();
 } else {
   render();

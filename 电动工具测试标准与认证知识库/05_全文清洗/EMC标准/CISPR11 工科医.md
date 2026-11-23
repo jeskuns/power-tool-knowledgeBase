@@ -737,8 +737,8 @@ Quasi-peak
 Average
 dB(μV)
 dB(μV)
-0,15 – 0,50 
-0,50 – 5 
+0,15 – 0,50
+0,50 – 5
 At the transition frequency, the more stringent limit shall apply.
 NOTE 1 Limits only apply to low voltage a.c. mains input ports.
 Frequency range
@@ -748,8 +748,8 @@ dB(μV)
 Decreasing linearly with logarithm
 0,15 – 0,50
 of frequency to
-0,50 – 5 
-5 – 30 
+0,50 – 5
+5 – 30
 At the transition frequency, the more stringent limit shall apply.
 6.2.2 
 Limits of electromagnetic radiation disturbance
@@ -765,7 +765,7 @@ Quasi-peak
 Average
 dB(μV)
 dB(μV)
-5 – 30 
+5 – 30
 decreasing linearly with logarithm
 of frequency to
 NOTE 2 For class A equipment intended to be connected solely to isolated neutral or high impedance earthed 
@@ -896,9 +896,9 @@ Quasi-peak
 Average
 dB(μV)
 dB(μV)
-0,15 – 0,50 
-0,50 – 5 
-5 – 30 
+0,15 – 0,50
+0,50 – 5
+5 – 30
 decreasing linearly with logarithm of
 At the transition frequency, the more stringent limit shall apply.
 NOTE 1 Limits only apply to Low Voltage (LV) a.c. mains input ports.
@@ -925,8 +925,8 @@ dB(μV)
 Decreasing linearly with logarithm
 0,15 – 0,50
 of frequency to
-0,50 – 5 
-5 – 30 
+0,50 – 5
+5 – 30
 At the transition frequency, the more stringent limit shall apply.
 Rated input power of
 Quasi-peak
@@ -948,7 +948,7 @@ Quasi-peak
 Average
 dB(μV)
 dB(μV)
-0,009 – 0,050 
+0,009 – 0,050
 – 
 –
 Decreasing linearly
@@ -963,8 +963,8 @@ with logarithm of
 0,148 5 – 0,5
 frequency to
 frequency to
-0,5 – 5 
-5 – 30 
+0,5 – 5
+5 – 30
 At the transition frequency, the more stringent limit shall apply.
 6.3.2 
 Limits of electromagnetic radiation disturbance
@@ -3323,7 +3323,7 @@ Sans restriction
 a La résolution n°63 du Règlement des Radiocommunications de l'UIT s’applique.
 b L'expression «sans restrictions» s'applique aux fréquences fondamentales et à toutes les autres
 composantes de fréquences comprises dans la bande désignée. En dehors des bandes de fréquences ISM 
-désignées par l’UIT, les limites de tensions perturbatrices et de perturbations rayonnées de la présente 
+désignées par l’UIT, les limites de tensions perturbatrices et de perturbations rayonnées de la présente
 norme s’appliquent.
 5 Classification des appareils ISM
 5.1 
@@ -3381,7 +3381,7 @@ La limite inférieure doit être appliquée à toutes les fréquences de transit
 <!-- 第 67 页 -->
 CISPR 11 © CEI:2009 
 Les limites et les exigences de mesure de la présente norme ne s'appliquent pas aux 
-composants et aux sous-ensembles qui ne sont pas prévus pour réaliser une fonction ISM par 
+composants et aux sous-ensembles qui ne sont pas prévus pour réaliser une fonction ISM par
 eux-mêmes.
 Les appareils et les méthodes de mesure sont spécifiés aux Articles 7, 8 et 9.
 6.2 
@@ -3418,9 +3418,9 @@ dB(μV)
 0,15 – 0,50 
 0,50 – 5 
 A la fréquence de transition, la limite la plus contraignante doit être appliquée.
-alimentés par un transformateur ou un générateur de puissance dédié, et qui ne sont pas reliés aux lignes 
-aériennes à basse tension (BT). Pour les appareils qui ne sont pas destinés à être alimentés par un 
-transformateur de puissance spécifique à l'utilisateur, les limites pour une puissance d’entrée assignée 
+alimentés par un transformateur ou un générateur de puissance dédié, et qui ne sont pas reliés aux lignes
+aériennes à basse tension (BT). Pour les appareils qui ne sont pas destinés à être alimentés par un
+transformateur de puissance spécifique à l'utilisateur, les limites pour une puissance d’entrée assignée
 ≤ 20 kVA s’appliquent. Le fabricant et/ou le fournisseur doivent fournir des informations sur les mesures 
 d’installation qui peuvent être utilisées pour réduire les émissions provenant de l’appareil installé. En 
 particulier, il doit être indiqué que cet appareil est destiné à être alimenté par un transformateur ou un 
@@ -3429,7 +3429,7 @@ Gamme de fréquences
 Quasi-crête
 MHz
 dB(μV)
-Décroissant linéairement avec le 
+décroissant linéairement avec le
 logarithme de la fréquence jusqu’à
 0,15 – 0,50
 0,50 – 5 
@@ -3467,7 +3467,7 @@ dB(μV)
 Décroissant linéairement avec le 
 logarithme de la fréquence jusqu'à
 Pour les générateurs de rayons X utilisés pour le diagnostic et fonctionnant de façon 
-intermittente, les limites de quasi-crête du Tableau 2 ou du Tableau 3 peuvent être relâchées 
+intermittente, les limites de quasi-crête du Tableau 2 ou du Tableau 3 peuvent être relâchées
 de 20 dB.
 Les appareils en essai doivent respecter les limites de quasi-crête quand on utilise un 
 détecteur de quasi-crête.
@@ -3522,7 +3522,7 @@ puissance d'entrée assignée est ≤ 20 kVA doivent s'appliquer.
 <!-- 第 70 页 -->
 CISPR 11 © CEI:2009
 Tableau 5 – Limites du rayonnement électromagnétique perturbateur pour les appareils
-du groupe 1, classe B mesurés sur un emplacement d’essai
+du groupe 1, classe B mesurés sur un site d’essai
 Distance de mesure de 10  m 
 Gamme de 
 fréquences
@@ -3531,8 +3531,8 @@ MHz
 dB(μV/m)
 30 – 230 
 230 – 1 000 
-Sur un site d’essai, la mesure sur des appareils de classe B peut être réalisée à 3 m ou à 
-10  m. Un facteur inversement proportionnel de 20 dB par décade doit être utilisé pour 
+Sur un site d’essai, la mesure sur des appareils de classe B peut être réalisée à 3 m ou à
+10 m. Un facteur inversement proportionnel de 20 dB par décade doit être utilisé pour
 normaliser les données mesurées à la distance spécifiée afin de déterminer la conformité.
 A la fréquence de transition, la limite la plus contraignante doit être appliquée.
 Pour les appareils électromédicaux destinés à être installés de façon permanente dans des 
@@ -3567,16 +3567,16 @@ Gamme de fréquences comprises entre 150 kHz et 30 MHz
 Les limites pour les tensions perturbatrices aux bornes du réseau d’alimentation, dans la 
 gamme de fréquences de 150 kHz à 30 MHz, pour les appareils mesurés sur un site d’essai 
 utilisant le réseau 50 Ω/50 μH du CISPR ou la sonde de tension du CISPR (voir 7.3.3 et 
-Figure 4) sont indiquées aux Tableaux 6 et 7, à l’exception des bandes de fréquences 
+Figure 4) sont indiquées aux Tableaux 6 et 7, à l’exception des bandes de fréquences
 désignées par l’UIT et répertoriées au Tableau 1, pour lesquelles aucune limite ne s’applique.
 Pour les matériels de soudage électrique, les limites du Tableau 6 ou du Tableau 7 
-s’appliquent en mode de fonctionnement actif. En mode veille (ou inactif), les limites du 
+s’appliquent en mode de fonctionnement actif. En mode veille (ou inactif), les limites du
 Tableau 2 ou du Tableau 3 s’appliquent.
 
 <!-- 第 71 页 -->
 CISPR 11 © CEI:2009 
-Pour les appareils d’éclairage ISM à fréquences radioélectriques fonctionnant dans les bandes 
-de fréquences ISM dédiées (définies par l'UIT dans le Tableau 1), les limites du Tableau 7 
+Pour les appareils d’éclairage ISM à fréquences radioélectriques fonctionnant dans les bandes
+de fréquences ISM dédiées (définies par l'UIT dans le Tableau 1), les limites du Tableau 7
 s'appliquent.
 Pour les appareils de cuisson à induction à usage domestique ou commercial, les limites du 
 Tableau 8 s’appliquent.

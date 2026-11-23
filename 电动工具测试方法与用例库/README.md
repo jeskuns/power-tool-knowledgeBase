@@ -9,13 +9,13 @@
 |---|---|
 | 记录总数 | **538 条**：156 条 SQL 用例 + 324 条大纲测试项 + 35 份大纲文档 + 23 个企标/受控方法 |
 | 测试方案 | **4 套 / 13 项**（`解决方案.html`）：GB 3883.1 / .201 / .203 / .206，8 步完整流程 + 不适用边界 5 条 |
-| 完整用例来源 | `company/tool-test-app/src/data/tests/testData.js`（7 大类 / 15 子类，含步骤、判定、设备、注意事项） |
-| 大纲项来源 | `company/tool-test-app/src/data/outlines/testOutlineData.js` 的 `flatOutlineItems`（324 条） |
+| 完整用例来源 | `company/tool-test-assistant/src/data/tests/testData.js`（7 大类 / 15 子类，含步骤、判定、设备、注意事项） |
+| 大纲项来源 | `company/tool-test-assistant/src/data/outlines/testOutlineData.js` 的 `flatOutlineItems`（324 条） |
 | 大纲文档来源 | 同上 `testOutlineDocuments`（35 份，含页数与分类） |
 | 企标方法来源 | `数字化/实验室管理/测试大纲/实验室发布企标`、`实验室批准受控测试方法` 的文件夹名（提取 QJFF / QT 编号、名称、版本、页数） |
 | 用途 | 测试前查方法、按产品/测试类型找用例、与标准库/失效案例库/型号库交叉引用 |
 
-> 数据来源是 `tool-test-app` 的 App 数据文件，**没有**现成的用例 JSON/CSV/xlsx；本库是将其导出并结构化后的离线副本。
+> 数据来源是 `tool-test-assistant` 的 App 数据文件，**没有**现成的用例 JSON/CSV/xlsx；本库是将其导出并结构化后的离线副本。
 
 ## 二、目录里有什么
 
@@ -26,7 +26,7 @@ README.md                       本说明
 查询知识库/                     唯一一份单文件 md（供离线检索 / RAG）
   电动工具测试方法与用例查询知识库.md   0.21 MB
 _脚本/
-  _export_app_data.mjs          Node 脚本：从 tool-test-app 导出 tests/outlines 为 JSON
+  _export_app_data.mjs          Node 脚本：从 tool-test-assistant 导出 tests/outlines 为 JSON
   _src_tests.json               导出中转（156/324/35 条原始字段）
   build.py                      生成 查询数据/methods.js（按 SQL 21 字段）
   _src_standards.json           标准清单与详情导出中转
@@ -67,7 +67,7 @@ _脚本/
 
 ```powershell
 cd 知识库/电动工具测试方法与用例库/_脚本
-node _export_app_data.mjs                      # 从 tool-test-app 重新导出 tests/outlines/standards
+node _export_app_data.mjs                      # 从 tool-test-assistant 重新导出 tests/outlines/standards
 python build.py                               # 按 SQL 21 字段生成 methods.js
 python build_solutions.py                     # 生成 solutions.js + 解决方案.html
 cd ..\..\_脚本

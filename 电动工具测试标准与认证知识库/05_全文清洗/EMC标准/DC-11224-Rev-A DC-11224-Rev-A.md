@@ -360,7 +360,7 @@ USCAR Initiator Technical Requirements and Validation Standard
 EMC - Evaluation of CAN - Transceivers, FTZ Zwickau (FH) University of Applied Science 
 Terms and Definitions
 Refer to IEC 60050-161, ISO 11452-1 and ISO 7637-1 for additional definitions.
-ADRESS.  An acronym for Automated Document Retrieval & Engineering Standards System.
+ADRESS. An acronym for Automated Document Retrieval & Engineering Standards System.
 ALSE.  Absorber-lined shielded enclosure (also known as anechoic or semi-anechoic chamber). Used in 
 this document, together with ISO, to designate the test itself with reference to the method described in 
 ISO 11452-1.
@@ -1333,7 +1333,7 @@ kHz
 Test setup
 CISPR 25 applies with the following exceptions:
 - 
-The test harness shall be 1700 (+ 300,  0) mm long and routed 50 mm above the ground plane (this 
+The test harness shall be 1700 (+ 300, - 0) mm long and routed 50 mm above the ground plane (this harness can also be used for BCI or ALSE testing);
 harness can also be used for BCI or ALSE testing); 
 - 
 Ground leads that are shorter than 1m, or not included in the wiring harness, shall be taken out of the 
@@ -1341,9 +1341,9 @@ current probe.
 - 
 Measurements shall be taken at the following points;
 - 
-at a distance of 50  10 mm from the DUT connector or case over all frequencies; 
+at a distance of 50 ± 10 mm from the DUT connector or case over all frequencies;
 - 
-at a distance of 750  50 mm from the DUT connector or case for frequencies above 30 MHz; 
+at a distance of 750 ± 50 mm from the DUT connector or case for frequencies above 30 MHz;
 For a schematic diagram of the measuring setup, refer to Figure 2.
 
 <!-- 第 19 页 -->
@@ -1879,7 +1879,7 @@ Requirement
 The DUT, when tested under operating load typical for its intended application, shall conform to the 
 following restrictions on switching transients.  The DUT shall be tested with the fast transient setup from 
 ISO 7637-2. The measured transients are limited to +100/-150 volts when the pulse duration (measured 
-at the 10%-amplitude) is smaller than 100 µs. If it is greater than or equal to 100 µs, the limit is 80 volts 
+at the 10%-amplitude) is smaller than 100 µs. If it is greater than or equal to 100 µs, the limit is +80 volts
 for 12 V and 42 V systems, and +80/-150 volts for 24 V systems.
 6.5.2 
 Test
@@ -1946,7 +1946,7 @@ CW and Amplitude modulation (AM, 1 kHz 80%) are required below 30 MHz.  Amplitud
 constant peak relative to CW.  The default modulation between 30 and 400 MHz is continuous wave 
 (CW).  CW and/or pulse modulation is applicable from 400 MHz to 3.2 GHz; pulse modulation is 
 required in the cell phone and radar bands. The default pulse modulation is rectangular at 
-217 Hz (10%) PRF with a duration of 577 µs for the cell phone bands, and 300 Hz (10%) PRF with a 
+217 Hz (±10%) PRF with a duration of 577 µs for the cell phone bands, and 300 Hz (±10%) PRF with a
 duration of 3µs for the radar bands.   For testing to meet regulatory requirements, these frequency 
 ranges and modulation types are modified.  Refer to Tables 12 and 13.
 Other modulation techniques may be appropriate if the known DUT characteristics indicate a potential 
@@ -2162,7 +2162,7 @@ cars, vans and light commercial vehicles, Systems including Group D functions
 <!-- 第 29 页 -->
 120,00
 115,00
-A .3
+A.3
 110,00
 A.2
 105,00
@@ -2175,9 +2175,9 @@ dB(µA)
 75,00
 70,00
 120,00
-A .3
+A.3
 115,00
-A .2
+A.2
 110,00
 105,00
 100,00
@@ -2190,16 +2190,16 @@ dB(µA)
 70,00
 DC-11224, EMC Performance Requirements – Components, 2007-07, Page 29
 Systems including Group A/B/C functions
-A .4
-A .1
+A.4
+A.1
 100                               400
 MHz
 Figure 7:  Test Levels and Areas of Status Levels (A.1 to A.4, Table 16) for BCI Testing, large
 heavy trucks and buses, Group A, B and C
 Systems including Group D functions
-A .5
-A .4
-A .1
+A.5
+A.4
+A.1
 100                               400
 MHz
 Figure 8:  Test Levels and Areas of Status Levels (A.1 to A.5, Table 16) for BCI Testing, large
@@ -2221,8 +2221,8 @@ Levels
 Level [mA]
 [dB(µA)]
 A.5 
-> 111 to  114 
-> 350 to  500 
+> 111 to ≤ 114
+> 350 to ≤ 500
 IV 
 IV 
 III 1) 
@@ -2241,8 +2241,8 @@ A.2
 > 99 to  105 
 > 90 to  180
 A.1 
- 99 
- 90 
+≤ 99
+≤ 90
 I
 Note: 
 1) The squib activation does not need to be recoverable. 
@@ -2365,15 +2365,15 @@ Figure 10: Test Levels for ALSE Testing, Group A, B, C
 0 V/m
 The top level of Table 17, shaded gray, is only evaluated if the DUT has a Group D function.
 Test Level
-> 100 to  150 
+> 100 to ≤ 150
 III 
 III 
 II
-> 70 to  100 
+> 70 to ≤ 100
 II
 II
 > 35 to  70
- 35 
+≤ 35
 I
 Note:  
 1) The squib activation does not need to be recoverable. 
@@ -2402,7 +2402,7 @@ Group A Status
 Group B Status 
 Group C Status 
 Group D Status
-> 150 to  200 
+> 150 to ≤ 200
 IV 
 IV 
 III 1) 
@@ -2522,15 +2522,15 @@ Figure 13:  Test Levels for TEM Testing, Group A, B, C
 50 V/m
 0 V/m
 Test Level
-> 100 to  150 
+> 100 to ≤ 150
 III 
 III 
 II
-> 70 to  100 
+> 70 to ≤ 100
 II
 II
 > 35 to  70
- 35 
+≤ 35
 I
 Note: 
 1) The squib activation does not need to be recoverable.  
@@ -2551,7 +2551,7 @@ Group A Status
 Group B Status 
 Group C Status 
 Group D Status
-> 150 to  200 
+> 150 to ≤ 200
 IV 
 IV 
 III 1) 
@@ -2774,7 +2774,7 @@ Pos. 1
 Pos. 2
 50mm
 Pos. 4
-Plus Pos. 5 Top and Pos 6 Bottom
+Plus Pos. 5 Top and Pos. 6 Bottom
 Performance Status
 Groups B, C and D
 
@@ -3078,7 +3078,7 @@ Parameters
 12 V System 
 24 V System 
 42 V System
-Us in V 
+Us in V
 tr in ns 
 td in µs 
 0.1 
@@ -3148,7 +3148,7 @@ Figure 31:  ESD Handling Test Setup
 The HCP (horizontal coupling plane or ground plane) shall be placed on the test bench.  The HCP 
 shall be large enough so as to protrude beyond the DUT on all sides by at least 100 mm.  The ESD 
 simulator shall have its ground referenced to the HCP at a point 0.5 ± 0.1 m from the DUT as shown 
-in Figure 31. The connection between safety ground and the HCP shall contain 2 x 470 k, one at 
+in Figure 31. The connection between safety ground and the HCP shall contain 2 x 470 kΩ, one at
 each end. 
 - 
 An ESD simulator according to IEC 61000-4-2 shall be used with a discharge network of 150 pF and 
@@ -3193,7 +3193,7 @@ For each of the required discharge voltages, 3 discharges of positive and 3 disc
 polarity shall be performed at each of the specified discharge points. 
 - 
 Between two individual discharges, the charge applied shall be removed via a grounded discharge 
-resistor with approximately 1 mega ohm resistance (e.g. 2  470 kilo ohm resistors in series) by 
+resistor with approximately 1 mega ohm resistance (e.g. 2 × 470 kilo ohm resistors in series) by
 touching the discharge point (DUT, case or pins).  Alternatively, at least 5 s can be allowed to pass 
 between two discharges. 
 - 
@@ -3343,7 +3343,7 @@ AN (if used)
 Ground reference point for battery and support equipment 
 DUT local ground,(if required) 
 Ground reference point for ESD Coupling Plane, ESD generator and safety ground connection 
-2 x 470 k Ohm high voltage resistors to satety ground 
+2 x 470 k Ohm high voltage resistors to safety ground
 HCP 
 ESD generator main unit
 NOTE:  Dimensions are in mm ± 5%.
@@ -3368,7 +3368,7 @@ AN (if used)
 Ground reference point for battery and support equipment 
 DUT local ground,(if required) 
 Ground reference point for ESD Coupling Plane, ESD generator and safety ground connection 
-2 x 470 k Ohm high voltage resistors to satety ground 
+2 x 470 k Ohm high voltage resistors to safety ground
 HCP 
 ESD generator main unit
 NOTE:  All dimensions are in mm ± 5%.
@@ -3377,7 +3377,7 @@ Figure 34:  ESD Operating Test Setup: Field Coupled
 - 
 The ESD test bench ground plane shall be a minimum of 0.5 m from other conductive structures such 
 as the surfaces of a shield room and shall be connected to safety ground with a connection that 
-contains 2 x 470 kilo ohm (one at the ground plane end at point (12) and the other at the safety 
+contains 2 x 470 kilo ohm (one at the ground plane end at point (12) and the other at the safety
 ground termination of the grounding conductor) .
 - 
 Before testing commences, the discharge voltage of the ESD simulator shall be verified.
@@ -3433,7 +3433,7 @@ simulator with the air discharge electrode shall be moved towards the discharge 
 possible until either discharge occurs or the electrode touches the discharge point.
 - 
 Between two individual discharges, the charge applied shall be removed via a grounded discharge 
-resistor with approximately 1 mega ohm resistance (e.g. 2  470 kilo ohm resistors in series) by 
+resistor with approximately 1 mega ohm resistance (e.g. 2 × 470 kilo ohm resistors in series) by
 touching the discharge point and the housing.  Alternatively, at least 1 s can be allowed to pass 
 between two discharges.
 10.2.3.2 ESD Operating Test Conditions – Field Coupled
@@ -3449,7 +3449,7 @@ Between two individual discharges wait for at least 1 s.
 - 
 If the DUT harness has more than one connector, the test shall be repeated with the individual 
 harness for each connector.  The other harnesses connected to the other connectors must be placed 
-on the ground plane adjacent to the injection strip..
+on the ground plane adjacent to the injection strip.
 
 <!-- 第 61 页 -->
 DC-11224, EMC Performance Requirements – Components, 2007-07, Page 61

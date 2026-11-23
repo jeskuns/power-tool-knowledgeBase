@@ -755,7 +755,7 @@ average detector (3)
 Are the average
 data below the
 average limit?
-IEC   363/08
+IEC 363/08
 
 <!-- 第 17 页 -->
 4.1.4 
@@ -1197,7 +1197,7 @@ envelope for each frequency band as shown in Figure 2. Verification shall be
 performed in accordance with Annex B;
 6 dB 
 envelope
-IEC   364/08
+IEC 364/08
 Figure 2 – Example of gain curve
 – 
 compression point: The 1 dB compression point shall occur at a sine wave voltage 
@@ -1422,7 +1422,6 @@ Disturbanc
 real
 U
 U
-U
 −
 =
 (1)
@@ -1524,7 +1523,7 @@ IEC   367/08
 Figure 5 – Example for the required minimum attenuation
 of the signal / control line filters
 Voltage measurements are able to characterize the emissions on single leads only. The test 
-antenna structures on the printed board of electronic components or to characterize the 
+antenna structures on the printed board of electronic components or to characterize the
 efficiency of shielding. Therefore, voltage measurements are not able to characterize the 
 complete EUT emission. At lower frequencies (e.g. in the AM-bands) voltage measurements 
 usually ensure more dynamic range than radiated measurements.
@@ -1603,7 +1602,7 @@ measurements (on power supply and on power return) may be performed with all pow
 together at the AN and all power return connections tied together at the other AN.
 The configuration shall be defined in the test plan.
 For voltage measurements, the arrangement of the EUT and measuring equipment shall be as 
-shown in Figures , 6, 7 8 and 9 depending on the intended EUT installation in the vehicle.
+shown in Figures 6, 7, 8 and 9 depending on the intended EUT installation in the vehicle.
 
 <!-- 第 31 页 -->
 Side view
@@ -2024,7 +2023,7 @@ Peak
 Quasi-
 peak 
 Peak 
-Quasi
+Quasi-
 BROADCAST
 LW 
 0,15 - 0,30 
@@ -2094,7 +2093,7 @@ applicable limits should be defined in the test plan.
 NOTE 2 Where multiple bands use the same limits the user shall select the appropriate bands over which to test.  When the test 
 plan includes bands that overlap the test plan shall define the applicable limit.
 Levels in dB(μA)
--peak 
+peak
 Peak 
 Quasi-
 peak 
@@ -2140,7 +2139,7 @@ GSM 800
 EGSM/GSM 900 
 925 - 960
 GPS L1 civil 
-1567 – 1583
+1567 - 1583
 GSM 1800 (PCN) 
 1803 - 1882
 GSM 1900 
@@ -2157,7 +2156,7 @@ Bluetooth/802.11
 Radiated emissions from components/modules - ALSE method
 6.4.1 
 General
-Lizenziert VDO Automotive AG. Alle Rechte vorbehalten.
+Lizenziert für VDO Automotive AG. Alle Rechte vorbehalten.
 CISPR 25 © IEC:2008
 Table 8 – Examples of average limits for conducted disturbances –
 Control/signal lines – Current probe method
@@ -2285,9 +2284,9 @@ facing the antenna at a distance of (100 ± 10) mm from the edge. Location of th
 load simulator requires that the harness bend angle shall be (
 )
 +
- degrees as shown in
+degrees as shown in
 Figure 11.
-IEC   373/08
+IEC 373/08
 Key
 EUT
 Test harness
@@ -2295,7 +2294,7 @@ Load simulator
 Angle (
 )
 +
- degrees
+degrees
 Figure 11 – Test harness bending requirements
 6.4.2.5 
 Location of the load simulator
@@ -2335,7 +2334,7 @@ NOTE 1 The rod antenna is excluded because calibration is achieved by using the 
 CISPR 16-1-4.
 The phase centre of the antenna shall be in line with the centre of the longitudinal part of the 
 wiring harness for frequencies up to 1 000 MHz.
-The phase center of the antenna for frequencies above 1 000 MHz shall be in line with the 
+The phase centre of the antenna for frequencies above 1 000 MHz shall be in line with the
 EUT.
 NOTE 2 The users of this standard should be aware that antenna manufacturers may give:
 – 
@@ -2396,7 +2395,7 @@ Vertical
 polarisation
 50 ± 5
 hcp
-IEC   374/08
+IEC 374/08
 9  Grounding connection (full width bond between 
 counterpoise and ground plane)
 10 High-quality coaxial cable e.g. double-shielded (50 Ω) 
@@ -2439,7 +2438,7 @@ polarisation
 50 ± 5
 900 ± 100
 250 min.
-IEC   375/08
+IEC 375/08
 Key
 Biconical antenna
 10 High-quality coaxial cable e.g. double-shielded (50 Ω)
@@ -2478,7 +2477,7 @@ polarisation
 250 min.
 Front view 
 Side view
-IEC   376/08
+IEC 376/08
 Key
 Log-periodic antenna
 10 High-quality coaxial cable e.g. double-shielded (50 Ω)
@@ -2519,7 +2518,7 @@ polarisation
 250 min.
 Front view 
 Side view
-IEC   377/08
+IEC 377/08
 Horn antenna
 10 High-quality coaxial cable e.g. double-shielded (50 Ω)
 11 Bulkhead connector
@@ -2554,7 +2553,7 @@ peak
 Peak 
 Quasi-
 peak 
-Peak 
+peak
 Quasi-
 peak 
 Peak 
@@ -2594,7 +2593,7 @@ DAB III
 - 
 -
 TV Band IV/ 
-468 -  944 
+468 - 944
 - 
 - 
 - 
@@ -2652,15 +2651,13 @@ GSM 800
 860 - 895 
 - 
 - 
-  - 
-- 
+-
 -
 EGSM/GSM 900 
 925 - 960 
 - 
 - 
-  - 
-- 
+-
 -
 GPS L1 civil 
 1567 - 1583 
@@ -2754,7 +2751,7 @@ TV Band III
 DAB III 
 171 - 245 
 TV Band IV/V 
-468 -  944 
+468 - 944
 DTTV 
 470 - 770 
 DAB L band 
@@ -2803,7 +2800,7 @@ NOTE 2 Where multiple bands use the same limits the user shall select the approp
 plan includes bands that overlap the test plan shall define the applicable limit.
 
 <!-- 第 51 页 -->
-Level dB   (μV/m)
+Level dB (μV/m)
 1 567,42
 1 568,42
 1 569,42
@@ -2832,7 +2829,7 @@ construction of a TEM cell for component measurement is given in Annex F.
 1 581,42
 1 582,42
 1 583,42
-Frequency   (MHz)
+Frequency (MHz)
 IEC   378/08
 
 <!-- 第 52 页 -->
@@ -3035,7 +3032,7 @@ DAB III
 - 
 -
 TV Band IV/V 
-468 -  944
+468 - 944
 DTTV 
 470 - 770
 DAB L band 
@@ -3083,7 +3080,7 @@ applicable limits should be defined in the test plan.
 NOTE 2 Where multiple bands use the same limits the user shall select the appropriate bands over which to test.  When the test 
 plan includes bands that overlap the test plan shall define the applicable limit.
 Levels in dB(μV)
-peak 
+peak
 Peak 
 Quasi-
 peak 
@@ -4080,7 +4077,7 @@ The preselected speech to be sent over a voice channel for intelligibility scori
 phonetically balanced groups of isolated words, as opposed to complete sentences or 
 nonsense syllables. These phonetically balanced words were used because subjective scores 
 have been shown to be repeatable, which is a necessary criterion for this study. (During tests 
-employing vehicles as a noise source, subjective scoring by listener panels was conducted 
+employing vehicles as a noise source, subjective scoring by listener panels was conducted
 and compared to the objective scores, resulting in good correlation.)
 H.2.3 
 Conclusions relating to judgement of degradation
@@ -4118,7 +4115,7 @@ I.1.2
 Measurement uncertainty
 This topic will be considered for future revisions of this standard.
 I.1.3 
- Attenuation measurement method
+Attenuation measurement method
 The method of measuring the attenuation defined in Figure 5 needs to be defined.
 I.1.4 
 Average measurements

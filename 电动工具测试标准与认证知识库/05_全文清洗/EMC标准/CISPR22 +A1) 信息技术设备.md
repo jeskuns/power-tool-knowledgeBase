@@ -257,7 +257,7 @@ Part
 4.6: 
 Testing 
 and 
-measurement techniques—Immunity to conducted disturbances, induced by radio-frequency 
+measurement techniques—Immunity to conducted disturbances, induced by radio-frequency
 fields
 1   There exists a consolidated edition 2.2 (2006) including edition 2.0, its Amendment 1 (2004) and its 
 Amendment 2 (2006).
@@ -284,7 +284,7 @@ and methods, Part 1.1: Radio disturbance and immunity measuring apparatus—Meas
 apparatus
 CISPR 16-1-2:2003, Specification for radio disturbance and immunity measuring apparatus 
 and methods – Part 1-2: Radio disturbance and immunity measuring apparatus – Ancillary 
-equipment – Conducted disturbances 5 
+equipment – Conducted disturbances5
 Amendment 1 (2004) 
 Amendment 2 (2006)
 A1
@@ -361,7 +361,7 @@ dispersed systems via such means as direct connection to multi-user telecommunic
 networks (e.g. public switched telecommunications networks (PSTN) integrated services
 
 <!-- 第 12 页 -->
-digital networks (ISDN), x-type digital subscriber lines (xDSL), etc.), local area networks (e.g. 
+digital networks (ISDN), x-type digital subscriber lines (xDSL), etc.), local area networks (e.g. Ethernet, Token Ring, etc.) and similar networks
 Ethernet, Token Ring, etc.) and similar networks
 NOTE A port generally intended for interconnection of components of an ITE system under test (e.g. RS-232, 
 IEEE Standard 1284 (parallel printer), Universal Serial Bus (USB), IEEE Standard 1394 (“Fire Wire”), etc.) and 
@@ -422,7 +422,7 @@ warning shall be included in the instructions for use:
 Warning
 This is a class A product. In a domestic environment this product may cause radio inter-
 ference in which case the user may be required to take adequate measures.
-Limits for conducted disturbance at mains terminals  
+Limits for conducted disturbance at mains terminals and telecommunication ports
 and telecommunication ports
 The equipment under test (EUT) shall meet the limits in Tables 1 and 3 or 2 and 4, as appli-
 cable, including the average limit and the quasi-peak limit when using, respectively, an 
@@ -544,16 +544,14 @@ Quasi-peak limits
 dB(μV/m)
 30 to 230 
 230 to 1 000 
-NOTE 2 Additional provisions may be required for cases where interference 
-occurs.
+NOTE 2 Additional provisions may be required for cases where interference occurs.
 Table 6 – Limits for radiated disturbance of class B ITE
 at a measuring distance of 10 m
 Quasi-peak limits
 dB(μV/m)
 30 to 230 
 230 to 1 000 
-NOTE 2 Additional provisions may be required for cases where interference 
-occurs.
+NOTE 2 Additional provisions may be required for cases where interference occurs.
 The EUT shall meet the limits of Table 7 or Table 8 when measured in accordance with the 
 method described in Clause 10 and the conditional testing procedure described below.
 Table 7 – Limits for radiated disturbance of Class A ITE
@@ -593,7 +591,7 @@ Interpretation of CISPR radio disturbance limit
 7.1 
 Significance of a CISPR limit
 7.1.1 A CISPR limit is a limit which is recommended to national authorities for incorporation 
-in national publications, relevant legal regulations and official specifications. It is also recom-
+in national publications, relevant legal regulations and official specifications. It is also recommended that international organizations use these limits.
 mended that international organizations use these limits.
 7.1.2 The significance of the limits for equipment shall be that, on a statistical basis, at least 
 80 % of the mass-produced equipment complies with the limits with at least 80 % confidence.
@@ -820,10 +818,10 @@ Associated equipment shall be installed in accordance with normal installation p
 Where this means that the associated equipment is located on the test site, it shall be 
 arranged using the same conditions applicable for the EUT (for example, distance from 
 ground plane and insulation from the ground plane if floor standing, layout of cabling etc.).
-NOTE Specific ground plane requirements are given in 9.4 for conducted disturbance measurements and in 
-10.4.4 for radiated disturbance measurements, and in 9.5 and 10.5 where they may relate to particular test 
+NOTE Specific ground plane requirements are given in 9.4 for conducted disturbance measurements and in
+10.4.4 for radiated disturbance measurements, and in 9.5 and 10.5 where they may relate to particular test
 arrangements.
-Figures 4 through Figure 13 are examples of test arrangements and provide guidance only. 
+Figures 4 through 13 are examples of test arrangements and provide guidance only.
 The requirements stated in the text take precedence.
 
 <!-- 第 21 页 -->
@@ -831,10 +829,10 @@ The requirements stated in the text take precedence.
 The general conditions of 8.3 apply.
 Equipment intended for tabletop use shall be placed on a non-conductive table. The size of 
 the table will nominally be 1,5 m × 1,0 m but may ultimately be dependent on the horizontal 
-dimensions of EUT.
+dimensions of the EUT.
 All units of equipment forming the system under test (includes the EUT as well as connected 
 peripherals and associated equipment or devices) shall be arranged such that a nominal 
-0,1 m separation is achieved between the neighbouring units (see Figure 4). Where the units 
+0,1 m separation is achieved between the neighboring units (see Figure 4). Where the units
 are normally stacked, then they shall be placed directly on top of each other (for example a 
 monitor and desk-top PC) and placed at the rear of the arrangement (peripheral position 1 or 
 2 in Figure 4).
@@ -843,7 +841,7 @@ unless that would not be possible or typical of normal use. This may require the
 extended. If this is not possible, then the additional units may be placed around the sides of 
 the table as shown in Figure 4. Positions 1 and 2 shall be used for up to two additional units 
 in Figure 4. If more than two units are present, the test arrangement shall be chosen that 
-maintains as close as practical the 0,1 m spacing between units unless they are normally 
+maintains as close as practicable the 0,1 m spacing between units unless they are normally
 located closer together.
 Intra-unit cables shall be draped over the back of the table. If a cable hangs closer than 0,4 m 
 from the horizontal ground plane (or floor), the excess shall be folded at the cable centre into 
@@ -863,7 +861,7 @@ its power cable is fully extended in the vertical direction.
 c) 
 If the external power supply unit is incorporated into the mains power plug, it shall be 
 placed on the tabletop. An extension cable shall be used between the external power 
-supply unit and the source of power . The extension cable should be connected in a 
+external power supply unit and the source of power. The extension cable should be connected in a
 manner such that it takes the most direct path between the external power supply unit 
 and the source of power.
 In the above arrangements, the cable between the EUT and the power accessory shall be 
@@ -955,7 +953,7 @@ EUT has complied with the limits of radiated disturbance field strength of CISPR
 the measurement of radiated disturbance field strength according to CISPR 13 may be 
 excluded if all radiated disturbances from the EUT have complied with the relevant 
 limits of CISPR 22.
-Method of measurement of conducted disturbance at mains terminals  
+Method of measurement of conducted disturbance at mains terminals
 and telecommunication ports
 9.1 
 Measurement detectors
@@ -1024,8 +1022,8 @@ AMN and tested.
 d) 
 Where a special connection is specified, the necessary hardware to effect the 
 connection shall be supplied by the manufacturer for the purpose of this test.
-The AMN shall be placed 0,8 m from the boundary of the unit under test and bonded to a 
-ground reference plane for AMNs mounted on top of the ground reference plane. This 
+The AMN shall be placed 0,8 m from the boundary of the unit under test and bonded to a
+ground reference plane for AMNs mounted on top of the ground reference plane. This
 distance is between the closest points of the AMN and the EUT. All other units of the EUT and 
 associated equipment shall be at least 0,8 m from the AMN.
 Optionally, for AMNs mounted beneath the ground plane, the mains cable connection can be 
@@ -1061,7 +1059,7 @@ Ground connections, where required for safety purposes, shall be connected to th
 ground point of the AMN and, where not otherwise provided or specified by the manufacturer, 
 shall be of same length as the mains cable and run parallel to the mains connection at a 
 separation distance of not more than 0,1 m.
-manufacturer for connection to the same ultimate terminal as the safety ground connection, 
+manufacturer for connection to the same ultimate terminal as the safety ground connection,
 shall also be connected to the reference ground of the AMN.
 In case of dispute, tests shall be carried out as originally performed.
 9.5.2 Tabletop equipment arrangement
@@ -1334,7 +1332,7 @@ Measurement procedure: Without decoupling the AE from the EUT, measure the commo
 mode current with a current probe and measure the common mode voltage with a capacitive 
 voltage probe.
 The AE shall be:
-• 
+•
 device(s) typically connected to the telecommunication port under test by a multi-
 conductor cable specified by the manufacturer; or alternatively,
 • 
@@ -1356,7 +1354,7 @@ tests. See Clause 11.
 Measurements shall be made with a quasi-peak measuring receiver in the frequency range 
 30 MHz to 1 000 MHz.
 To reduce the testing time, a peak measuring receiver may be used instead of a quasi-peak 
-measuring receiver. In case of dispute, measurement with a quasi-peak measuring receiver 
+measuring receiver. In case of dispute, measurement with a quasi-peak measuring receiver will take precedence.
 will take precedence.
 10.2 Measuring receiver below 1 GHz
 The quasi-peak measuring receiver shall be in accordance with Clause 4 of CISPR 16-1-1.
@@ -1391,16 +1389,16 @@ field-strength readings. For measurement purposes, it may be possible to rotate 
 When this is not practicable the EUT remains in a fixed position, and measurements are made 
 around the EUT.
 10.3.4 Antenna-to-EUT polarization
-Antenna-to-EUT 
-polarization 
-(horizontal 
-and 
-vertical) 
-shall 
-be 
-varied 
-during 
-the 
+Antenna-to-EUT
+polarization
+(horizontal
+and
+vertical)
+shall
+be
+varied
+during
+the
 measurements to find the maximum field-strength readings.
 10.4 Measurement site below 1 GHz
 10.4.1 General
@@ -2250,7 +2248,7 @@ disturbance measurements at the mains or the telecommunication ports in the freq
 range 150 kHz to 30 MHz, the following decision tree is used to determine a final pass/fail 
 judgement.
 Spectrum analyzers or receivers provided with RF preselectors which automatically follow the 
-frequency being scanned by the spectrum analyzer or receiver should have a sufficiently long 
+frequency being scanned by the spectrum analyzer or receiver should have a sufficiently long
 dwell time on each frequency to avoid amplitude errors in the measured values.
 In addition, in order not to influence the measurement results, the video bandwidth of the 
 spectrum analyzer shall be equal to, or greater than, the resolution bandwidth.
@@ -2336,7 +2334,7 @@ No restriction
 on length 
 10 cm
 80 cm
-IEC   1351/08 
+IEC 1351/08
 AE  
 = Associated equipment 
 EUT = Equipment under test
@@ -2362,7 +2360,7 @@ by the EUT.
 • 
 Voltage measurement is also possible either in parallel with the 150 Ω resistor with a 
 high impedance probe, or by using a "50 Ω to 150 Ω adaptor" described in IEC 61000-4-
-6 as 150 Ω load, and applying the appropriate correction factor (9,6 dB in case of the 
+6 as 150 Ω load, and applying the appropriate correction factor (9,6 dB in case of the
 "50 Ω to 150 Ω adaptor").
 
 <!-- 第 55 页 -->
@@ -2381,7 +2379,7 @@ Ferrites
 10 cm 
 No restriction on
 length
-IEC   1352/08
+IEC 1352/08
 AE  
 = Associated equipment
 EUT  
@@ -2462,7 +2460,7 @@ COPYRIGHT
 CMAD 
 (optional)
 1)
-IEC   1353/08
+IEC 1353/08
 
 <!-- 第 57 页 -->
 C.2 
@@ -2640,7 +2638,7 @@ voltage
 measurement
 Apply Voltage limits of
 Table 3 or 4
-IEC   1354/08
+IEC 1354/08
 Figure C.5 – Flowchart for selecting test method
 
 <!-- 第 60 页 -->
@@ -2674,7 +2672,7 @@ EUT
 AE 
 Balanced pair
 Rx
-IEC   1355/08
+IEC 1355/08
 
 <!-- 第 61 页 -->
 Balanced pair 2

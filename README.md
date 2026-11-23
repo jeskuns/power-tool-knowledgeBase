@@ -1,25 +1,103 @@
-# power-tool-knowledgeBase
+# 电动工具知识库
 
-电动工具知识库的**瘦身后静态站点**：六个库（竞品型号 / 标准认证 / 测试方法用例 / 设备工装 / 测试记录 / 失效案例）的离线查询页、单文件 md、产品缩略图与标准全文，部署在 Cloudflare Pages。
+> 实验室六大测试知识库的源文件目录与离线查询门户：型号 / 标准 / 方法 / 设备 / 记录 / 案例，输入即查，全部数据离线内置。
+>
+> 目录位置：`Documents\lifeOS\数字化\实验室管理\知识库\`
+> 站点部署副本：`company\power-tool-knowledgeBase\`（由本目录瘦身同步，线上 `https://power-tool-knowledgebase.pages.dev`）
 
-> 与 `power-tools-news`（原 power-tools-kb 改名）是两个独立项目，勿混。
+---
 
-## 目录来源
+## 一、这是什么
 
-本目录是**部署副本**，由源目录 `Documents\lifeOS\数字化\实验室管理\知识库\` 经 `_脚本/_build_site.py` 瘦身生成（HTML / 查询数据 JS / 单文件 md / 缩略图 WebP / 标准全文 md / logo / CSS 保留；原图 2.2GB、爬虫原始 JSON、tif、PDF/Excel 排除）。**不要在站点副本里直接改业务数据**，改源目录后重跑构建脚本再同步。
+把实验室多年积累的六类资料整理成一个**可离线使用**的静态知识库：既有统一的查询门户（一个搜索框跨库检索），也有每个库各自的阅读器 / 查询页和单文件 Markdown（供离线检索与 RAG 使用）。
 
-- 17280 文件 / 约 287 MB，单文件均 < 25 MB，适合 Cloudflare Pages。
-- 主页 `index.html` 带即时查询（型号 / 记录 / 标准 / 案例）与六库卡片；方法 / 设备两库用各自 `查询.html`。
+- **对外显示名**：电动工具知识库
+- **数据规模**：8790 条产品型号 + 2144 条标准目录 + 3601 条委托记录 + 538 条测试方法/用例 + 125 台设备 + 93 条失效案例
+- **离线可用**：原文、卡片、图片、查询数据全部随站点打包，拷到手机没网也能查
+- **无后台依赖**：纯静态文件，部署在 Cloudflare Pages
 
-## 部署
+> 命名区分：**电动工具知识库**（本项目，六库查询站）与 **电动工具行业新闻**（`power-tools-news`，每日采集行业资讯的站点）是两个独立项目，请勿混淆。历史资料里的「工程部」「工程部数字化」等字样为旧称或真实路径记录，现已按新命名体系更新展示文案；`company\gongchengbu\knowledge\` 为同步备份路径，保持原样。
 
-推送 `main` 触发 `.github/workflows/deploy.yml` 自动部署到 Cloudflare Pages 项目 `power-tool-knowledgeBase`（需仓库 secrets `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID`）。
-也可本地部署：`npx wrangler pages deploy . --project-name=power-tool-knowledgeBase`。
+---
 
-本地起服务预览：`python -m http.server 8080` 后打开 `http://localhost:8080/index.html`。
+## 二、六个库
 
-## 更新流程
+| 库 | 目录 | 核心数据 | 用途 |
+|---|---|---|---|
+| 竞品型号库 | `电动工具竞品型号库/` | 8790 条型号 / 30 品牌 / 21 家公司，产品图与缩略图 | 选型对比、按型号查规格、安规判定前参数确认 |
+| 测试标准与认证库 | `电动工具测试标准与认证知识库/` | 2144 条标准目录、25 张限值速查卡、974 篇全文路径 | 查条款限值、确认标准版本、标准全文检索 |
+| 测试方法与用例库 | `电动工具测试方法与用例库/` | 538 条（156 SQL 用例 + 324 大纲项 + 35 大纲 + 23 企标方法）、4 套测试方案 | 测前查方法、按产品找用例、减少漏项 |
+| 测试设备与工装能力库 | `电动工具测试设备与工装能力库/` | 125 台设备、19 台外校、10 条工装、39 张编号照片 | 设备选型、校准提醒、CNAS/CMA 评审取证 |
+| 测试记录库 | `电动工具测试记录知识库/` | 3601 单委托 / 3803 台样品（2024–2026） | 查不合格、查超期、查型号历史 |
+| 失效案例库 | `电动工具测试失效案例库/` | 93 条案例（含失效现象/原因/规避措施） | 失效检索与归口分析 |
 
-1. 在源目录改数据、跑对应 `_脚本/build*.py` 刷新查询数据与单文件 md。
-2. 跑源目录 `_脚本/_build_site.py` 重新生成本站点副本。
-3. `git add -A && git commit -m "sync" && git push` 触发部署。
+每个子库都有自己的 `README.md`，含数据来源、字段口径、目录说明和实测统计，深入某个库时先看它。
+
+---
+
+## 三、目录结构
+
+```
+知识库/
+├── index.html                 统一查询门户 + 六库入口卡片（主页）
+├── query/data/                统一查询页的数据源（跨库检索）
+├── assets/                    站点样式与脚本（css / js）
+├── _脚本/                     站点与查询数据构建脚本（见下）
+├── 电动工具竞品型号库/         型号数据、图片、爬虫与查询知识库
+├── 电动工具测试标准与认证知识库/  标准目录、速查卡、OCR 全文
+├── 电动工具测试方法与用例库/    方法与用例结构化数据、测试方案
+├── 电动工具测试设备与工装能力库/ 设备台账、外校、工装、编号照片
+├── 电动工具测试记录知识库/      三年测试台账主数据与分析
+└── 电动工具测试失效案例库/      失效案例与归因
+```
+
+---
+
+## 四、查询入口
+
+- **统一门户**：根目录 `index.html`，顶部搜索框支持型号 / 报告编号 / 标准号 / 任意关键词，输入即出结果；点标签可浏览某个库的全部数据。
+- **快捷查询**：门户提供 `?scope=models` / `records` / `stds` / `cases` 等参数直达对应库。
+- **各库独立页**：各子库自带的 `查询.html`（标准 / 记录 / 型号 / 案例 / 方法 / 设备六个库都有）与 `查询知识库/` 下的单文件 md。
+- **品牌墙**：首页默认态「按品牌浏览全部型号」展开后显示 30 个品牌的 logo 卡片（`assets/logo/` + `assets/data/brands.js`），点卡片直接筛该品牌型号；logo 由 `build_site_data.py` 从 `电动工具竞品型号库/图片数据/brands/` 归集。
+- **单文件 Markdown**：每个库各有一份查询知识库 md，供离线全文检索与 RAG 使用。
+
+---
+
+## 五、构建与更新
+
+所有脚本在 `_脚本/` 和 `query/data/` 下，均在项目根目录执行：
+
+| 脚本 | 作用 |
+|---|---|
+| `python _脚本/build_query_kb_all.py` | 刷新六库单文件查询知识库 md（幂等） |
+| `python _脚本/build_site_data.py` | 重建 `assets/data/*.js` 与品牌 logo 汇总 |
+| `python _脚本/build_standard_fulltext.py` | 生成标准全文路径与全文索引 |
+| `python _脚本/sync_knowledge_all.py --only power-tool` | 瘦身同步到部署副本 `company\power-tool-knowledgeBase` |
+| `python _脚本/sync_knowledge_all.py --only gongchengbu` | 同步到 `company\gongchengbu\knowledge`（仓库内备份） |
+| `python _脚本/_check_links.py` | 体检首页与六库查询页的站内链接（应为 0 缺失） |
+
+> `_build_portal.py`、`_fix_images.py`、`_fix_portal_links.py`、`_analyze_gaps.py` 是历史一次性补丁，不要重复执行（`_build_portal.py` 是纯字符串 replace，二次运行会静默无效果）。
+
+各子库内部还有自己的数据流水线（爬虫、OCR、表格解析等），见各自 README。
+
+**标准库 OCR**：按 `电动工具测试标准与认证知识库/00_索引/OCR计划.md` 分阶段续跑，实时进度用 `python _脚本/kb_ocr_plan.py --status` 查看（需用带 fitz 的 Python 环境）。OCR 数值不可直接当权威引用。
+
+**同步到站点**：本目录瘦身同步到 `company\power-tool-knowledgeBase\`，推送后由 GitHub Actions 部署到 Cloudflare Pages（项目名 `power-tool-knowledgebase`）。源里删掉的文件会从同步目标一并删除（只删清单里的），所以**改动只在源目录做**，不要直接改副本。
+
+```powershell
+cd C:\Users\Administrator\Documents\lifeOS\数字化\实验室管理\知识库\_脚本
+python sync_knowledge_all.py --only power-tool --dry-run   # 先看差异
+python sync_knowledge_all.py --only power-tool
+python sync_knowledge_all.py --only gongchengbu
+```
+
+**注入到测试助手 App**：型号库是 `company\tool-test-assistant` 的唯一数据源，用 App 侧的 `tools/inject_kb.py` 生成 320px 缩略图与 1024px 大图（详见该仓库 README 第十一节），不由本目录推送。
+
+---
+
+## 六、维护约定
+
+- 展示标题、页脚、README 中的品牌字样统一为「电动工具知识库」。
+- 业务数据（设备台账、委托记录等历史字段）里的原始表述保持原样，以免事实失真。
+- 新增资料先落在对应子库，再跑构建脚本刷新查询数据与单文件 md，最后同步到部署副本。
+- 各子库 README 的「最后更新」日期随实际改动维护。

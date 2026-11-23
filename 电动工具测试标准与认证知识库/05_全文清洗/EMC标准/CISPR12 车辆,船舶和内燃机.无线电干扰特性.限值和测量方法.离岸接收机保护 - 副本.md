@@ -384,7 +384,7 @@ Figure 1 – Method of determination of conformance
 COPYRIGHT
 "Engine - Running mode"
 operating conditions
-Measu rement with
+Measurement with
 peak detector
 Are the peak            
 data below the        
@@ -398,7 +398,7 @@ peak limit ?
 Yes
 No
 Measurement with     
-quasi - peak d etector
+quasi-peak detector
 (b)
 Are the quasi - peak
 data below the        
@@ -410,7 +410,7 @@ Running mode"
 No
 Yes
 Fail
-IEC   706/07
+IEC 706/07
 detector (and average detector respectively) and applicable peak limit is always higher than or equal to 
 applicable quasi-peak limit (and average limit respectively), this single detector measurement can lead 
 to a simplified and quicker conformance process.
@@ -475,7 +475,7 @@ L120 kHz
 L1 MHz
 Linear plot  
 dB (µV/m)
-IEC   707/07
+IEC 707/07
 
 <!-- 第 13 页 -->
 Field strength in   µV/m
@@ -496,7 +496,7 @@ can be deemed to comply with the limits for average emissions and no further tes
 Field Strength in   dB (µV/m)
 1 000
 Frequency in   MHz
-IEC   708/07
+IEC 708/07
 Figure 3 – Limits of disturbance (average detector) at 10 m antenna distance
 The measuring instrument shall comply with the requirements of CISPR 16-1-1. Either manual 
 or automatic frequency scanning may be used.
@@ -1575,7 +1575,7 @@ distributor cap
 5 mm
 Metal caps
 Figure E.11 – Noise suppression ignition cable (resistive or reactive)
-* All connecting leads to suppressors under measurement to be kept as short as possible or 
+* All connecting leads to suppressors under measurement to be kept as short as possible or
 of specified length where shown.
 COPYRIGHT
 ∗
@@ -1681,7 +1681,7 @@ is the measuring distance (see F.3).
 a
 2 000
 1 000
-IEC   727/07 
+IEC   727/07
 Dimensions in millimetres
 Transistorized ignition coil system with power supply and pulse frequency generator (negative terminal 
 connected to ground)
@@ -1707,7 +1707,7 @@ a
 is the measuring distance (see F.3).
 1 000
 a
-IEC   728/07 
+IEC   728/07
 Dimensions in millimetres
 Transistorized ignition coil system with power supply and pulse frequency generator (negative terminal 
 connected to ground)
