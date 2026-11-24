@@ -768,16 +768,16 @@ a 50 ohm/5 μH LISN.
 performed and, if required, reported for each band in which the device can be operated with the device
 operating at the number of frequencies in each band specified in the following table:
 Frequency range over which device
-Number of 
-frequencies 
+Number of
+frequencies
 Location in the range of operation
 operates
-1 MHz or less 
+1 MHz or less
 Middle.
-1 to 10 MHz 
+1 to 10 MHz
 1 near top and 1 near bottom.
-More than 10 MHz 
-1 near top, 1 near middle and 1 near 
+More than 10 MHz
+1 near top, 1 near middle and 1 near
 bottom.
 (n) Measurements on TV broadcast receivers shall be performed with the receiver tuned to each VHF
 frequency and also shall include the following oscillator frequencies: 520, 550, 600, 650, 700, 750, 800,
@@ -869,12 +869,12 @@ Highest frequency generated or used in the device or
 Upper frequency of measurement
 on which the device operates or tunes (MHz)
 range (MHz)
-Below 1.705 
-1.705–108 
-108–500 
-500–1000 
-Above 1000 
-5th harmonic of the highest frequency or 
+Below 1.705
+1.705–108
+108–500
+500–1000
+Above 1000
+5th harmonic of the highest frequency or
 40 GHz, whichever is lower.
 (2) A unintentional radiator, excluding a digital device, in which the highest frequency generated in the
 device, the highest frequency used in the device and the highest frequency on which the device operates
@@ -888,12 +888,12 @@ upper frequency to be investigated shall be that shown in the table below or in 
 (b)(1) of this section, as based on both the highest frequency generated and the highest frequency used
 in the digital device, whichever range is higher.
 Highest frequency generated or used in the device or on
-Upper frequency of 
+Upper frequency of
 measurement range (MHz)
 which the device operates or tunes (MHz)
-Below 1.705 
-1.705–10 
-10–30 
+Below 1.705
+1.705–10
+10–30
 (3) Except for a CB receiver, a receiver employing superheterodyne techniques shall be investigated
 from 30 MHz up to at least the second harmonic of the highest local oscillator frequency generated in the
 device. If such receiver is controlled by a digital device, the frequency range shall be investigated up to
@@ -1093,32 +1093,32 @@ authorized prior to the initiation of marketing, as follows:
 Equipment authorization
 Type of device
 required
-TV broadcast receiver 
+TV broadcast receiver
 Verification.
-FM broadcast receiver 
+FM broadcast receiver
 Verification.
-CB receiver 
-Declaration of Conformity or 
+CB receiver
+Declaration of Conformity or
 Certification.
-Superregenerative receiver 
-Declaration of Conformity or 
+Superregenerative receiver
+Declaration of Conformity or
 Certification.
-Scanning receiver 
+Scanning receiver
 Certification.
-Radar detector 
+Radar detector
 Certification.
-All other receivers subject to part 15 
-Declaration of Conformity or 
+All other receivers subject to part 15
+Declaration of Conformity or
 Certification.
-TV interface device 
-Declaration of Conformity or 
+TV interface device
+Declaration of Conformity or
 Certification.
-Cable system terminal device 
+Cable system terminal device
 Declaration of Conformity.
-Stand-alone cable input selector switch 
+Stand-alone cable input selector switch
 Verification.
-Class B personal computers and peripherals 
-Declaration of Conformity or 
+Class B personal computers and peripherals
+Declaration of Conformity or
 Certification.1
 CPU boards and internal power supplies used with Class B
 personal computers
@@ -1127,16 +1127,16 @@ Certification.1
 Declaration of Conformity.
 Class B personal computers assembled using authorized CPU
 boards or power supplies
-Class B external switching power supplies 
+Class B external switching power supplies
 Verification.
-Other Class B digital devices & peripherals 
+Other Class B digital devices & peripherals
 Verification.
 Verification.
 Class A digital devices, peripherals & external switching power
 supplies
-Access Broadband over Power Line (Access BPL) 
+Access Broadband over Power Line (Access BPL)
 Certification.
-All other devices 
+All other devices
 Verification.
 (b) Only those receivers that operate (tune) within the frequency range of 30–960 MHz, CB receivers and
 radar detectors are subject to the authorizations shown in paragraph (a) of this section. However,
@@ -1310,14 +1310,14 @@ table, as measured using a 50 μH/50 ohms line impedance stabilization network (
 the provisions of this paragraph shall be based on the measurement of the radio frequency voltage
 between each power line and ground at the power terminal. The lower limit applies at the band edges.
 Conducted limit (dBμV)
-Frequency of emission (MHz) 
-Quasi-peak 
+Frequency of emission (MHz)
+Quasi-peak
 Average
-0.15–0.5 
-66 to 56* 
+0.15–0.5
+66 to 56*
 56 to 46*
-0.5–5 
-5–30 
+0.5–5
+5–30
 
 <!-- 第 36 页 -->
 *Decreases with the logarithm of the frequency.
@@ -1328,11 +1328,11 @@ within the band 150 kHz to 30 MHz shall not exceed the limits in the following t
 measurement of the radio frequency voltage between each power line and ground at the power terminal.
 The lower limit applies at the boundary between the frequency ranges.
 Conducted limit (dBμV)
-Frequency of emission (MHz) 
-Quasi-peak 
+Frequency of emission (MHz)
+Quasi-peak
 Average
-0.15–0.5 
-0.5–30 
+0.15–0.5
+0.5–30
 (c) The limits shown in paragraphs (a) and (b) of this section shall not apply to carrier current systems
 operating as unintentional radiators on frequencies below 30 MHz. In lieu thereof, these carrier current
 systems shall be subject to the following standards:
@@ -1358,20 +1358,20 @@ top
 <!-- 第 37 页 -->
 (a) Except for Class A digital devices, the field strength of radiated emissions from unintentional radiators
 at a distance of 3 meters shall not exceed the following values:
-Frequency of emission (MHz) 
+Frequency of emission (MHz)
 Field strength (microvolts/meter)
-30–88 
-88–216 
-216–960 
-Above 960 
+30–88
+88–216
+216–960
+Above 960
 (b) The field strength of radiated emissions from a Class A digital device, as determined at a distance of
 10 meters, shall not exceed the following:
-Frequency of emission (MHz) 
+Frequency of emission (MHz)
 Field strength (microvolts/meter)
-30–88 
-88–216 
-216–960 
-Above 960 
+30–88
+88–216
+216–960
+Above 960
 (c) In the emission tables above, the tighter limit applies at the band edges. Sections 15.33 and 15.35
 which specify the frequency range over which radiated emissions are to be measured and the detector
 functions and other measurement standards apply.
@@ -1983,27 +1983,27 @@ Special Characters
 These require two bytes for each symbol. Each hex code as shown will be preceded by a 11h
 for data channel 1 or by a 19h for data channel 2. For example: 19h 37h will place a musical
 note in data channel 2.
-HEX 
-Example 
-Alternate 
+HEX
+Example
+Alternate
 Description
 ® 
-See note1 
+See note1
 Registered mark symbol
 ° 
 Degree sign
-1/2 
+1/2
 1/2
 ¿ 
 Inverse query
 TM 
-See note1 
+See note1
 Trademark symbol
 ¢ 
 Cents sign
 £ 
 Pounds Sterling sign
-&sung; 
+&sung;
 Music note
 à 
 A 
@@ -2039,9 +2039,9 @@ symbol may be drawn with the “T” next to the “M” or over the “M”. It
 symbol be superscripted, i.e., XYZTM. It is left to each individual manufacturer to interpret these symbols
 in any way that meets the legal needs of the user.
 Standard characters
-HEX 
-Example 
-Alternate 
+HEX
+Example
+Alternate
 Description
 Standard space
 ! 
@@ -2360,107 +2360,107 @@ same control codes and procedures already described. The first byte of every con
 the data channel (C1/C2) to which the command applies. Control codes which do not match the data
 receiver.
 Mid-Row Codes
-Data channel 1 
-Data channel 2 
+Data channel 1
+Data channel 2
 Attribute description
-11  20 
+11  20
 19  20White.
-11  21 
+11  21
 19  21White Underline.
-11  22 
+11  22
 19  22Green.
-11  23 
+11  23
 19  23Green Underline.
-11  24 
+11  24
 19  24Blue.
-11  25 
+11  25
 19  25Blue Underline.
-11  26 
+11  26
 19  26Cyan.
 
 <!-- 第 60 页 -->
-11  27 
+11  27
 19  27Cyan Underline.
-11  28 
+11  28
 19  28Red.
-11  29 
+11  29
 19  29Red Underline.
-11  2A 
+11  2A
 19  2AYellow.
-11  2B 
+11  2B
 19  2BYellow Underline.
-11  2C 
+11  2C
 19  2CMagenta.
-11  2D 
+11  2D
 19  2DMagenta Underline.
-11  2E 
+11  2E
 19  2EItalics.
-11  2F 
+11  2F
 19  2FItalics Underline.
 Miscellaneous Control Codes
 Mne-
 monic
 Command description
-Data channel 1 
+Data channel 1
 Data channel 2
 14  20
-1C  20RCL 
+1C  20RCL
 Resume caption loading.
 14  21
-1C  21BS 
+1C  21BS
 Backspace.
 14  22
-1C  22AOF 
+1C  22AOF
 Reserved (formerly Alarm Off).
 14  23
-1C  23AON 
+1C  23AON
 Reserved (formerly Alarm On).
 14  24
-1C  24DER 
+1C  24DER
 Delete to End of Row.
 14  25
-1C  25RU2 
+1C  25RU2
 Roll-Up Captions–2 Rows.
 14  26
-1C  26RU3 
+1C  26RU3
 Roll-Up Captions–3 Rows.
 14  27
-1C  27RU4 
+1C  27RU4
 Roll-Up Captions–4 Rows.
 14  28
-1C  28FON 
+1C  28FON
 Flash On.
 14  29
-1C  29RDC 
+1C  29RDC
 Resume Direct Captioning.
 14  2A
-1C  2ATR 
+1C  2ATR
 Text Restart.
 14  2B
-1C  2BRTD 
+1C  2BRTD
 Resume Text Display.
 14  2C
-1C  2CEDM 
+1C  2CEDM
 Erase Displayed Memory.
 14  2D
-1C  2DCR 
+1C  2DCR
 Carriage Return.
 14  2E
-1C  2EENM 
+1C  2EENM
 Erase Non-Displayed Memory.
 14  2F
-1C  2FEOC 
+1C  2FEOC
 End of Caption (Flip Memories).
 17  21
-1F  21TO1 
+1F  21TO1
 Tab Offset 1 Column.
 
 <!-- 第 61 页 -->
 17  22
-1F  22TO2 
+1F  22TO2
 Tab Offset 2 Columns.
 17  23
-1F  23TO3 
+1F  23TO3
 Tab Offset 3 Columns.
 Preamble Address Codes
 Row
@@ -2470,25 +2470,25 @@ Row
 Row
 Row
 Row
-First byte of code 
+First byte of code
 pair:
-Data 
-Channel 
-Data 
-Channel 
-Second byte of code 
+Data
+Channel
+Data
+Channel
+Second byte of code
 pair:
-White 
+White
 Underline
-Green 
+Green
 Underline
-Blue 
+Blue
 Underline
-Cyan 
+Cyan
 Underline
-Red 
+Red
 Underline
-Yellow 
+Yellow
 Underline
 Row
 Row
@@ -2508,32 +2508,32 @@ Row
 1F
 1F
 18 1B 1B 1C 1C
-White 
+White
 40 60 40 60
 40 40 60 40 60
 41 61 41 61
 41 41 61 41 61
-Green 
+Green
 42 62 42 62
 42 42 62 42 62
 43 63 43 63
 43 43 63 43 63
-Blue 
+Blue
 44 64 44 64
 44 44 64 44 64
 45 65 45 65
 45 45 65 45 65
-Cyan 
+Cyan
 46 66 46 66
 46 46 66 46 66
 47 67 47 67
 47 47 67 47 67
-Red 
+Red
 48 68 48 68
 48 48 68 48 68
 49 69 49 69
 49 49 69 49 69
-Yellow 
+Yellow
 4A 6A 4A 6A
 4A
 6A
@@ -2552,7 +2552,7 @@ Yellow
 4B 4B 68 4B 6B
 
 <!-- 第 62 页 -->
-Magenta 
+Magenta
 4C 6C 4C 6C
 4C
 6C
@@ -2569,7 +2569,7 @@ Magenta
 4D
 6D
 4D 4D 6D 4D 6D
-Magenta 
+Magenta
 Underline
 4E 6E 4E 6E
 4E
@@ -2579,7 +2579,7 @@ Underline
 4E
 6E
 4E 4E 6E 4E 6E
-White 
+White
 Italics
 4F 6F 4F 6F
 4F
@@ -2589,43 +2589,43 @@ Italics
 4F
 6F
 4F 4F 6F 4F 6F
-White 
-Italics 
+White
+Italics
 Underline
-Indent 0 
+Indent 0
 50 70 50 70
 50 50 70 50 70
 51 71 51 71
 51 51 71 51 71
-Indent 0 
+Indent 0
 Underline
-Indent 4 
+Indent 4
 52 72 52 72
 52 52 72 52 72
 53 73 53 73
 53 53 73 53 73
-Indent 4 
+Indent 4
 Underline
-Indent 8 
+Indent 8
 54 74 54 74
 54 54 74 54 74
 55 75 55 75
 55 55 75 55 75
-Indent 8 
+Indent 8
 Underline
 Indent 12
 56 76 56 76
 56 56 76 56 76
 57 77 57 77
 57 57 77 57 77
-Indent 12 
+Indent 12
 Underline
 Indent 16
 58 78 58 78
 58 58 78 58 78
 59 79 59 79
 59 59 79 59 79
-Indent 16 
+Indent 16
 Underline
 Indent 20
 5A 7A 5A 7A
@@ -2644,7 +2644,7 @@ Indent 20
 5B
 7B
 5B 5B 7B 5B 7B
-Indent 20 
+Indent 20
 Underline
 Indent 24
 5C 7C 5C 7C
@@ -2663,7 +2663,7 @@ Indent 24
 5D
 7D
 5D 5D 7D 5D 7D
-Indent 24 
+Indent 24
 Underline
 Indent 28
 5E 7E 5E 7E
@@ -2682,7 +2682,7 @@ Indent 28
 5F
 7F
 5F 5F 7F 5F 7F
-Indent 28 
+Indent 28
 Underline
 Note: All indent codes (second byte equals 50h–5fh, 70th–7fh) assign white as the color attribute.
 
@@ -2765,26 +2765,26 @@ displayed to ensure visibility of the information on the majority of home televi
 caption area is specified as shown in the following figure:
 View or download PDF
 The dimensions of the above figure shall be as follows:
-Label 
-Dimensions 
+Label
+Dimensions
 Percent of television picture height
 A 
-Television picture height 
+Television picture height
 100.0
 B 
-Television picture width 
+Television picture width
 133.33
 C 
-Height of safe caption area 
+Height of safe caption area
 80.0
 D 
-Width of safe caption area 
+Width of safe caption area
 106.67
 E 
-Vertical position of safe caption area 
+Vertical position of safe caption area
 10.0
 F 
-Horizontal position of safe caption area 
+Horizontal position of safe caption area
 13.33
 sequence of one non-printing and one printing character. The non-printing byte varies depending on the
 data channel. Regular characters require unique one-byte codes which are the same in either data
@@ -2960,67 +2960,67 @@ View or download PDF
 (3) The substitutions in Table 2 are to be made if a decoder does not support the remaining G2
 characters.
 Table 2—G2 Character Substitution Table
-G2 Character 
+G2 Character
 Substitute with
-Open single quote (‘), G2 char code 0×31 
+Open single quote (‘), G2 char code 0×31
 G0 single quote (‘), char code 0×27
-Close single quote (’), G2 char code 0×32 
+Close single quote (’), G2 char code 0×32
 G0 single quote ('), char code 0×27
-Open double quote (“), G2 char code 0×33 
+Open double quote (“), G2 char code 0×33
 G0 double quote (“), char code 0×22
-Close double quote (”), G2 char code 0×34 
+Close double quote (”), G2 char code 0×34
 G0 double quote (”), char code 0×22
-Bold bullet (•), G2 char code 0×35 
+Bold bullet (•), G2 char code 0×35
 G1 bullet (•), char code 0×B7
-Elipsis (. . .), G2 char code 0×25 
+Elipsis (. . .), G2 char code 0×25
 G0 underscore (_), char code 0×5F
-One-eighth ( 1/8), G2 char code 0×76 
+One-eighth ( 1/8), G2 char code 0×76
 G0 percent sign (%), char code 0×25
-Three-eighths ( 3/8), G2 char code 0×77 
+Three-eighths ( 3/8), G2 char code 0×77
 G0 percent sign (%), char code 0×25
-Five-eighths ( 5/8), G2 char code 0×78 
+Five-eighths ( 5/8), G2 char code 0×78
 G0 percent sign (%), char code 0×25
-Seven-eighths ( 7/8), G2 char code 0×79 
+Seven-eighths ( 7/8), G2 char code 0×79
 G0 percent sign (%), char code 0×25
-Vertical border (&verbar;), G2 char code 0×7A 
+Vertical border (&verbar;), G2 char code 0×7A
 G0 stroke (&verbar;), char code 0×7C
-Upper-right border (⌉), G2 char code 0×7B 
+Upper-right border (⌉), G2 char code 0×7B
 G0 dash (-), char code 0×2D
-Lower-left border (⌊), G2 char code 0×7C 
+Lower-left border (⌊), G2 char code 0×7C
 G0 dash (-), char code 0×2D
-Horizontal border (&horbar;), G2 char code 0×7D 
+Horizontal border (&horbar;), G2 char code 0×7D
 G0 dash (-), char code 0×2D
-Lower-right border (⌋), G2 char code 0×7E 
+Lower-right border (⌋), G2 char code 0×7E
 G0 dash (-), char code 0×2D
 
 <!-- 第 72 页 -->
-Upper-left border (⌈), G2 char code 0×7F 
+Upper-left border (⌈), G2 char code 0×7F
 G0 dash (-), char code 0×2D
 (4) Support for code spaces C2, C3, and G3 is optional. All unsupported graphic symbols in the G3 code
 space are to be substituted with the G0 underscore character (_), char code 0×5F.
 (e) Screen coordinates. Table 3 specifies the screen coordinate resolutions and limits for anchor point
 positioning in 4:3 and 16:9 display formats, and the number of characters per row.
 Table 3—Screen Coordinate Resolutions and Limits
-Maximum 
+Maximum
 characters per
-Screen 
+Screen
 aspect ratio
-Maximum anchor 
+Maximum anchor
 position resolution
-Minimum anchor 
+Minimum anchor
 position resolution
-Maximum 
+Maximum
 displayed rows
 row
-4:3 
-75v×160h 
-15v×32h 
-16:9 
-75v×210h 
-15v×42h 
-Other 
-75v×(5×H) 
-15v×H* 
+4:3
+75v×160h
+15v×32h
+16:9
+75v×210h
+15v×42h
+Other
+75v×(5×H)
+15v×H*
 1H = 32 × (the width of the screen in relation to a 4:3 display). For example, the 16:9 format is 1/3 wider
 than a 4:3 display; thus, H = 32 * 4/3 = 42.667, or 42.
 (1) This means that the minimum grid resolution for a 4:3 aspect ratio instrument is 15 vertical positions ×
@@ -3110,25 +3110,25 @@ the DefineWindow command. At a minimum, decoders should implement Predefined Win
 Style 1 and Predefined Pen Attribute Style 1, as shown in Table 4 and Table 5, respectively.
 Table 4—Predefined Window Style ID's
 Style
-Print 
+Print
 direction
-Scroll 
+Scroll
 direction
 Word
 Display
 ID # Justify
 wrap
 effect
-Left Left-to-right Bottom-to-topNo Snap n/a 
-n/a 
-(0,0,0) 
+Left Left-to-right Bottom-to-topNo Snap n/a
+n/a
+(0,0,0)
 Black
 Effect
 direction
 Effect
-Fill 
+Fill
 color
-Fill 
+Fill
 opacity
 Border
 Border
@@ -3136,156 +3136,156 @@ color
 Usage
 speed
 type
-Solid 
-None n/a 
+Solid
+None n/a
 NTSC Styl
 PopUp
 
 <!-- 第 75 页 -->
-Cntr Left-to-right Bottom-to-topNo Snap n/a 
-n/a 
-(0,0,0) 
+Cntr Left-to-right Bottom-to-topNo Snap n/a
+n/a
+(0,0,0)
 Black
-Left Left-to-right Bottom-to-topYes Snap n/a 
-n/a 
-(0,0,0) 
+Left Left-to-right Bottom-to-topYes Snap n/a
+n/a
+(0,0,0)
 Black
-Cntr Left-to-right Bottom-to-topYes Snap n/a 
-n/a 
-(0,0,0) 
+Cntr Left-to-right Bottom-to-topYes Snap n/a
+n/a
+(0,0,0)
 Black
 Left Top-to-bottom Right-to-left
-No Snap n/a 
-n/a 
-(0,0,0) 
+No Snap n/a
+n/a
+(0,0,0)
 Black
 Table 5—Predefined Pen Style ID's
 Predefined
-Pen 
+Pen
 size
-Font 
+Font
 style Offset ItalicsUnderline
 Edge
 style ID
 type
-Stndr 0 
-Normal No 
+Stndr 0
+Normal No
 No 
 None
-(2,2,2) 
+(2,2,2)
 White
-Stndr 1 
-Normal No 
+Stndr 1
+Normal No
 No 
 None
-(2,2,2) 
-Solid 
-(0,0,0) 
+(2,2,2)
+Solid
+(0,0,0)
 White
-Stndr 2 
-Normal No 
+Stndr 2
+Normal No
 No 
 None
-(2,2,2) 
+(2,2,2)
 White
-Stndr 3 
-Normal No 
+Stndr 3
+Normal No
 No 
 None
-(2,2,2) 
-Solid 
-(0,0,0) 
-Solid 
-n/a 
+(2,2,2)
+Solid
+(0,0,0)
+Solid
+n/a
 NTSC
 Captions
-Left Left-to-right Bottom-to-topNo Snap n/a 
-n/a 
-n/a 
-Transparent None n/a 
-PopUp 
-Captions 
-w/o 
+Left Left-to-right Bottom-to-topNo Snap n/a
+n/a
+n/a
+Transparent None n/a
+PopUp
+Captions
+w/o
 Blac
 Backgroun
-Solid 
-None n/a 
+Solid
+None n/a
 NTSC Styl
-Centered 
-PopUp 
+Centered
+PopUp
 Captions
-Solid 
-None n/a 
+Solid
+None n/a
 NTSC Styl
-RollUp 
+RollUp
 Captions
-Left Left-to-right Bottom-to-topYes Snap n/a 
-n/a 
-n/a 
-Transparent None n/a 
-RollUp 
-Captions 
-w/o 
+Left Left-to-right Bottom-to-topYes Snap n/a
+n/a
+n/a
+Transparent None n/a
+RollUp
+Captions
+w/o
 Blac
 Backgroun
-Solid 
-None n/a 
+Solid
+None n/a
 NTSC Styl
-Centered 
-RollUp 
+Centered
+RollUp
 Captions
-Solid 
-None n/a 
+Solid
+None n/a
 Ticker Tape
 Foregrnd
 Foregrnd
 Backgrnd
 Backgrnd
-Edge 
+Edge
 color
 Usage
 color
 color
 opacity
 opacity
-Solid 
-(0,0,0) 
+Solid
+(0,0,0)
 Black
-Solid 
-n/a 
-Default 
-NTSC 
+Solid
+n/a
+Default
+NTSC
 Style*
-Solid 
-n/a 
-NTSC 
-Style* 
-Mono 
+Solid
+n/a
+NTSC
+Style*
+Mono
 w/Serif
-Solid 
-(0,0,0) 
+Solid
+(0,0,0)
 Black
-Solid 
-n/a 
-NTSC 
-Style* 
-Prop w/ 
+Solid
+n/a
+NTSC
+Style*
+Prop w/
 Serif
 
 <!-- 第 76 页 -->
-Stndr 4 
-Normal No 
+Stndr 4
+Normal No
 No 
 None
-(2,2,2) 
+(2,2,2)
 White
-Stndr 3 
-Normal No 
+Stndr 3
+Normal No
 No 
 Unifrm(2,2,2)
 White
-Stndr 4 
-Normal No 
+Stndr 4
+Normal No
 No 
 Unifrm(2,2,2)
 White
@@ -3307,38 +3307,38 @@ font styles. For information purposes only, each font style references one or mo
 embody the characteristics of the style:
 (i) 0—Default (undefined)
 (ii) 1—Monospaced with serifs (similar to Courier)
-White 
-Black 
-Style* 
-Mono 
-w/o Serif
-Solid 
-(0,0,0) 
+White
 Black
-Solid 
-n/a 
-NTSC 
-Style* 
-Prop w/o 
+Style*
+Mono
+w/o Serif
+Solid
+(0,0,0)
+Black
+Solid
+n/a
+NTSC
+Style*
+Prop w/o
 Serif
-Solid 
-n/a 
+Solid
+n/a
 Transparent(0,0,0)
-Mono 
-w/o 
-Serif, 
-Bordered 
-Text, No 
+Mono
+w/o
+Serif,
+Bordered
+Text, No
 BG
 Black
-Solid 
-n/a 
+Solid
+n/a
 Transparent(0,0,0)
-Prop. 
-w/o 
-Serif, 
-Bordered 
-Text, No 
+Prop.
+w/o
+Serif,
+Bordered
+Text, No
 BG
 Black
 
@@ -3374,18 +3374,18 @@ caption provider unless the viewer chooses otherwise.
 
 <!-- 第 78 页 -->
 Table 6—Minimum Color List Table
-Color 
-Red 
-Green 
+Color
+Red
+Green
 Blue
-Black 
-White 
-Red 
-Green 
-Blue 
-Yellow 
-Magenta 
-Cyan 
+Black
+White
+Red
+Green
+Blue
+Yellow
+Magenta
+Cyan
 (2)(i) When a decoder supporting this Minimum Color List receives an RGB value not in the list, it will
 map the received value to one of the values in the list via the following algorithm:
 (A) All one (1) values are to be changed to 0.
@@ -3395,34 +3395,34 @@ map the received value to one of the values in the list via the following algori
 (1,1,1) will be mapped to (0,0,0).
 (3) Table 7 is an alternative minimum color list table supporting 22 colors.
 Table 7—Alternative Minimum Color List Table
-Color 
-Red 
-Green 
+Color
+Red
+Green
 Blue
-Black 
-Gray 
-White 
-Bright White 
-Dark Red 
-Red 
-Bright Red 
+Black
+Gray
+White
+Bright White
+Dark Red
+Red
+Bright Red
 
 <!-- 第 79 页 -->
-Dark Green 
-Green 
-Bright Green 
-Dark Blue 
-Blue 
-Bright Blue 
-Dark Yellow 
-Yellow 
-Bright Yellow 
-Dark Magenta 
-Magenta 
-Bright Magenta 
-Dark Cyan 
-Cyan 
-Bright Cyan 
+Dark Green
+Green
+Bright Green
+Dark Blue
+Blue
+Bright Blue
+Dark Yellow
+Yellow
+Bright Yellow
+Dark Magenta
+Magenta
+Bright Magenta
+Dark Cyan
+Cyan
+Bright Cyan
 (i) When a decoder supporting the Alternative Minimum Color List in Table 7 receives an RGB value not
 in the list (i.e., an RGB value whose non-zero elements are not the same value), it will map the received
 value to one of the values in the list via the following algorithm:
@@ -3552,11 +3552,11 @@ interactive digital cable services such as video-on-demand, a cable operator's e
 and data-enhanced television services may require the use of a set-top box. For more information call
 your local cable operator.”
 [68 FR 66733, Nov. 28, 2003]
-§ 15.124   DTV 
-transition 
-notices 
+§ 15.124   DTV
+transition
+notices
 by 
-manufacturers 
+manufacturers
 of
 televisions and related devices.
 top
@@ -3693,73 +3693,73 @@ by FCC Identifier.
 top
 (a) Except as shown in paragraph (d) of this section, only spurious emissions are permitted in any of the
 frequency bands listed below:
-MHz 
-MHz 
-MHz 
+MHz
+MHz
+MHz
 GHz
-0.090–0.110 
+0.090–0.110
 16.42–16.423
-399.9–410 
+399.9–410
 4.5–5.15
-10.495–0.505 
+10.495–0.505
 16.69475–16.69525
-608–614 
+608–614
 5.35–5.46
-2.1735–2.1905 
+2.1735–2.1905
 16.80425–16.80475
-960–1240 
+960–1240
 7.25–7.75
-4.125–4.128 
+4.125–4.128
 25.5–25.67
-1300–1427 
+1300–1427
 8.025–8.5
-4.17725–4.17775 
+4.17725–4.17775
 37.5–38.25
-1435–1626.5 
+1435–1626.5
 9.0–9.2
-4.20725–4.20775 
+4.20725–4.20775
 73–74.6
-1645.5–1646.5 
+1645.5–1646.5
 9.3–9.5
-6.215–6.218 
+6.215–6.218
 74.8–75.2
-1660–1710 
+1660–1710
 10.6–12.7
-6.26775–6.26825 
+6.26775–6.26825
 108–121.94
-1718.8–1722.2 
+1718.8–1722.2
 13.25–13.4
-6.31175–6.31225 
+6.31175–6.31225
 123–138
-2200–2300 
+2200–2300
 14.47–14.5
-8.291–8.294 
+8.291–8.294
 149.9–150.05
-2310–2390 
+2310–2390
 15.35–16.2
-8.362–8.366 
+8.362–8.366
 156.52475–156.52525
-2483.5–2500 
+2483.5–2500
 17.7–21.4
-8.37625–8.38675 
+8.37625–8.38675
 156.7–156.9
-2690–2900 
+2690–2900
 22.01–23.12
-8.41425–8.41475 
+8.41425–8.41475
 162.0125–167.17
-3260–3267 
+3260–3267
 23.6–24.0
-12.29–12.293 
+12.29–12.293
 167.72–173.2
-3332–3339 
+3332–3339
 31.2–31.8
-12.51975–12.52025 
+12.51975–12.52025
 240–285
-3345.8–3358 
+3345.8–3358
 36.43–36.5
-12.57675–12.57725 
+12.57675–12.57725
 322–335.4
-3600–4400 
+3600–4400
 (2)
 13.36–13.41
 1Until February 1, 1999, this restricted band shall be 0.490–0.510 MHz.
@@ -3813,14 +3813,14 @@ network (LISN). Compliance with the provisions of this paragraph shall be based 
 the radio frequency voltage between each power line and ground at the power terminal. The lower limit
 applies at the boundary between the frequency ranges.
 Conducted limit (dBμV)
-Frequency of emission (MHz) 
-Quasi-peak 
+Frequency of emission (MHz)
+Quasi-peak
 Average
-0.15–0.5 
-66 to 56* 
+0.15–0.5
+66 to 56*
 56 to 46*
-0.5–5 
-5–30 
+0.5–5
+5–30
 *Decreases with the logarithm of the frequency.
 (b) The limit shown in paragraph (a) of this section shall not apply to carrier current systems operating as
 intentional radiators on frequencies below 30 MHz. In lieu thereof, these carrier current systems shall be
@@ -3847,21 +3847,21 @@ FR 51249, Oct. 1, 1993; 67 FR 45671, July 10, 2002]
 top
 (a) Except as provided elsewhere in this subpart, the emissions from an intentional radiator shall not
 exceed the field strength levels specified in the following table:
-Frequency (MHz) 
-Field strength (microvolts/meter) 
+Frequency (MHz)
+Field strength (microvolts/meter)
 Measurement distance (meters)
-0.009–0.490 
-2400/F(kHz) 
-0.490–1.705 
-24000/F(kHz) 
-1.705–30.0 
-30–88 
-100** 
-88–216 
-150** 
-216–960 
-200** 
-Above 960 
+0.009–0.490
+2400/F(kHz)
+0.490–1.705
+24000/F(kHz)
+1.705–30.0
+30–88
+100**
+88–216
+150**
+216–960
+200**
+Above 960
 **Except as provided in paragraph (g), fundamental emissions from intentional radiators operating under
 this section shall not be located in the frequency bands 54–72 MHz, 76–88 MHz, 174–216 MHz or
 470–806 MHz. However, operation within these frequency bands is permItted under other sections of this
@@ -4258,26 +4258,26 @@ transmitter is activated automatically. Such set-up information may include data
 operated under this section shall not exceed the following:
 
 <!-- 第 102 页 -->
-Fundamental 
+Fundamental
 frequency (MHz)
 Field strength of fundamental
 Field strength of spurious emissions
 (microvolts/meter)
 (microvolts/meter)
-40.66–40.70 
-2,250 
-70–130 
-1,250 
-130–174 
-11,250 to 3,750 
+40.66–40.70
+2,250
+70–130
+1,250
+130–174
+11,250 to 3,750
 1125 to 375
-174–260 
-3,750 
-260–470 
-13,750 to 12,500 
+174–260
+3,750
+260–470
+13,750 to 12,500
 1375 to 1,250
-Above 470 
-12,500 
+Above 470
+12,500
 1,250
 1Linear interpolations.
 (1) The above field strength limits are specified at a distance of 3 meters. The tighter limits apply at the
@@ -4310,25 +4310,25 @@ section and may be employed for any type of operation, including operation prohi
 <!-- 第 103 页 -->
 this section, provided the intentional radiator complies with the provisions of paragraphs (b) through (d) of
 this section, except the field strength table in paragraph (b) of this section is replaced by the following:
-Fundamental 
+Fundamental
 frequency (MHz)
 Field strength of fundamental
 Field strength of spurious emission
 (microvolts/meter)
 (microvolts/meter)
-40.66–40.70 
-1,000 
-70–130 
-130–174 
-500 to 1,5001 
+40.66–40.70
+1,000
+70–130
+130–174
+500 to 1,5001
 50 to 1501
-174–260 
-1,500 
-260–470 
-1,500 to 5,0001 
+174–260
+1,500
+260–470
+1,500 to 5,0001
 150 to 5001
-Above 470 
-5,000 
+Above 470
+5,000
 1Linear interpolations.
 In addition, devices operated under the provisions of this paragraph shall be provided with a means for
 automatically limiting operation so that the duration of each transmission shall not be greater than one
@@ -4358,8 +4358,8 @@ if interference is experienced, moving the cordless telephone farther away from 
 reduce or eliminate the interference. A statement describing the means and procedures used to achieve
 automatic channel selection shall be provided in any application for equipment authorization of a cordless
 telephone operating on channels one through fifteen.
-Channel 
-Base transmitter (MHz) 
+Channel
+Base transmitter (MHz)
 Handset transmitter (MHz)
 43.720
 48.760
@@ -4529,23 +4529,23 @@ own authorization. Powered tags approved with a device under a single applicatio
 the same identification number as the device.
 (e) To prevent interference to Federal Government radar systems, operation under the provisions of this
 section is not permitted within 40 kilometers of the following locations:
-DoD Radar Site 
-Latitude 
+DoD Radar Site
+Latitude
 Longitude
-Beale Air Force Base 
-39°08'10" N 
+Beale Air Force Base
+39°08'10" N
 121°21'04" W
-Cape Cod Air Force Station 
-41°45'07" N 
+Cape Cod Air Force Station
+41°45'07" N
 070°32'17" W
-Clear Air Force Station 
-64°55'16" N 
+Clear Air Force Station
+64°55'16" N
 143°05'02" W
-Cavalier Air Force Station 
-48°43'12" N 
+Cavalier Air Force Station
+48°43'12" N
 097°54'00" W
-Eglin Air Force Base 
-30°43'12" N 
+Eglin Air Force Base
+30°43'12" N
 086°12'36" W
 (f) As a condition of the grant, the grantee of an equipment authorization for a device operating under the
 provisions of this section shall provide information to the user concerning compliance with the operational
@@ -4663,21 +4663,21 @@ disturbance sensors, excluding perimeter protection systems.
 <!-- 第 112 页 -->
 (b) The field strength of emissions from intentional radiators operated within these frequency bands shall
 comply with the following:
-Fundamental 
+Fundamental
 frequency (MHz)
 Field strength of fundamental
 Field strength of harmonics
 (millivolts/meter)
 (millivolts/meter)
-902–928 
+902–928
 1.6
-2435–2465 
+2435–2465
 1.6
-5785–5815 
+5785–5815
 1.6
-10500–10550 
+10500–10550
 25.0
-24075–24175 
+24075–24175
 25.0
 (1) Regardless of the limits shown in the above table, harmonic emissions in the restricted bands below
 17.7 GHz, as specified in §15.205, shall not exceed the field strength limits shown in §15.209. Harmonic
@@ -4706,11 +4706,11 @@ detector. The provisions in §15.35 for limiting peak emissions apply.
 <!-- 第 113 页 -->
 [54 FR 17714, Apr. 25, 1989, as amended at 55 FR 46792, Nov. 7, 1990; 61 FR 42558, Aug. 16, 1996;
 68 FR 68547, Dec. 9, 2003]
-§ 15.247   Operation 
-within 
-the 
-bands 
-902–928 
+§ 15.247   Operation
+within
+the
+bands
+902–928
 MHz,
 2400–2483.5 MHz, and 5725–5850 MHz.
 top
@@ -4872,11 +4872,11 @@ the public is not exposed to radio frequency energy levels in excess of the Comm
 [54 FR 17714, Apr. 25, 1989, as amended at 55 FR 28762, July 13, 1990; 62 FR 26242, May 13, 1997;
 65 FR 57561, Sept. 25, 2000; 67 FR 42734, June 25, 2002; 69 FR 54035, Sept. 7, 2004; 72 FR 5632,
 Feb. 7, 2007]
-§ 15.249   Operation 
-within 
-the 
-bands 
-902–928 
+§ 15.249   Operation
+within
+the
+bands
+902–928
 MHz,
 2400–2483.5 MHz, 5725–5875 MHZ, and 24.0–24.25 GHz.
 top
@@ -4888,10 +4888,10 @@ Field strength of harmonics
 frequency
 (millivolts/meter)
 (microvolts/meter)
-902–928 MHz 
-2400–2483.5 MHz 
-5725–5875 MHz 
-24.0–24.25 GHz 
+902–928 MHz
+2400–2483.5 MHz
+5725–5875 MHz
+24.0–24.25 GHz
 (b) Fixed, point-to-point operation as referred to in this paragraph shall be limited to systems employing a
 fixed transmitter transmitting to a fixed remote location. Point-to-multipoint systems, omnidirectional
 applications, and multiple co-located intentional radiators transmitting the same information are not
@@ -4945,30 +4945,30 @@ isotropically radiated power (EIRP) density levels:
 (1) The radiated emissions above 960 MHz from a device operating under the provisions of this section
 shall not exceed the following RMS average limits based on measurements using a 1 MHz resolution
 bandwidth:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −75.3
-1610–1990 
+1610–1990
 −63.3
-1990–3100 
+1990–3100
 −61.3
-3100–5925 
+3100–5925
 −51.3
-5925–7250 
+5925–7250
 −41.3
-7250–10600 
+7250–10600
 −51.3
-Above 10600 
+Above 10600
 −61.3
 (2) In addition to the radiated emission limits specified in the table in paragraph (d)(1) of this section,
 transmitters operating under the provisions of this section shall not exceed the following RMS average
 limits when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −85.3
-1559–1610 
+1559–1610
 −85.3
 (3) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs and this 50 MHz bandwidth must be
@@ -5011,11 +5011,11 @@ provisions of §15.31(c) continue to apply to transmitters that employ swept fre
 bandwidth, and a video bandwidth greater than or equal to the resolution bandwidth.
 (5) Alternative measurement procedures may be considered by the Commission.
 [70 FR 6774, Feb. 9, 2005]
-§ 15.251   Operation 
-within 
-the 
-bands 
-2.9–3.26 
+§ 15.251   Operation
+within
+the
+bands
+2.9–3.26
 GHz,
 3.267–3.332 GHz, 3.339–3.3458 GHz, and 3.358–3.6 GHz.
 top
@@ -5086,43 +5086,43 @@ isotropically radiated power (EIRP) density levels:
 (1) For transmitters operating in the 16.2–17.7 GHz band, the RMS average radiated emissions above
 960 MHz from a device operating under the provisions of this section shall not exceed the following EIRP
 limits based on measurements using a 1 MHz resolution bandwidth:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −75.3
-1610–16,200 
+1610–16,200
 −61.3
-16,200–17,700 
+16,200–17,700
 −41.3
 
 <!-- 第 123 页 -->
-Above 17,700 
+Above 17,700
 −61.3
 (2) For transmitters operating in the 23.12–29.0 GHz band, the RMS average radiated emissions above
 960 MHz from a device operating under the provisions of this section shall not exceed the following EIRP
 limits based on measurements using a 1 MHz resolution bandwidth:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −75.3
-1610–23,120 
+1610–23,120
 −61.3
-23,120–23,600 
+23,120–23,600
 −41.3
-23,600–24,000 
+23,600–24,000
 −61.3
-24,000–29,000 
+24,000–29,000
 −41.3
-Above 29,000 
+Above 29,000
 —61.3
 (3) In addition to the radiated emission limits specified in the tables in paragraphs (b)(1) and (b)(2) of this
 section, transmitters operating under the provisions of this section shall not exceed the following RMS
 average EIRP limits when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −85.3
-1559–1610 
+1559–1610
 −85.3
 (4) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs and this 50 MHz bandwidth must be
@@ -5920,26 +5920,26 @@ device operating under the provisions of this section shall not exceed the follo
 measured using a resolution bandwidth of 1 MHz:
 
 <!-- 第 147 页 -->
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 –65.3
-1610–1990 
+1610–1990
 –53.3
-1990–3100 
+1990–3100
 –51.3
-3100–10600 
+3100–10600
 –41.3
-Above 10600 
+Above 10600
 –51.3
 (e) In addition to the radiated emission limits specified in the table in paragraph (d) of this section, UWB
 transmitters operating under the provisions of this section shall not exceed the following average limits
 when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 –75.3
-1559–1610 
+1559–1610
 –75.3
 (f) For UWB devices where the frequency at which the highest radiated emission occurs, fM, is above 960
 MHz, there is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
@@ -5968,22 +5968,22 @@ ceases transmission within 10 seconds of the remote switch being released by the
 (4) The radiated emissions at or below 960 MHz shall not exceed the emission levels in §15.209. The
 radiated emissions above 960 MHz shall not exceed the following average limits when measured using a
 resolution bandwidth of 1 MHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −65.3
-1610–1990 
+1610–1990
 −53.3
-Above 1990 
+Above 1990
 −51.3
 (5) In addition to the radiated emission limits specified in the table in paragraph (c)(4) of this section,
 emissions from these imaging systems shall not exceed the following average limits when measured
 using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −75.3
-1559–1610 
+1559–1610
 −75.3
 (d) For equipment operating with fCand fMbetween 1990 MHz and 10600 MHz:
 (1) Parties operating this equipment must hold a license issued by the Federal Communications
@@ -5994,24 +5994,24 @@ services, and necessary training operations.
 (3) The radiated emissions at or below 960 MHz shall not exceed the emission levels in §15.209 of this
 chapter. The radiated emissions above 960 MHz shall not exceed the following average limits when
 measured using a resolution bandwidth of 1 MHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −46.3
-1610–10600 
+1610–10600
 −41.3
 
 <!-- 第 149 页 -->
-Above 10600 
+Above 10600
 −51.3
 (4) In addition to the radiated emission limits specified in the paragraph (d)(3) of this section, emissions
 from these imaging systems shall not exceed the following average limits when measured using a
 resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −56.3
-1559–1610 
+1559–1610
 −56.3
 (5) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs, fM. That limit is 0 dBm EIRP. It is acceptable
@@ -6037,24 +6037,24 @@ device operating under the provisions of this section shall not exceed the follo
 measured using a resolution bandwidth of 1 MHz:
 
 <!-- 第 150 页 -->
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −53.3
-1610–1990 
+1610–1990
 −51.3
-1990–10600 
+1990–10600
 −41.3
-Above 10600 
+Above 10600
 −51.3
 (d) In addition to the radiated emission limits specified in the table in paragraph (c) of this section, UWB
 transmitters operating under the provisions of this section shall not exceed the following average limits
 when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −63.3
-1559–1610 
+1559–1610
 −63.3
 (e) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs, fM. That limit is 0 dBm EIRP. It is acceptable
@@ -6065,10 +6065,10 @@ statement in a conspicuous location on the device: “Operation of this device i
 enforcement, fire and rescue officials, public utilities, and industrial entities. Operation by any other party
 is a violation of 47 U.S.C. 301 and could subject the operator to serious legal penalties.”
 [68 FR 19750, Apr. 22, 2003]
-§ 15.513   Technical 
-requirements 
-for 
-medical 
+§ 15.513   Technical
+requirements
+for
+medical
 imaging
 systems.
 top
@@ -6087,26 +6087,26 @@ system ceases transmission within 10 seconds of the remote switch being released
 section shall not exceed the emission levels in §15.209. The radiated emissions above 960 MHz from a
 device operating under the provisions of this section shall not exceed the following average limits when
 measured using a resolution bandwidth of 1 MHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −65.3
-1610–1990 
+1610–1990
 −53.3
-011990–3100 
+011990–3100
 −51.3
-3100–10600 
+3100–10600
 −41.3
-Above 10600 
+Above 10600
 −51.3
 (e) In addition to the radiated emission limits specified in the table in paragraph (d) of this section, UWB
 transmitters operating under the provisions of this section shall not exceed the following average limits
 when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −75.3
-1559–1610 
+1559–1610
 −75.3
 (f) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs, fM. That limit is 0 dBm EIRP. It is acceptable
@@ -6139,26 +6139,26 @@ reduction in output power or any other means.
 section shall not exceed the emission levels in §15.209. The radiated emissions above 960 MHz from a
 device operating under the provisions of this section shall not exceed the following average limits when
 measured using a resolution bandwidth of 1 MHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −75.3
-1610–22,000 
+1610–22,000
 −61.3
-22,000–29,000 
+22,000–29,000
 −41.3
-29,000–31,000 
+29,000–31,000
 −51.3
-Above 31,000 
+Above 31,000
 −61.3
 (e) In addition to the radiated emission limits specified in the table in paragraph (d) of this section, UWB
 transmitters operating under the provisions of this section shall not exceed the following average limits
 when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −85.3
-1559–1610 
+1559–1610
 −85.3
 (f) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs, fM. That limit is 0 dBm EIRP. It is acceptable
@@ -6192,28 +6192,28 @@ contained between 3100 MHz and 10,600 MHz.
 section shall not exceed the emission levels in §15.209. The radiated emissions above 960 MHz from a
 device operating under the provisions of this section shall not exceed the following average limits when
 measured using a resolution bandwidth of 1 MHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −75.3
-1610–1990 
+1610–1990
 −53.3
-1990–3100 
+1990–3100
 −51.3
 
 <!-- 第 154 页 -->
-3100–10600 
+3100–10600
 −41.3
-Above 10600 
+Above 10600
 −51.3
 (d) In addition to the radiated emission limits specified in the table in paragraph (c) of this section, UWB
 transmitters operating under the provisions of this section shall not exceed the following average limits
 when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −85.3
-1559–1610 
+1559–1610
 −85.3
 (e) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs, fM. That limit is 0 dBm EIRP. It is acceptable
@@ -6245,26 +6245,26 @@ between 3100 MHz and 10,600 MHz.
 section shall not exceed the emission levels in §15.209. The radiated emissions above 960 MHz from a
 device operating under the provisions of this section shall not exceed the following average limits when
 measured using a resolution bandwidth of 1 MHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-960–1610 
+960–1610
 −75.3
-1610–1990 
+1610–1990
 −63.3
-1990–3100 
+1990–3100
 −61.3
-3100–10600 
+3100–10600
 −41.3
-Above 10600 
+Above 10600
 −61.3
 (d) In addition to the radiated emission limits specified in the table in paragraph (c) of this section, UWB
 transmitters operating under the provisions of this section shall not exceed the following average limits
 when measured using a resolution bandwidth of no less than 1 kHz:
-Frequency in MHz 
+Frequency in MHz
 EIRP in dBm
-1164–1240 
+1164–1240
 −85.3
-1559–1610 
+1559–1610
 −85.3
 (e) There is a limit on the peak level of the emissions contained within a 50 MHz bandwidth centered on
 the frequency at which the highest radiated emission occurs, fM. That limit is 0 dBm EIRP. It is acceptable
@@ -6531,369 +6531,369 @@ for these coast stations to ensure harmful interference is prevented at these fa
 Point of contact: Commandant (CG 622), U.S. Coast Guard, 2100 2nd Street, SW., Washington, DC
 20593–0001, Telephone: (202) 267–2860, e-mail: cgcomms@comdt.uscg.mil.
 Table 2—Exclusion Zones for U.S. Coast Guard Coast Stations
-Locale 
-Latitude 
+Locale
+Latitude
 Longitude
-Group Guam 
-13°35'23" N 
+Group Guam
+13°35'23" N
 144°50'24" E
-GANTSEC 
-18°18'00" N 
+GANTSEC
+18°18'00" N
 65°46'59" W
-Puerto Rico 
-18°28'11" N 
+Puerto Rico
+18°28'11" N
 66°07'47" W
-Honolulu 
-21°18'21" N 
+Honolulu
+21°18'21" N
 157°53'23" W
-Group Key West 
-24°33'35" N 
+Group Key West
+24°33'35" N
 81°47'59" W
-Trumbo Point CG Base 
-24°33'58" N 
+Trumbo Point CG Base
+24°33'58" N
 81°47'57" W
-Miami 
-25°37'28" N 
+Miami
+25°37'28" N
 80°23'07" W
-Everglades Park 
-25°50'10" N 
+Everglades Park
+25°50'10" N
 81°23'13" W
-Group Saint Petersburg (Everglades) 
-25°51'00" N 
+Group Saint Petersburg (Everglades)
+25°51'00" N
 81°23'24" W
-Station Ft. Lauderdale 
-26°05'21" N 
+Station Ft. Lauderdale
+26°05'21" N
 80°06'40" W
-Station Ft. Myers Beach 
-26°27'34" N 
+Station Ft. Myers Beach
+26°27'34" N
 81°57'15" W
-Group Miami (Ft. Pierce) 
-27°27'36" N 
+Group Miami (Ft. Pierce)
+27°27'36" N
 80°18'36" W
-Station Ft. Pierce 
-27°27'50" N 
+Station Ft. Pierce
+27°27'50" N
 80°18'27" W
-Group Corpus Christi 
-27°42'01" N 
+Group Corpus Christi
+27°42'01" N
 97°16'11" W
-Group Corpus Christi 
-27°42'06" N 
+Group Corpus Christi
+27°42'06" N
 97°16'45" W
-ESD Saint Petersburg 
-27°45'21" N 
+ESD Saint Petersburg
+27°45'21" N
 82°37'32" W
 
 <!-- 第 164 页 -->
-Group Saint Petersburg 
-27°46'11" N 
+Group Saint Petersburg
+27°46'11" N
 82°37'47" W
-Station Port O'Connor 
-28°26'03" N 
+Station Port O'Connor
+28°26'03" N
 96°25'39" W
-S. Padre Island 
-28°26'22" N 
+S. Padre Island
+28°26'22" N
 97°09'56" W
-Freeport 
-28°55'59" N 
+Freeport
+28°55'59" N
 95°16'59" W
-Group Galveston (Freeport) 
-28°56'24" N 
+Group Galveston (Freeport)
+28°56'24" N
 95°17'59" W
-Station YANKEETOWN 
-29°01'51" N 
+Station YANKEETOWN
+29°01'51" N
 82°43'39" W
-Station Ponce De Leon Inlet 
-29°03'50" N 
+Station Ponce De Leon Inlet
+29°03'50" N
 81°55'01" W
-Group New Orleans (Grand Isle) 
-29°15'53" N 
+Group New Orleans (Grand Isle)
+29°15'53" N
 89°57'26" W
-Galveston 
-29°19'59" N 
+Galveston
+29°19'59" N
 94°46'18" W
-Kapalan 
-29°20'04" N 
+Kapalan
+29°20'04" N
 94°47'17" W
-Sabine 
-29°43'42" N 
+Sabine
+29°43'42" N
 93°52'14" W
-New Orleans 
-30°01'17" N 
+New Orleans
+30°01'17" N
 90°07'24" W
-Panama City 
-30°10'01" N 
+Panama City
+30°10'01" N
 85°45'04" W
-Group Mobile (Panama City) 
-30°10'12" N 
+Group Mobile (Panama City)
+30°10'12" N
 85°45'36" W
-ANT Jacksonville Beach 
-30°17'16" N 
+ANT Jacksonville Beach
+30°17'16" N
 81°24'10" W
-Pensacola 
-30°20'24" N 
+Pensacola
+30°20'24" N
 87°18'17" W
-Group Mayport 
-30°23'10" N 
+Group Mayport
+30°23'10" N
 81°26'01" W
-Group Mayport 
-30°23'24" N 
+Group Mayport
+30°23'24" N
 81°25'48" W
-Ft. Morgan 
-30°39'07" N 
+Ft. Morgan
+30°39'07" N
 88°03'12" W
-Tybee Lighthouse 
-32°01'15" N 
+Tybee Lighthouse
+32°01'15" N
 80°50'39" W
-Point Loma Lighthouse 
-32°39'56" N 
+Point Loma Lighthouse
+32°39'56" N
 117°14'34" W
-Point Loma 
-32°40'07" N 
+Point Loma
+32°40'07" N
 117°14'14" W
-Activities San Diego 
-32°43'59" N 
+Activities San Diego
+32°43'59" N
 117°11'13" W
-Group Charleston (Sullivan's Island) 
-32°45'00" N 
+Group Charleston (Sullivan's Island)
+32°45'00" N
 79°49'47" W
-Sullivan's Island Lights 
-32°45'02" N 
+Sullivan's Island Lights
+32°45'02" N
 79°50'03" W
-Group Charleston 
-32°46'25" N 
+Group Charleston
+32°46'25" N
 79°56'37" W
-Group San Diego 
-32°52'48" N 
+Group San Diego
+32°52'48" N
 118°26'23" W
-San Pedro 
-33°45'00" N 
+San Pedro
+33°45'00" N
 118°15'58" W
-Group Fort Macon 
-33°53'24" N 
+Group Fort Macon
+33°53'24" N
 78°01'48" W
-Point Mugu 
-33°59'32" N 
+Point Mugu
+33°59'32" N
 119°07'18" W
 
 <!-- 第 165 页 -->
-Group LA/Long Beach 
-34°07'11" N 
+Group LA/Long Beach
+34°07'11" N
 119°06'35" W
-Channel Island 
-34°09'17" N 
+Channel Island
+34°09'17" N
 119°13'11" W
-Station Oxnard Channel Island 
-34°09'43" N 
+Station Oxnard Channel Island
+34°09'43" N
 119°13'19" W
-Group Ft. Macon 
-34°41'48" N 
+Group Ft. Macon
+34°41'48" N
 76°40'59" W
-Group Cape Hatteras 
-35°13'59" N 
+Group Cape Hatteras
+35°13'59" N
 75°31'59" W
-Group Cape Hatteras 
-35°15'35" N 
+Group Cape Hatteras
+35°15'35" N
 75°31'48" W
-Morro Bay (Cambria) 
-35°31'21" N 
+Morro Bay (Cambria)
+35°31'21" N
 121°03'31" W
-San Clemente Island 
-32°50'24" N 
+San Clemente Island
+32°50'24" N
 118°23'15" W
-Point Pinos 
-36°38'12" N 
+Point Pinos
+36°38'12" N
 121°56'06" W
-CAMSLANT 
-36°43'47" N 
+CAMSLANT
+36°43'47" N
 76°01'11" W
-Group Hampton Roads 
-36°53'01" N 
+Group Hampton Roads
+36°53'01" N
 76°21'10" W
-Point Montara 
-37°31'23" N 
+Point Montara
+37°31'23" N
 122°30'47" W
-Point Montara Lighthouse 
-37°32'09" N 
+Point Montara Lighthouse
+37°32'09" N
 122°31'08" W
-Group San Francisco 
-37°32'23" N 
+Group San Francisco
+37°32'23" N
 122°31'11" W
-Group San Francisco 
-37°48'34" N 
+Group San Francisco
+37°48'34" N
 122°21'55" W
-Point Bonita 
-37°49'00" N 
+Point Bonita
+37°49'00" N
 122°31'41" W
-Group Eastern Shores 
-37°55'47" N 
+Group Eastern Shores
+37°55'47" N
 75°22'47" W
-Group Eastern Shore 
-37°55'50" N 
+Group Eastern Shore
+37°55'50" N
 75°22'58" W
-CAMSPAC 
-38°06'00" N 
+CAMSPAC
+38°06'00" N
 122°55'48" W
-Point Arena Lighthouse 
-38°57'18" N 
+Point Arena Lighthouse
+38°57'18" N
 124°44'28" W
-Point Arena 
-38°57'36" N 
+Point Arena
+38°57'36" N
 123°44'23" W
-Group Atlantic City 
-39°20'59" N 
+Group Atlantic City
+39°20'59" N
 74°27'42" W
-Activities New York 
-40°36'06" N 
+Activities New York
+40°36'06" N
 74°03'36" W
-Activities New York 
-40°37'11" N 
+Activities New York
+40°37'11" N
 74°04'11" W
-ESD Moriches Hut 
-40°47'19" N 
+ESD Moriches Hut
+40°47'19" N
 72°44'53" W
-Group Moriches 
-40°47'23" N 
+Group Moriches
+40°47'23" N
 72°45'00" W
-Group Humboldt Bay 
-40°58'41" N 
+Group Humboldt Bay
+40°58'41" N
 124°06'31" W
-Group Humboldt Bay 
-40°58'47" N 
+Group Humboldt Bay
+40°58'47" N
 124°06'35" W
-Trinidad Head 
-41°03'15" N 
+Trinidad Head
+41°03'15" N
 124°09'02" W
-Group Long Island Sound 
-41°16'12" N 
+Group Long Island Sound
+41°16'12" N
 72°54'00" W
 
 <!-- 第 166 页 -->
-Station New Haven 
-41°16'12" N 
+Station New Haven
+41°16'12" N
 72°54'06" W
-Station Brant Point 
-41°17'21" N 
+Station Brant Point
+41°17'21" N
 70°05'31" W
-Group Woods Hole 
-41°17'23" N 
+Group Woods Hole
+41°17'23" N
 70°04'47" W
-Station Castle Hill 
-41°27'46" N 
+Station Castle Hill
+41°27'46" N
 71°21'42" W
-Group Woods Hole 
-41°17'29" N 
+Group Woods Hole
+41°17'29" N
 70°401'07" W
-Boston Area 
-41°40'12" N 
+Boston Area
+41°40'12" N
 70°31'48" W
-Station Provincetown 
-42°01'48" N 
+Station Provincetown
+42°01'48" N
 70°12'42" W
-Eastern Point 
-42°36'24" N 
+Eastern Point
+42°36'24" N
 70°39'26" W
-Cape Blanco 
-42°50'16" N 
+Cape Blanco
+42°50'16" N
 124°33'52" W
-Group North Bend 
-43°24'16" N 
+Group North Bend
+43°24'16" N
 124°13'22" W
-Group North Bend 
-43°24'35" N 
+Group North Bend
+43°24'35" N
 124°14'23" W
-Cape Elizabeth 
-43°33'28" N 
+Cape Elizabeth
+43°33'28" N
 70°12'00" W
-Group South Portland 
-43°38'24" N 
+Group South Portland
+43°38'24" N
 70°15'00" W
-Group South Portland 
-43°38'45" N 
+Group South Portland
+43°38'45" N
 70°14'51" W
-Group SW Harbor 
-44°16'19" N 
+Group SW Harbor
+44°16'19" N
 68°18'27" W
-Group Southwest Harbor 
-44°16'48" N 
+Group Southwest Harbor
+44°16'48" N
 68°18'36" W
-Fort Stevens, Oregon 
-46°09'14" N 
+Fort Stevens, Oregon
+46°09'14" N
 123°53'07" W
-Group Astoria 
-46°09'29" N 
+Group Astoria
+46°09'29" N
 123°31'48" W
-Group Astoria 
-46°09'35" N 
+Group Astoria
+46°09'35" N
 123°53'24" W
-La Push 
-47°49'00" N 
+La Push
+47°49'00" N
 124°37'59" W
-Station Quillayute River 
-47°54'49" N 
+Station Quillayute River
+47°54'49" N
 124°38'01" W
-Port Angeles 
-48°07'59" N 
+Port Angeles
+48°07'59" N
 123°25'59" W
-Group Port Angeles 
-48°08'24" N 
+Group Port Angeles
+48°08'24" N
 123°24'35" W
-Juneau (Sitka) 
-57°05'24" N 
+Juneau (Sitka)
+57°05'24" N
 135°15'35" W
-Kodiak 
-57°40'47" N 
+Kodiak
+57°40'47" N
 152°28'47" W
-Valdez (Cape Hinchinbrook) 
-60°26'23" N 
+Valdez (Cape Hinchinbrook)
+60°26'23" N
 146°25'48" W
 Note:Systems of coordinates comply with NAD 83.
 Table 2.1—Exclusion Zones for Maritime Public Coast Stations
 [Points of Contact Are Identified in the Commission's License Database]
 
 <!-- 第 167 页 -->
-Licensee name 
-Location 
-Latitude 
+Licensee name
+Location
+Latitude
 Longitude
-Shipcom LLC 
-Marina Del Ray, CA 
-33°56'21" N 
+Shipcom LLC
+Marina Del Ray, CA
+33°56'21" N
 118°27'14" W
-Globe Wireless 
-Rio Vista, CA 
-38°11'55" N 
+Globe Wireless
+Rio Vista, CA
+38°11'55" N
 121°48'34" W
-Avalon Communications Corp 
-St. Thomas, VI 
-18°21'19" N 
+Avalon Communications Corp
+St. Thomas, VI
+18°21'19" N
 64°56'48" W
-Globe Wireless 
-Bishopville, MD 
-38°24'10" N 
+Globe Wireless
+Bishopville, MD
+38°24'10" N
 75°12'59" W
-Shipcom LLC 
-Mobile, AL 
-30°40'07" N 
+Shipcom LLC
+Mobile, AL
+30°40'07" N
 88°10'23" W
-Shipcom LLC 
-Coden, AL 
-30°22'35" N 
+Shipcom LLC
+Coden, AL
+30°22'35" N
 88°12'20" W
-Globe Wireless 
-Pearl River, LA 
-30°22'13" N 
+Globe Wireless
+Pearl River, LA
+30°22'13" N
 89°47'26" W
-Globe Wireless 
-Kahalelani, HI 
-21°10'33" N 
+Globe Wireless
+Kahalelani, HI
+21°10'33" N
 157°10'39" W
-Globe Wireless 
-Palo Alto, CA 
-37°26'44" N 
+Globe Wireless
+Palo Alto, CA
+37°26'44" N
 122°06'48" W
-Globe Wireless 
-Agana, GU 
-13°29'22" N 
+Globe Wireless
+Agana, GU
+13°29'22" N
 144°49'39" E
 Note: Systems of coordinates comply with NAD 83.
 (ii) New or relocated Coast stations. In the unlikely event that a new or relocated coast station is
@@ -6931,149 +6931,149 @@ Point of contact: U.S. Coast Guard HQ, Division of Spectrum Management CG–622,
 SW., Rm. 6611, Washington, DC 20593, Tel: (202) 267–6036, Fax: (202) 267–4106, e-mail:
 jtaboada@comdt.uscg.mil.
 Table 3a—Consultation Area Coordinates for Aeronautical (OR) Stations (1.7–30 MHz)
-Command name 
-Location 
-Latitude 
+Command name
+Location
+Latitude
 Longitude
-Washington 
-Arlington, VA 
-38°51'07" N 
+Washington
+Arlington, VA
+38°51'07" N
 77°02'15" W
-Cape Cod 
-Cape Cod, MA 
-41°42'00" N 
+Cape Cod
+Cape Cod, MA
+41°42'00" N
 70°30'00" W
-Atlantic City 
-Atlantic City, NJ 
-39°20'59" N 
+Atlantic City
+Atlantic City, NJ
+39°20'59" N
 74°27'42" W
-Elizabeth City 
-Elizabeth City, NC 
-36°15'53" N 
+Elizabeth City
+Elizabeth City, NC
+36°15'53" N
 76°10'32" W
-Savannah 
-Savannah, GA 
-32°01'30" N 
+Savannah
+Savannah, GA
+32°01'30" N
 81°08'30" W
-Miami 
-Opa Locka, FL 
-25°54'22" N 
+Miami
+Opa Locka, FL
+25°54'22" N
 80°16'01" W
-Clearwater 
-Clearwater, FL 
-27°54'27" N 
+Clearwater
+Clearwater, FL
+27°54'27" N
 82°41' 29" W
-Borinquen 
-Aguadilla, PR 
-18°18'36" N 
+Borinquen
+Aguadilla, PR
+18°18'36" N
 67°04' 48" W
-New Orleans 
-New Orleans, LA 
-29°49'31" N 
+New Orleans
+New Orleans, LA
+29°49'31" N
 90°02' 06" W
-Traverse City 
-Traverse City, MI 
-44°44'24" N 
+Traverse City
+Traverse City, MI
+44°44'24" N
 85°34'54" W
-San Diego 
-San Diego, CA 
-32°43'33" N 
+San Diego
+San Diego, CA
+32°43'33" N
 117°10' 15" W
-Sacramento 
-McCllelan AFB, CA 
-38°40'06" N 
+Sacramento
+McCllelan AFB, CA
+38°40'06" N
 121°24'04" W
-Astoria 
-Warrenton, OR 
-46°25'18" N 
+Astoria
+Warrenton, OR
+46°25'18" N
 123°47' 46" W
-North Bend 
-North Bend, OR 
-43°24'39" N 
+North Bend
+North Bend, OR
+43°24'39" N
 124°14'35" W
-Barbers Point 
-Kapolei, HI 
-21°18'01" N 
+Barbers Point
+Kapolei, HI
+21°18'01" N
 158°04'15" W
-Kodiak 
-Kodiak, AK 
-57°44'19" N 
+Kodiak
+Kodiak, AK
+57°44'19" N
 152°30'18" W
 
 <!-- 第 169 页 -->
-Houston 
-Houston, TX 
-29°45'00" N 
+Houston
+Houston, TX
+29°45'00" N
 95°22'00" W
-Detroit 
-Mt. Clemens, MI 
-42°36'05" N 
+Detroit
+Mt. Clemens, MI
+42°36'05" N
 82°50'12" W
-San Francisco 
-San Francisco, CA 
-37°37'58" N 
+San Francisco
+San Francisco, CA
+37°37'58" N
 122°23'20" W
-Los Angeles 
-Los Angeles, CA 
-33°56'36" N 
+Los Angeles
+Los Angeles, CA
+33°56'36" N
 118°23'48" W
-Humboldt Bay 
-McKinleyville, CA 
-40°58'39" N 
+Humboldt Bay
+McKinleyville, CA
+40°58'39" N
 124°06'45" W
-Port Angeles 
-Port Angeles, WA 
-48°08'25" N 
+Port Angeles
+Port Angeles, WA
+48°08'25" N
 123°24'48" W
-Sitka 
-Sitka, AK 
-57°05'50" N 
+Sitka
+Sitka, AK
+57°05'50" N
 135°21'58" W
 Note: Systems of coordinates conform to NAD 83.
 Point of contact: ARINC, 2551 Riva Road, Annapolis, MD 21401, Tel: 1–800–633–6882, Fax: (410)
 Point of contact: ARINC, 2551 Riva Road, Annapolis, MD 21401, Tel: 1–800–633–6882, Fax:
 Table 3b—Consultation Area Coordinates for Aeronautical Receive Stations (1.7–30 MHz)
-Locale 
-Latitude 
+Locale
+Latitude
 Longitude
-Southampton, NY 
-40°55'15" N 
+Southampton, NY
+40°55'15" N
 72°23'41" W
-Molokai, HI 
-21°12'23" N 
+Molokai, HI
+21°12'23" N
 157°12'30" W
-Oahu, HI 
-21°22'27" N 
+Oahu, HI
+21°22'27" N
 158°05'56" W
-Half Moon Bay, CA 
-37°39'64" N 
+Half Moon Bay, CA
+37°39'64" N
 122°24'44" W
-Pt. Reyes, CA 
-38°06'00" N 
+Pt. Reyes, CA
+38°06'00" N
 122°56'00" W
-Barrow, AK 
-71°17'24" N 
+Barrow, AK
+71°17'24" N
 156°40'12"; W
-Guam 
-13°28'12" N 
+Guam
+13°28'12" N
 144°48'0.0" E (note: Eastern Hemisphere)
-NY Comm Center, NY 
-40°46'48" N 
+NY Comm Center, NY
+40°46'48" N
 73°05'46" W
-Cedar Rapids, IA 
-42°02'05.0" N 
+Cedar Rapids, IA
+42°02'05.0" N
 91°38'37.6" W
-Beaumont, CA 
-33°54'27.1" N 
+Beaumont, CA
+33°54'27.1" N
 116°59'49.1" W
-Fairfield, TX 
-31°47'02.6" N 
+Fairfield, TX
+31°47'02.6" N
 96°47'03.0" W
-Houston, TX 
-29°36'35.8" N 
+Houston, TX
+29°36'35.8" N
 95°16'54.8" W
-Miami, FL 
-25°49'05" N 
+Miami, FL
+25°49'05" N
 80°18'28" W
 Note:Systems of coordinates conform to NAD 83.
 
@@ -7082,106 +7082,106 @@ Point of contact: U.S. Coast Guard HQ, Division of Spectrum Management CG–622,
 SW., Rm. 6611, Washington, DC 20593, Tel: (202) 267–6036, Fax: (202) 267–4106, e-mail:
 jtaboada@comdt.uscg.mil.
 Table 4—Consultation Area Coordinates for Land Stations, Set 1 (1.7–30 MHz)
-Command name 
-Location 
-Latitude 
+Command name
+Location
+Latitude
 Longitude
-COMMSTA Boston 
-Maspee, MA 
-41°24'00" N 
+COMMSTA Boston
+Maspee, MA
+41°24'00" N
 70°18'57" W
-Camslant 
-Chesapeake, VA 
-36°33'59" N 
+Camslant
+Chesapeake, VA
+36°33'59" N
 76°15'23" W
-COMMSTA Miami 
-Miami, FL 
-25°36'58" N 
+COMMSTA Miami
+Miami, FL
+25°36'58" N
 80°23'04" W
-COMMSTA New Orleans 
-Belle Chasse, IA 
-29°52'40" N 
+COMMSTA New Orleans
+Belle Chasse, IA
+29°52'40" N
 89°54'46" W
-Camspac 
-Pt. Reyes Sta, CA 
-38°06'00" N 
+Camspac
+Pt. Reyes Sta, CA
+38°06'00" N
 122°55'48" W
-COMMSTA Honolulu 
-Wahiawa, HI 
-21°31'08" N 
+COMMSTA Honolulu
+Wahiawa, HI
+21°31'08" N
 157°59'28" W
-COMMSTA Kodiak 
-Kodiak, AK 
-57°04'26' N 
+COMMSTA Kodiak
+Kodiak, AK
+57°04'26' N
 152°28'20" W
-Guam 
-Finegayan, GU 
-13°53'08" N 
+Guam
+Finegayan, GU
+13°53'08" N
 144°50'20" E
 Note: Systems of coordinates conform to NAD 83.
 Point of contact: COTHEN Technical Support Center, COTHEN Program Manager, Tel: (800) 829–6336.
 Table 5—Consultation Area Coordinates for Land Stations, Set 2 (1.7–30 MHz)
-Site name 
-Latitude 
+Site name
+Latitude
 Longitude
-Albuquerque, NM 
-35°05'02" N 
+Albuquerque, NM
+35°05'02" N
 105°34'23" W
-Arecibo, PR 
-18°17'26" N 
+Arecibo, PR
+18°17'26" N
 66°22'33" W
-Atlanta, GA 
-32°33"06 N 
+Atlanta, GA
+32°33"06 N
 84°23'35" W
-Beaufort, SC 
-34°34'22" N 
+Beaufort, SC
+34°34'22" N
 76°09'48" W
-Cape Charles, VA 
-37°05'37" N 
+Cape Charles, VA
+37°05'37" N
 75°58'06" W
-Cedar Rapids, IA 
-42°00'09" N 
+Cedar Rapids, IA
+42°00'09" N
 91°17'39" W
-Denver, CO 
-39°15'45" N 
+Denver, CO
+39°15'45" N
 103°34'23" W
-Fort Myers, FL 
-81°31'20" N 
+Fort Myers, FL
+81°31'20" N
 26°20'01" W
-Kansas City, MO 
-38°22'10" N 
+Kansas City, MO
+38°22'10" N
 93°21'48" W
-Las Vegas, NV 
-36°21'15" N 
+Las Vegas, NV
+36°21'15" N
 114°17'33" W
-Lovelock, NV 
-40°03'07" N 
+Lovelock, NV
+40°03'07" N
 118°18'56" W
 
 <!-- 第 171 页 -->
-Memphis, TN 
-34°21'57" N 
+Memphis, TN
+34°21'57" N
 90°02'43" W
-Miami, FL 
-25°46'20" N 
+Miami, FL
+25°46'20" N
 80°28'48" W
-Morehead City, NC 
-34°34'50" N 
+Morehead City, NC
+34°34'50" N
 78°13'59" W
-Oklahoma City, OK 
-34°30'52" N 
+Oklahoma City, OK
+34°30'52" N
 97°30'52" W
-Orlando, FL 
-28°31'30" N 
+Orlando, FL
+28°31'30" N
 80°48'58" W
-Reno, NV 
-38°31'12" N 
+Reno, NV
+38°31'12" N
 119°14'37" W
-Sarasota, FL 
-27°12'41" N 
+Sarasota, FL
+27°12'41" N
 81°31'20" W
-Wilmington, NC 
-34°29'24" N 
+Wilmington, NC
+34°29'24" N
 78°04'31" W
 Note: Systems of coordinates conform to NAD 83.
 Point Of Contact: ROTHR Deputy Program Manager, (540) 653–3624.
@@ -7384,15 +7384,15 @@ TVBD is operating, the radiated emissions from TVBDs shall meet the requirements
 (4) Emissions in the band 602–620 MHz must also comply with the following field strength limits at a
 distance of one meter.
 Frequency
-Field strength 
+Field strength
 dBµV/meter/120 kHz
 (MHz)
-602–607 
+602–607
 120–5[F(MHz)–602]
-607–608 
-608–614 
-614–615 
-615–620 
+607–608
+608–614
+614–615
+615–620
 120–5[620–F(MHz)]
 (5) TVBDs connected to the AC power line are required to comply with the conducted limits set forth in
 §15.207.
@@ -7572,30 +7572,30 @@ the R–6602 curves contained in §73.699 of this chapter.
 Protected contour
 Contour
 Propagation
-Type of station 
+Type of station
 Channel
 (dBu)
 curve
-Analog: Class A TV, LPTV, translator and booster 
+Analog: Class A TV, LPTV, translator and booster
 Low VHF (2–6)
 F(50,50)
 
 <!-- 第 182 页 -->
-High 
-VHF 
+High
+VHF
 (7–13)
 F(50,50)
-UHF (14–69) 
+UHF (14–69)
 F(50,50)
 Low VHF (2–6)
 F(50,90)
 Digital: Full service TV, Class A TV, LPTV, translator and
 booster
-High 
-VHF 
+High
+VHF
 (7–13)
 F(50,90)
-UHF (14–51) 
+UHF (14–51)
 F(50,90)
 (2) Required separation distance. TVBDs must be located outside the contours indicated in paragraph
 (a)(1) of this section of co-channel and adjacent channel stations by at least the minimum distances
@@ -7613,13 +7613,13 @@ channel
 unlicensed device
 (km)
 (km)
-Less than 3 meters 
+Less than 3 meters
 6.0
 0.1
-3—Less than 10 meters 
+3—Less than 10 meters
 8.0
 0.1
-10–30 meters 
+10–30 meters
 14.4
 0.74
 (b) TV translator, Low Power TV (including Class A) and Multi-channel Video Programming Distributor
@@ -7667,57 +7667,57 @@ channels within 2.4 kilometers at the following locations.
 (1) The Naval Radio Research Observatory in Sugar Grove, West Virginia.
 (2) The Table Mountain Radio Receiving Zone (TMRZ) at 40°07'50" N and 105°15'40" W.
 (3) The following facilities:
-Longitude 
+Longitude
 (deg/min/sec)
-Latitude 
+Latitude
 (deg/min/sec)
 Observatory
-Allen Telescope Array 
-121 28 24 W 
+Allen Telescope Array
+121 28 24 W
 40 49 04 N
-Arecibo Observatory 
-066 45 11 W 
+Arecibo Observatory
+066 45 11 W
 18 20 46 N
 
 <!-- 第 184 页 -->
-Green Bank Telescope (GBT) 079 50 24 W 
+Green Bank Telescope (GBT) 079 50 24 W
 38 25 59 N
-Very Large Array (VLA) 
-Rectangle between latitudes 33 58 22 N and 34 14 56 N, and 
+Very Large Array (VLA)
+Rectangle between latitudes 33 58 22 N and 34 14 56 N, and
 longitudes 107 24 40 W and 107 48 22 W
-Very 
-Long 
-Baseline 
-Array 
+Very
+Long
+Baseline
+Array
 (VLBA) Stations:
-Pie Town, AZ 
-108 07 07 W 
+Pie Town, AZ
+108 07 07 W
 34 18 04 N
-Kitt Peak, AZ 
-111 36 42 W 
+Kitt Peak, AZ
+111 36 42 W
 31 57 22 N
-Los Alamos, NM 
-106 14 42 W 
+Los Alamos, NM
+106 14 42 W
 35 46 30 N
-Ft. Davis, TX 
-103 56 39 W 
+Ft. Davis, TX
+103 56 39 W
 30 38 06 N
-N. Liberty, IA 
-091 34 26 W 
+N. Liberty, IA
+091 34 26 W
 41 46 17 N
-Brewster, WA 
-119 40 55 W 
+Brewster, WA
+119 40 55 W
 48 07 53 N
-Owens Valley, CA 118 16 34 W 
+Owens Valley, CA 118 16 34 W
 37 13 54 N
-St. Croix, VI 
-064 35 03 W 
+St. Croix, VI
+064 35 03 W
 17 45 31 N
-Hancock, NH 
-071 59 12 W 
+Hancock, NH
+071 59 12 W
 42 56 01 N
-Mauna Kea, HI 
-155 27 29 W 
+Mauna Kea, HI
+155 27 29 W
 19 48 16 N
 [74 FR 7326, Feb. 17, 2009, as amended at 75 FR 75839, Dec. 6, 2010]
 § 15.713   TV bands database.

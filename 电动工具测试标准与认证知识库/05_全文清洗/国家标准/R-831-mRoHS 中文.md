@@ -29,7 +29,7 @@
 检测报告
 RLSZF001553430001C
 报告编号
-R-831-m(m:optional suffix that may be replaced by number or 
+R-831-m(m:optional suffix that may be replaced by number or
 letter)
 样品型号
 根据客户要求, 对所提交样品中的铅(Pb), 镉(Cd), 汞(Hg), 六价

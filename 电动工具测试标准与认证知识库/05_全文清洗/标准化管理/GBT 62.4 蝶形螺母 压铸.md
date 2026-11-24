@@ -19,48 +19,48 @@ S
 J 
 荡黯
 中华人民共和国国家标准
-GB/T 
+GB/T
 62.4-2004
 蝶形螺母
 压铸
-Wing 
-nuts-Die-casting 
+Wing
+nuts-Die-casting
 wing
 2004-02-10发布
 2004-08-01实施
 率替冒瞥臀瓣瞥壕臀臀暴发“
 
 <!-- 第 2 页 -->
-GB/T 
+GB/T
 62.4-2004
 前
 r
 本部分是国家标准“蝶形螺母”产品系列标准之一。该系列包括：
 a) 
- GB/T 
+ GB/T
 62.1-2004 蝶形螺母
 圆翼；
 b) 
- GB/T 
+ GB/T
 62.2-2004 蝶形螺母
 方翼；
- GB/T 
+ GB/T
 3-2004 蝶形螺母
 冲压；
 d) 
- GB/T 
+ GB/T
 62.4-2004 蝶形螺母
 压铸。
-本部分是GB/T 
+本部分是GB/T
 62的第4部分。
-此次制修订工作中，参照日本标准JIS 
+此次制修订工作中，参照日本标准JIS
 B 
 1185-1994(
 (翼形螺母）
 （日文版）提出了我国“蝶形螺母”
 产品系列标准，同时增加了蝶形螺母的品种（标准）和“保证扭矩”等指标。
 本部分由中国机械工业联合会提出。
-本部分由全国紧固件标准化技术委员会（SAC/TC 
+本部分由全国紧固件标准化技术委员会（SAC/TC
 85）归口。
 本部分由机械科学研究院负责起草。
 本部分首次发布。
@@ -70,73 +70,73 @@ B
 本部分规定了螺纹规格为M3^-M10、保证扭矩为I级、用锌合金压铸制成的蝶形螺母。
 2 规范性引用文件
 的各方研究是否可使用这些文件的最新版本。凡是不注日期的引用文件，其最新版本适用于本部分。
-GB/T 
+GB/T
 90.1 紧固件
-验收检查（GB/T 
-1-2002, 
-idt 
-ISO 
+验收检查（GB/T
+1-2002,
+idt
+ISO
 3269:2000)
-GB/T 
+GB/T
 90.2 紧固件
 标志与包装
-metric 
-screw 
-threads-General 
-plan, 
+metric
+screw
+threads-General
+plan,
 MOD)
-GB/T 
-1237 紧固件标记方法（GB/T 
-1237-2000,ISO 
+GB/T
+1237 紧固件标记方法（GB/T
+1237-2000,ISO
 8991:1986,egv)
-GB/T 
+GB/T
 3098.20 紧固件机械性能
 蝶形螺母
 保证扭矩
-GB/T 
+GB/T
 8738 铸造锌合金锭
-external 
-and 
-internal 
-screw 
+external
+and
+internal
+screw
 threads一Medi
 um 
 quality，MOD)
 3 尺寸
 螺母的型式与尺寸见图1和表10
 有无凹穴及其型式与尺寸，由制造者确定。
-GB/T 
+GB/T
 62.4-2004
 蝶形螺母
 压铸
-下列文件中的条款通过GB/T 
+下列文件中的条款通过GB/T
 62的本部分的引用而成为本部分的条款。凡是注日期的引用文件，
 其随后所有的修改单（不包括勘误的内容）或修订版均不适用于本部分，然而，鼓励根据本部分达成协议
-GB/T 
+GB/T
 193 普通螺纹
-直径与螺距系列（GB/T 
-193-2003, 
-ISO 
-261:1998, 
-ISO 
-general 
+直径与螺距系列（GB/T
+193-2003,
+ISO
+261:1998,
+ISO
+general
 purpose
-GB/T 
+GB/T
 9145 普通螺纹
-中等精度、优选系列的极限尺寸（GB/T 
-9145--2003, 
-ISO 
+中等精度、优选系列的极限尺寸（GB/T
+9145--2003,
+ISO
 965-2:1998,
-ISO 
-general 
-purpose 
-metric 
-screw threads--Tolerances-Part 
-2：Limits 
+ISO
+general
+purpose
+metric
+screw threads--Tolerances-Part
+2：Limits
 of 
-sizes 
-for 
-general 
+sizes
+for
+general
 purpose
 一
 L
@@ -153,16 +153,16 @@ Y
 图1
 
 <!-- 第 4 页 -->
-GB／T 
+GB／T
 62.4-2004
 4 技术条件和引用标准
 技术条件和引用标准见表20
 5 标记
-5.1 标记方法按GB/T 
+5.1 标记方法按GB/T
 1237规定。
 5.2 标记示例
 螺母
-GB/T 
+GB/T
 62.4 M5
 表1 尺寸
 单位为毫米
@@ -170,7 +170,7 @@ GB/T
 升
 表2 技术条件和引用标准
 卜排州
-螺纹规格D= 
+螺纹规格D=
 M5、材料为ZZnAID4-3、保证扭矩为I
 I级、不经表面处理、用锌合金压铸制成的蝶形
 螺母的标记：

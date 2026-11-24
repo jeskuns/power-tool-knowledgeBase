@@ -228,18 +228,18 @@ Sep. 18, 2007
 
 !
 (Emission):
- 	
-	
-	
+ 
+
+
 
 EMC = Emission (EMI) + Immunity (EMS)
 Sep. 18, 2007
 
 <!-- 第 6 页 -->
-	
-	
-	
-	
+
+
+
+
 2:
  9
 :
@@ -469,9 +469,9 @@ $
 %
 &
 '
- 	
-	
-	
+ 
+
+
 	 (Emission) 
 
 
@@ -559,13 +559,13 @@ w w w . t u v . c o m
 6
 6
 (PC, Exercise meter...)
- 
+
 
- 
+
 
- 
+
 
- 
+
 
 (Emission)
  *
@@ -798,20 +798,20 @@ w w w . t u v . c o m
 : 9KHz – 30MHz
 
 <!-- 第 17 页 -->
- Electrostatic Discharge (ESD) 
+ Electrostatic Discharge (ESD)
 EN 61000-4-2
- Radiated Susceptibility (RS) 
+ Radiated Susceptibility (RS)
 EN 61000-4-3
 EN 61547 (Immunity)
 Power line/Signal line
 Enclosure
- Voltage Interruption and Dip (DIP) 
+ Voltage Interruption and Dip (DIP)
 EN 61000-4-11
- Electrical Fast Transient (EFT) 
+ Electrical Fast Transient (EFT)
 EN 61000-4-4
- Surge 
+ Surge
 EN 61000-4-5
- Conducted Susceptibility (CS) 
+ Conducted Susceptibility (CS)
 EN 61000-4-6
 Sep. 18, 2007
 
@@ -945,7 +945,7 @@ EN 61000-3-2
 Sep. 18, 2007
 TÜV Rheinland Taiwan Ltd.
 w w w . t u v . c o m
-Limit 
+Limit
 , 
 
 
@@ -1014,13 +1014,13 @@ Sep. 18, 2007
 
 
 
-	
+
 
-	
+
 
-	
+
 
-	
+
 ,
 EN 61000-3-3 (
 

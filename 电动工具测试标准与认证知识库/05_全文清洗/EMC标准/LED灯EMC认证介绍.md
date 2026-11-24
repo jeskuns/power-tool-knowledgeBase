@@ -33,9 +33,9 @@ FCC 认证要求
 <!-- 第 4 页 -->
 EN 55015:2006+A1:2007+A2:2009    EMI的传导和幅射要求
 EN 61547:1995+A1:2000                    EMS部份要求
-EN 61000-3-2：2006 
+EN 61000-3-2：2006
 电源谐波要求
-EN 61000-3-3: 2008 
+EN 61000-3-3: 2008
 电源闪烁要求
 CE认证EMC要求
 灯的EMC部份新旧标准主要差异就EN55015增加了30M-
@@ -153,10 +153,10 @@ EN5515 RE
 射
 
 <!-- 第 6 页 -->
-70 kHz to 150 kHz 
+70 kHz to 150 kHz
 81 to 51
 75 to 45
-150 kHz to 3MHz 
+150 kHz to 3MHz
 58 to 22
 51 to 15
 45 to 9
@@ -166,38 +166,38 @@ EN5515 RE
 2 m
 3 m
 4 m
-range 
+range
 Limits for loop diameter
-9 kHz to 70 kHz 
+9 kHz to 70 kHz
 磁场幅射
 Frequency
 EN55015几个主要测试限值
 peak
 Average
-range 
+range
 Limits dB(µV)
-9 kHz to 50 
+9 kHz to 50
 kHz
 –
 传导
 Quasi-
 Frequency
-range  MHz 
+range  MHz
 Quasi-peak  dB(µV/m)
 幅导（3M场地）
-30 to 230 
-230 to 300 
+30 to 230
+230 to 300
 深圳华通威国际检验有限公司EMC检测部
 Frequency
-150 kHz to 
+150 kHz to
 0,5 MHz
 66 to 56
 56 to 46
-0,5 MHz to 5,0 
+0,5 MHz to 5,0
 MHz
-5 MHz to 30 
+5 MHz to 30
 MHz
-50 kHz to 150 
+50 kHz to 150
 kHz
 90 to 80
 –
@@ -205,7 +205,7 @@ kHz
 <!-- 第 7 页 -->
 ：B
 IEC61000-4-4  AC Line: +/- 1KV  DC and Signal Line:+/- 0.5KV5/50  Tr/Th
-Point Positive 10 times and Negative 10 times discharge     判定等级
+Point Positive 10 times and Negative 10 times discharge 判定等级
 IEC61000-4-5  AC Line: <25W  Line-earth +/-1KV   Line-Line +/-0.5KV
 IEC61000-4-2   Contact +/- 4KV     Air Discharge +/- 8KV            Each
 IEC61000-4-3  80-1000MHz    3V/m  AM  80%  1KHz
@@ -213,9 +213,9 @@ ns  5KHz注：适用于线缆长度小于3m
 EN61547 相关测试项目和要求
 判定等级：A
 判定等级：B
->25W  Line-earth +/-2KV   Line-Line +/-1KV  半灯具Line-earth +/-1KV
+>25W  Line-earth +/-2KV   Line-Line +/-1KV 半灯具Line-earth +/-1KV
 Power Port:  3V    0.15-80MHz  1KHz  80%  AM注：适用于线缆长度大于
-IEC61000-4-11  AC Line Dips  30%   10P  判定等级：C     Interruptions
+IEC61000-4-11  AC Line Dips  30%   10P 判定等级：C     Interruptions
 IEC61000-4-6  AC Line:  3V  Control and Signal Line：3V  Input DC
 深圳华通威国际检验有限公司EMC检测部
 判定等级：A
@@ -371,7 +371,7 @@ PFC的英文全称为“Power Factor Correction”，意思是“功率因
 幅射问题解决方法和思路
 
 <!-- 第 25 页 -->
-300MHz，或者30-1000MHz频段内的空间幅射(Radiated 
+300MHz，或者30-1000MHz频段内的空间幅射(Radiated
 Emission)进行测试。
 按照理论和实践出来了思路和方法，希望对该类产品的设计
 出口欧洲，美国的LED驱动器和开关电源现在都需要对30-

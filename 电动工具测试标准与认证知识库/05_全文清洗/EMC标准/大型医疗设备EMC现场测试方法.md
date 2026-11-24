@@ -28,7 +28,7 @@
 内完成EMC 相关测试，而需要在现场测量。本文主要讨论EMC 现场测试的方法。
 
 <!-- 第 2 页 -->
-第2章  EMC 要求概述
+第2章 EMC 要求概述
 要求概述
 要求概述
 要求概述
@@ -297,15 +297,15 @@ IEC61000-4-3 所规定的RS 试验要求。在这种情况下，这类大型永�
 测试规格
 测试规格
 表 4 辐射抗扰测试规格
-Application standard 
+Application standard
 IEC 61000-4-3:2006
-Frequency Range:  
+Frequency Range:
 80 MHz - 2500 MHz
-Field Strength:  
+Field Strength:
 3 V/m
-Modulation:  
+Modulation:
 1kHZ Sine Wave, 80% AM Modulation
-Dwell time 
+Dwell time
 1s
 4.1.1.2 测试布置
 测试布置
@@ -373,12 +373,12 @@ Dwell time
 工科医设备对静电要求的等级如表7 所示。接触放电为±6kv（包括直接接触和金属耦合板
 放电），空气放电为±8kv。
 表 5 静电放电测试规格
-Application standard 
+Application standard
 IEC 61000-4-2:2001
-Contact Discharge 
-±6kv (Direct/Indirect) 
+Contact Discharge
+±6kv (Direct/Indirect)
 Discharge Voltage:
-Air Discharge 
+Air Discharge
 ±8 kV (Direct)
 4.1.2.2 测试布局
 测试布局
@@ -410,10 +410,10 @@ EFT 测试是为了验证电气和电子设备对诸如来自切换瞬态过程�
 工科医设备的测试等级如表8 所示：电源端子每相及相间EFT 等级为±2 kV，I/O 端口和系
 统间互联电缆EFT 等级为±1kV。
 表 6 电快速瞬变脉冲群测试规格
-Application standard 
+Application standard
 IEC 61000-4-4:2004
-Test Voltage: 
-Power Line ±2 kV, 5kHz 
+Test Voltage:
+Power Line ±2 kV, 5kHz
 I/O cable，interconnecting line ±1kV，5kHz
 
 <!-- 第 14 页 -->
@@ -443,9 +443,9 @@ I/O cable，interconnecting line ±1kV，5kHz
 测试规格
 工科医设备的浪涌测试等级如表6 所示：差模测试电压为±1 kV，共模测试电压为±2 kV。
 表 7 浪涌测试规格
-Application standard 
+Application standard
 IEC 61000-4-5:2005
-Test Voltage 
+Test Voltage
 ±1 kV differential mode
 
 <!-- 第 15 页 -->
@@ -470,17 +470,17 @@ Test Voltage
 测试规格
 工科医设备的测试等级如表10 中所示：
 表8 传导抗扰测试规格
-Application standard 
+Application standard
 IEC 61000-4-6:2006
-Frequency Range: 
+Frequency Range:
 0.15 MHz - 80 MHz
-Field Strength:  
+Field Strength:
 3V
-Modulation:  
+Modulation:
 1kHz Sine Wave, 80% AM Modulation
-Coupled Cable: 
+Coupled Cable:
 Power Mains, I/O lines
-Dwell time 
+Dwell time
 1s
 4.1.5.2 测试布局
 测试布局
@@ -525,13 +525,13 @@ b）代替法：总是由短电缆（即≤1m）连在一起的并作为受试�
 表9 电压暂降测试规格
 
 <!-- 第 17 页 -->
-Application standard 
+Application standard
 IEC 61000-4-11:2004
 Voltage test level
 % UT
 <5 
 0.5
-Application standard 
+Application standard
 IEC 61000-4-11:2004
 Voltage test level
 % UT
@@ -550,12 +550,12 @@ Voltage test level
 测试规格
 测试规格
 测试规格
-Frequency Range: 
+Frequency Range:
 50Hz
-Field Strength:  
+Field Strength:
 3 A/m
 Voltage dip
-% UT 
+% UT
 Duration Periods
 表10 电压中断测试规格
 Voltage dip
@@ -592,10 +592,10 @@ S
 成为常规的测试方法。
 
 <!-- 第 20 页 -->
-【参考资料】 
-[1] IEC60601-1-2:2007  
-[2] CISPR11:2003+A1:2004 
-[3] IEC61000-3-2:2005  
+【参考资料】
+[1] IEC60601-1-2:2007
+[2] CISPR11:2003+A1:2004
+[3] IEC61000-3-2:2005
 [4] IEC61000-3-3:1999+A1:2001+A2:2005
 [5] IEC61000-4-2:2001
 [6] IEC61000-4-3:2006

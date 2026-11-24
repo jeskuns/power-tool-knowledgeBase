@@ -95,7 +95,7 @@ GB/T 196
 screw threads--Basic dimensions, MOD)
 普通螺纹
 GB/T 197
-公差(GB/T 197-—2003,ISO 965-1:1998,ISO 
+公差(GB/T 197-—2003,ISO 965-1:1998,ISO
 general purpose metric
 screw threads-Tolerances---Part 1 :Principles and basic data, MOD)
 GB/T 1237
@@ -107,7 +107,7 @@ GB/T 3098. 1
 GB/T 3103. 1
 螺栓、螺钉和螺母(GB/T 3103.1--2002,ISO 4759-1:2000,IDT)
 GB/T 3106
-螺栓、螺钉和螺柱的公称长度和普通螺栓的螺纹长度［GB/T3106一1982（1988年确
+螺栓、螺钉和螺柱的公称长度和普通螺栓的螺纹长度[GB/T3106一1982（1988年确
 认).eqv ISO 888:19767
 紧固件
 GB/T 5267. 1

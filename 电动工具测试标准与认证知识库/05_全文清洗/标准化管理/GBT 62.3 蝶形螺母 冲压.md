@@ -23,8 +23,8 @@ ICS＿
 GB/T 62.3-2004
 蝶形螺母
 冲压
-Wing 
-nuts-Pressing 
+Wing
+nuts-Pressing
 wing
 2004-02-10发布
 2004-0a-01实施
@@ -38,30 +38,30 @@ wing
 青
 本部分是国家标准“蝶形螺母”产品系列标准之一。该系列包括：
 a) 
- GB/T 
+ GB/T
 62.1-2004 蝶形螺母
 圆翼；
 b) 
- GB/T 
+ GB/T
 62.2-2004 蝶形螺母
 方翼；
- GB/T 
+ GB/T
 3-2004 蝶形螺母
 冲压；
 d) 
- GB/T 
+ GB/T
 62.4-2004 蝶形螺母
 压铸。
-本部分是GB/T 
+本部分是GB/T
 62的第3部分。
-此次制修订工作中，参照日本标准JIS 
+此次制修订工作中，参照日本标准JIS
 B 
 1185- 1994(
 (翼形螺母）
 （日文版）提出了我国“蝶形螺母”
 产品系列标准，同时增加了蝶形螺母的品种（标准）和“保证扭矩”等指标。
 本部分由中国机械工业联合会提出。
-本部分由全国紧固件标准化技术委员会（SAC/TC 
+本部分由全国紧固件标准化技术委员会（SAC/TC
 85）归口。
 本部分由机械科学研究院负责起草。
 本部分首次发布。
@@ -75,75 +75,75 @@ B
 U级（B型）、用钢板冲压制成的A
 型（高型）或B型（低型）蝶形螺母。
 2 规范性引用文件
-下列文件中的条款通过GB/T 
+下列文件中的条款通过GB/T
 62的本部分的引用而成为本部分的条款。凡是注日期的引用文件，
 其随后所有的修改单（不包括勘误的内容）或修订版均不适用于本部分，然而，鼓励根据本部分达成协议
 的各方研究是否可使用这些文件的最新版本。凡是不注日期的引用文件，其最新版本适用于本部分。
-GB/T 
+GB/T
 1 紧固件
-验收检查（GB/T 
-90.1-2002,idt 
-ISO 
+验收检查（GB/T
+90.1-2002,idt
+ISO
 3269;2000)
-GB/T 
+GB/T
 90.2 紧固件
 标志与包装
-GB/T 
+GB/T
 193 普通螺纹
-直径与螺距系列（GB/T 
-193-2003, 
-ISO 
-261;1998, 
-ISO 
-general 
+直径与螺距系列（GB/T
+193-2003,
+ISO
+261;1998,
+ISO
+general
 purpose
 metri
 c 
-screw 
-threads-General 
-plan, 
+screw
+threads-General
+plan,
 MOD)
-GB/T 
+GB/T
 700 碳素结构钢
-GB/T 
-1237 紧固件标记方法（GB/T 
-1237-2000,egv 
-ISO 
+GB/T
+1237 紧固件标记方法（GB/T
+1237-2000,egv
+ISO
 8991:1986)
-GB/T 
+GB/T
 3098.20 紧固件机械性能
 蝶形螺母
 保证扭矩
-GB/T 
+GB/T
 1 紧固件
-电镀层（GB/T 
-1-2002, 
-ISO 
+电镀层（GB/T
+1-2002,
+ISO
 4042:1999,IDT)
-GB/T 
+GB/T
 9145 普通螺纹
-中等精度、优选系列的极限尺寸（GB/T 
-9145-2003, 
-ISO 
+中等精度、优选系列的极限尺寸（GB/T
+9145-2003,
+ISO
 965-2:1998,
-ISO 
-general 
-purpose 
-metric 
-screw 
-threads-Tolerances-Part 
-2：Limits 
-of 
-sizes 
-for 
-general 
+ISO
+general
 purpose
-external 
-and 
-internal 
-screw 
-threads-Medium 
-quality, 
+metric
+screw
+threads-Tolerances-Part
+2：Limits
+of 
+sizes
+for
+general
+purpose
+external
+and
+internal
+screw
+threads-Medium
+quality,
 MOD)
 3 尺寸
 螺母的型式与尺寸见图1和表to
@@ -166,12 +166,12 @@ V
 4 技术条件和引用标准
 技术条件和引用标准见表20
 5 标记
-5.1 标记方法按GB/T 
+5.1 标记方法按GB/T
 1237规定。
 5.2 标记示例
 螺母
-GB/T 
-62.3 
+GB/T
+62.3
 M5
 表1 尺寸
 单位为毫米

@@ -327,7 +327,7 @@ Shenzhen Morlab Communications Technology Co., Ltd.
 :::CCC┆CE┆FCC┆RoHS┆GCF┆UL┆OTA┆TELEC┆Bluetooth:::
 人工电源耦合网络(
 在指定频率范围内使
-N.A 
+N.A
 人
 电源耦合网络(
 两个)
@@ -460,7 +460,7 @@ Shenzhen Morlab Communications Technology Co., Ltd.
 划中特殊规定否则这些测试线束应该彼此平行并且彼此靠紧。
 （εr≤1.4）上，位于接地板上方(50± 5)mm处。除非在测试计
 2.探头应圈住整个线束（包括全部电缆）。在离EUT连接器
-50mm 和750mm两处测量辐射。（2002版中则为保证在30M 
+50mm 和750mm两处测量辐射。（2002版中则为保证在30M
 Hz以上的频率点能测到最大电平，测量探头除在EUT连接器
 Hz以上的频率点能测到最大电平，测量探头除在EUT连接器
 1 试验线束应该为（1700 2000）mm 长（或试验另有规定）
@@ -787,17 +787,17 @@ d
 用于介绍
 些基本定义和
 Part 1: General and
-definitions 
+definitions
 总则和定义
 用于介绍一些基本定义和
 Part 3: Transverse
 TEM小室
 检验设备对【0.01MHz –
-a t 3: 
+a t 3:
 a sve se
 200MHz】频带电磁场的
 抗干扰性能。
-Part 2: Absorber-lined 
+Part 2: Absorber-lined
 电波暗室法
 检验设备对【80MHz –
 小室
@@ -900,7 +900,7 @@ Shenzhen Morlab Communications Technology Co., Ltd.
 N.A
 人工电源耦合网
 在指定频率范围内使待测设备与电源和
-N.A 
+N.A
 耦
 负载电气隔离及耦合EUT骚扰信号
 络(两个)
@@ -1145,7 +1145,7 @@ Shenzhen Morlab Communications Technology Co., Ltd.
 <!-- 第 50 页 -->
 道路车辆-用窄带发射的电磁能量进行电子干扰.部件
 narrowband radiated electromagnetic energy —
-ISO11452-4:Road vehicles — Component test 
+ISO11452-4:Road vehicles — Component test
 p
 methods for electrical disturbances from
 P
