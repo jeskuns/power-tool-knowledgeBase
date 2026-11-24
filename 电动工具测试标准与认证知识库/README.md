@@ -252,3 +252,8 @@ python build_query_kb_all.py    # 刷新四个库的 查询知识库/*.md，不�
   `knowledge/tools/build_defan_pack.py` 已废弃，不要再用（它会重建 `得帆知识库/` 与 zip）。
 
 <!-- QUERY-KB-SINGLE -->
+
+<!-- CHG-20261124 -->
+## 全文清洗（2026-11-24）
+- `05_全文清洗` 1954 篇已清洗并按类型合并为 15 份分类 md（`查询知识库/全文分类/`）；standards.js 2144 条链接指向新锚点。
+<!-- /CHG-20261124 -->
