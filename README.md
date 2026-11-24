@@ -110,3 +110,10 @@ python sync_knowledge_all.py --only gongchengbu
 - 首页 `index.html` 的「标准全文目录」改指向 `全文分类/索引.md`；标准库的 `查询.html` 已删除（检索走首页顶部 `?scope=stds`）。
 - `安规标准知识库.html` 内 47 处 `全文/` 旧链接已改指新分类文档锚点。
 <!-- /CHG-20261124 -->
+
+<!-- CHG-MOBILE-20261124 -->
+## 手机版适配 + Pages 部署修复（2026-11-24）
+- **全站手机版**：新增 `assets/css/app-mobile.css` + `assets/js/app-mobile.js`，给 8 个 HTML（首页 + 7 个子页）注入底部「首页/型号/标准/方法/设备/记录/案例」七库快捷导航、安全区避让、窄屏顶栏防竖排、搜索框上下堆叠、表格横滚、图片自适应。手机视口 390px 实测：导航/高亮正常、横向溢出 0。
+- **Pages 部署修复**：`02_安全标准.md`（40MB）、`01_标准化管理.md`（17.7MB）超过 Cloudflare Pages 25MiB 单文件上限导致部署失败（线上长期旧版）。已按 `## 篇名` 拆为 `02_安全标准-1..7.md`、`01_标准化管理-1..3.md`（均 <6MB，也低于同步脚本 8MB 上限），并同步修正 `standards.js`（两处）、`安规标准知识库.html`、`index.html`、`索引.md` 的所有锚点引用。
+- **约定**：全文分类的单文件必须 <8MB（同步脚本 `MAX_FILE`），超过就按 `##` 篇名拆分并改引用；改动在源目录做后跑 `python _脚本/sync_knowledge_all.py --only power-tool`。GitHub Actions 报 Cloudflare Rate limited（10429）时用本机 wrangler `pages deploy . --project-name=power-tool-knowledgebase --commit-dirty=true` 直传。
+<!-- /CHG-MOBILE-20261124 -->
