@@ -41,6 +41,13 @@
   .topbar { padding: 10px 14px !important; }
   .topbar b { font-size: 16px !important; }
   .topbar a, .topbar-breadcrumb a { min-height: 32px; display: inline-flex; align-items: center; }
+  /* 首页顶栏：面包屑不换行、隐藏长徽章，避免标题被挤成竖排 */
+  .topbar-inner { gap: 8px !important; min-height: 0 !important; }
+  .topbar-breadcrumb { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .topbar-breadcrumb .current { white-space: nowrap; }
+  .topbar-actions { flex: none; gap: 8px !important; }
+  .topbar-badge { display: none !important; }
+  .topbar-home { padding: 6px 12px !important; white-space: nowrap; font-size: 12px !important; }
 
   /* ---- 查询区：输入框与按钮不再挤成一行难点的窄条 ---- */
   .sbox { display: flex; gap: 8px; }
