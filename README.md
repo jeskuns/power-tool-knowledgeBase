@@ -2,8 +2,8 @@
 
 > 实验室六大测试知识库的源文件目录与离线查询门户：型号 / 标准 / 方法 / 设备 / 记录 / 案例，输入即查，全部数据离线内置。
 >
-> 目录位置：`Documents\lifeOS\数字化\实验室管理\知识库\`
-> 站点部署副本：`company\power-tool-knowledgeBase\`（由本目录瘦身同步，线上 `https://power-tool-knowledgebase.pages.dev`）
+> 正本（原文 / 原图 / 构建脚本）：`Documents\lifeOS\数字化\实验室管理\知识库\`
+> 上线包：`company\power-tool-knowledgeBase\`（Pages 站）与 `company\gongchengbu\knowledge\`（工程部 App 内嵌），均由本目录构建，**只含查询数据、路径全英文、不带原文**
 
 ---
 
@@ -16,7 +16,7 @@
 - **离线可用**：原文、卡片、图片、查询数据全部随站点打包，拷到手机没网也能查
 - **无后台依赖**：纯静态文件，部署在 Cloudflare Pages
 
-> 命名区分：**电动工具知识库**（本项目，六库查询站）与 **电动工具行业新闻**（`power-tools-news`，每日采集行业资讯的站点）是两个独立项目，请勿混淆。历史资料里的「工程部」「工程部数字化」等字样为旧称或真实路径记录，现已按新命名体系更新展示文案；`company\gongchengbu\knowledge\` 为同步备份路径，保持原样。
+> 命名区分：**电动工具知识库**（本项目，六库查询站）与 **电动工具行业新闻**（`power-tools-news`，每日采集行业资讯的站点）是两个独立项目，请勿混淆。历史资料里的「工程部」「工程部数字化」等字样为旧称或真实路径记录，现已按新命名体系更新展示文案；`company\gongchengbu\knowledge\` 为工程部站点的上线包路径，与 `company\power-tool-knowledgeBase\` 同源同结构。
 
 ---
 
@@ -51,13 +51,30 @@
 └── 电动工具测试失效案例库/      失效案例与归因
 ```
 
+上线包结构（两个目标完全一致，由 `_脚本/build_deploy_kb.py` 生成，共 12863 个文件 / 约 95 MB）：
+
+```text
+上线目录/
+├── index.html                 统一查询门户（内嵌跨库检索）
+├── query/data/                四个查询数据 js（models / records / standards / cases）
+├── assets/                    样式、品牌数据、品牌 logo
+├── models/                    型号查询 + data/ + images/p/<品牌>/*.webp（约 12790 张）
+├── standards/                 标准目录查询 + data/ + safety-cards.html
+├── methods/                   用例查询 + data/ + solutions.html
+├── equipment/                 设备查询 + data/ + offline/
+├── records/                   委托记录查询 + data/ + CSV 明细
+└── cases/                     失效案例查询 + data/
+```
+
+> 原文（标准全文 / OCR / 清洗稿 / 速查卡片 md / 型号总表 xlsx 等）只留在正本，不进上线包；上线包里的「查看全文」入口已去掉，站外可用正本路径查看。
+
 ---
 
 ## 四、查询入口
 
 - **统一门户**：根目录 `index.html`，顶部搜索框支持型号 / 报告编号 / 标准号 / 任意关键词，输入即出结果；点标签可浏览某个库的全部数据。
 - **快捷查询**：门户提供 `?scope=models` / `records` / `stds` / `cases` 等参数直达对应库。
-- **各库独立页**：各子库自带的 `查询.html`（标准 / 记录 / 型号 / 案例 / 方法 / 设备六个库都有）与 `查询知识库/` 下的单文件 md。
+- **各库独立页**：正本各子库自带的 `查询.html` 与 `查询知识库/` 下的单文件 md；上线包中它们对应英文路径 `models|standards|methods|equipment|records|cases/index.html` 与 `*/offline/`，原文目录不带过去。
 - **品牌墙**：首页默认态「按品牌浏览全部型号」展开后显示 30 个品牌的 logo 卡片（`assets/logo/` + `assets/data/brands.js`），点卡片直接筛该品牌型号；logo 由 `build_site_data.py` 从 `电动工具竞品型号库/图片数据/brands/` 归集。
 - **单文件 Markdown**：每个库各有一份查询知识库 md，供离线全文检索与 RAG 使用。
 
@@ -72,9 +89,10 @@
 | `python _脚本/build_query_kb_all.py` | 刷新六库单文件查询知识库 md（幂等） |
 | `python _脚本/build_site_data.py` | 重建 `assets/data/*.js` 与品牌 logo 汇总 |
 | `python _脚本/build_standard_fulltext.py` | 生成标准全文路径与全文索引 |
-| `python _脚本/sync_knowledge_all.py --only power-tool` | 瘦身同步到部署副本 `company\power-tool-knowledgeBase` |
-| `python _脚本/sync_knowledge_all.py --only gongchengbu` | 同步到 `company\gongchengbu\knowledge`（仓库内备份） |
-| `python _脚本/_check_links.py` | 体检首页与六库查询页的站内链接（应为 0 缺失） |
+| `python _脚本/build_deploy_kb.py` | **上线包构建**：从正本生成两个英文路径、只含查询数据的上线目录（`--dry-run` 先看清单） |
+| `python _脚本/sync_knowledge_all.py --only power-tool` | 仅构建 Pages 上线目录（自动转发到 `build_deploy_kb.py`，不会拷回原文） |
+| `python _脚本/sync_knowledge_all.py --only gongchengbu` | 仅构建工程部站点内嵌目录（同样转发） |
+| `python _脚本/_check_links.py --root <上线目录>` | 体检该目录首页与六库查询页的站内链接（应为 0 缺失） |
 
 > `_build_portal.py`、`_fix_images.py`、`_fix_portal_links.py`、`_analyze_gaps.py` 是历史一次性补丁，不要重复执行（`_build_portal.py` 是纯字符串 replace，二次运行会静默无效果）。
 
@@ -82,13 +100,14 @@
 
 **标准库 OCR**：按 `电动工具测试标准与认证知识库/00_索引/OCR计划.md` 分阶段续跑，实时进度用 `python _脚本/kb_ocr_plan.py --status` 查看（需用带 fitz 的 Python 环境）。OCR 数值不可直接当权威引用。
 
-**同步到站点**：本目录瘦身同步到 `company\power-tool-knowledgeBase\`，推送后由 GitHub Actions 部署到 Cloudflare Pages（项目名 `power-tool-knowledgebase`）。源里删掉的文件会从同步目标一并删除（只删清单里的），所以**改动只在源目录做**，不要直接改副本。
+**生成上线包**：用 `build_deploy_kb.py` 从正本构建到 `company\power-tool-knowledgeBase\`（Pages 站，推送后由 GitHub Actions 部署到 `power-tool-knowledgebase`）与 `company\gongchengbu\knowledge\`（工程部 App 内嵌）。两个上线目录只含查询数据、路径全英文；改动只在正本做，不要直接改上线目录，下次构建会覆盖。
 
 ```powershell
 cd C:\Users\Administrator\Documents\lifeOS\数字化\实验室管理\知识库\_脚本
-python sync_knowledge_all.py --only power-tool --dry-run   # 先看差异
-python sync_knowledge_all.py --only power-tool
-python sync_knowledge_all.py --only gongchengbu
+python build_deploy_kb.py --dry-run          # 先看清单
+python build_deploy_kb.py                    # 生成两个上线目录
+python _check_links.py --root "C:\Users\Administrator\Documents\lifeOS\company\power-tool-knowledgeBase"
+python sync_knowledge_all.py --only power-tool     # 等价转发，兼容旧命令
 ```
 
 **注入到测试助手 App**：型号库是 `company\tool-test-assistant` 的唯一数据源，用 App 侧的 `tools/inject_kb.py` 生成 320px 缩略图与 1024px 大图（详见该仓库 README 第十一节），不由本目录推送。
@@ -99,7 +118,7 @@ python sync_knowledge_all.py --only gongchengbu
 
 - 展示标题、页脚、README 中的品牌字样统一为「电动工具知识库」。
 - 业务数据（设备台账、委托记录等历史字段）里的原始表述保持原样，以免事实失真。
-- 新增资料先落在对应子库，再跑构建脚本刷新查询数据与单文件 md，最后同步到部署副本。
+- 新增资料先落在对应子库，再跑构建脚本刷新查询数据与单文件 md，最后用 `build_deploy_kb.py` 重建两个上线包。
 - 各子库 README 的「最后更新」日期随实际改动维护。
 
 <!-- CHG-20261124 -->
@@ -109,6 +128,7 @@ python sync_knowledge_all.py --only gongchengbu
 - 查询数据源统一：主页 `query/data/*.js` 与库内 `查询数据/*.js` 对齐，竞品型号 **8790**、标准编目 **2144**（旧主文档的 5999/2658 已刷新）。
 - 首页 `index.html` 的「标准全文目录」改指向 `全文分类/索引.md`；标准库的 `查询.html` 已删除（检索走首页顶部 `?scope=stds`）。
 - `安规标准知识库.html` 内 47 处 `全文/` 旧链接已改指新分类文档锚点。
+- 2026-11-25 更正：以上为当时的正本状态；上线包现在不带 `全文分类/` 与 `查询.html`，全文入口只在正本（上线包见第三节结构）。
 <!-- /CHG-20261124 -->
 
 <!-- CHG-MOBILE-20261124 -->
